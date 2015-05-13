@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+<head lang="ja">
+    <meta charset="UTF-8">
+    <title>GoogleMapAPIv3 市町村の形</title>
+    <script type="text/javascript" src="http://maps.googleapis.com/maps/api/js"></script>
+    <style>
+        html, body, #canvas {width:100%; height:100%; margin:0px; padding:0px;}
+    </style>
+</head>
+<body>
+<div id="canvas"></div>
+<script>
+window.onload = function() {
+    var latLng = new google.maps.LatLng(36.786897, 136.892720);
+    var mapOptions = {
+        zoom: 9,
+        center: latLng
+    };
+    var div = document.getElementById("canvas");
+    div.style.width = div.style.height = '100%';
+    var map = new google.maps.Map(div, mapOptions);
+    map.data.loadGeoJson('http://japancityshape.niiyz.com/geojson/氷見市.json');
+    map.data.setStyle({fillColor: 'orange'});
+};
+</script>
+</body>
+</html>
