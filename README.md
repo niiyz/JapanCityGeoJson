@@ -32,8 +32,25 @@ window.onload = function() {
 };
 ~~~
 
-![Screencast](https://github.com/niiyz/JapanCityShape/blob/master/screenshot.png)
+![Screencast](https://github.com/niiyz/JapanCityGeoJson/blob/master/screenshot.png)
 
 # Demo
 
+テキストボックスに県、市、町、村、郡まで入力してください。
+
 http://toyamamap.niiyz.com/
+
+有る。
+
+・「富山県」
+
+・「上新川郡」
+
+・「上市町」
+
+・「足立区」
+
+無い
+
+・「富山県氷見市」
+
