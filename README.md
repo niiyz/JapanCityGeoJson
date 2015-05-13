@@ -1,10 +1,12 @@
 # JapanCityGeoJson
 
-国土交通省のデータから市町村の形を作るための緯度経度データを抽出しました。
+国土交通省のデータから市町村の形を作るためのGeoJsonデータを小分けしました。
 
 国土数値情報 (JPGIS2.1(GML)準拠及びSHAPE形式データ)　国土交通省
 
-http://nlftp.mlit.go.jp/ksj/gml/datalist/KsjTmplt-N03.html
+国土交通省国土政策局GISHP http://nlftp.mlit.go.jp/ksj/gml/datalist/KsjTmplt-N03.html
+
+GeoJson http://geojson.org/
 
 ~~~
 ogr2ogr -f GeoJSON places.json N03-14_140401.shp
@@ -16,7 +18,8 @@ ruby geo_to_json.rb
 
 # サンプル ex.GoogleMapAPIv3
 
-富山県氷見市表示
+GoogleMapAPIveはGeoJsonデータに対応しているので富山県氷見市を表示してみます。
+
 ~~~
 window.onload = function() {
     var latLng = new google.maps.LatLng(36.786897, 136.892720);
@@ -34,23 +37,19 @@ window.onload = function() {
 
 ![Screencast](https://github.com/niiyz/JapanCityGeoJson/blob/master/screenshot.png)
 
+~~~
+map.data.loadGeoJson('http://japancityshape.niiyz.com/geojson/神奈川県.json');
+~~~
+
+~~~
+map.data.loadGeoJson('http://japancityshape.niiyz.com/geojson/横浜市.json');
+~~~
+
+~~~
+map.data.loadGeoJson('http://japancityshape.niiyz.com/geojson/金沢区.json');
+map.data.loadGeoJson('http://japancityshape.niiyz.com/geojson/旭区.json');
+~~~
+
 # Demo
 
-テキストボックスに県、市、町、村、郡まで入力してください。
-
 http://japancityshape.niiyz.com/
-
-有る。
-
-・「富山県」
-
-・「上新川郡」
-
-・「上市町」
-
-・「足立区」
-
-無い
-
-・「富山県氷見市」
-
