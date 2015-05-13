@@ -18,7 +18,7 @@ ruby geo_to_json.rb
 
 # サンプル ex.GoogleMapAPIv3
 
-GoogleMapAPIveはGeoJsonデータに対応しているので富山県氷見市を表示してみます。
+GoogleMapAPIv3はGeoJsonデータに対応しているので富山県氷見市を表示してみます。
 
 ~~~
 window.onload = function() {
