@@ -1,4 +1,4 @@
-# JapanCityShape
+# JapanCityGeoJson
 
 国土交通省のデータから市町村の形を作るための緯度経度データを抽出しました。
 
@@ -14,29 +14,22 @@ ogr2ogr -f GeoJSON places.json N03-14_140401.shp
 ruby geo_to_json.rb
 ~~~
 
-# Sample ex.GoogleMapAPIv3 Polygon
+# サンプル ex.GoogleMapAPIv3
 
+富山県氷見市表示
 ~~~
-$.getJSON('data/富山県.json', function (data) {
-    for (var city in data) {
-        var latLngs = data[city];
-        var coords = [];
-        for (var i = 0; i < latLngs.length; i++) {
-            var lat = latLngs[i][1];
-            var lng = latLngs[i][0];
-            coords.push(new google.maps.LatLng(lat, lng));
-        }
-        var polygon = new google.maps.Polygon({
-            paths: coords,
-            strokeColor: "red",
-            strokeOpacity: 0.8,
-            strokeWeight: 2,
-            fillColor: 'orange',
-            fillOpacity: 0.4
-        });
-        polygon.setMap(map);
-    }
-});
+window.onload = function() {
+    var latLng = new google.maps.LatLng(36.786897, 136.892720);
+    var mapOptions = {
+        zoom: 9,
+        center: latLng
+    };
+    var div = document.getElementById("canvas");
+    div.style.width = div.style.height = '100%';
+    var map = new google.maps.Map(div, mapOptions);
+    map.data.loadGeoJson('http://japancityshape.niiyz.com/geojson/氷見市.json');
+    map.data.setStyle({fillColor: 'orange'});
+};
 ~~~
 
 ![Screencast](https://github.com/niiyz/JapanCityShape/blob/master/screenshot.png)
