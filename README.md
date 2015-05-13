@@ -30,7 +30,7 @@ window.onload = function() {
     var div = document.getElementById("canvas");
     div.style.width = div.style.height = '100%';
     var map = new google.maps.Map(div, mapOptions);
-    map.data.loadGeoJson('http://japancityshape.niiyz.com/geojson/氷見市.json');
+    map.data.loadGeoJson('http://geojson.niiyz.com/geojson/富山県/氷見市.json');
     map.data.setStyle({fillColor: 'orange'});
 };
 ~~~
@@ -38,18 +38,18 @@ window.onload = function() {
 ![Screencast](https://github.com/niiyz/JapanCityGeoJson/blob/master/screenshot.png)
 
 ~~~
-map.data.loadGeoJson('http://japancityshape.niiyz.com/geojson/神奈川県.json');
+map.data.loadGeoJson('http://geojson.niiyz.com/geojson/神奈川県/神奈川県.json');
 ~~~
 
 ~~~
-map.data.loadGeoJson('http://japancityshape.niiyz.com/geojson/横浜市.json');
+map.data.loadGeoJson('http://geojson.niiyz.com/geojson/神奈川県/横浜市.json');
 ~~~
 
 ~~~
-map.data.loadGeoJson('http://japancityshape.niiyz.com/geojson/金沢区.json');
-map.data.loadGeoJson('http://japancityshape.niiyz.com/geojson/旭区.json');
+map.data.loadGeoJson('http://geojson.niiyz.com/geojson/神奈川県/金沢区.json');
+map.data.loadGeoJson('http://geojson.niiyz.com/geojson/神奈川県/旭区.json');
 ~~~
 
 # Demo
 
-http://japancityshape.niiyz.com/
+http://geojson.niiyz.com/
