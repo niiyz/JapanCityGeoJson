@@ -11,6 +11,11 @@
     </style>
 </head>
 <body>
+<div style="float:right;">
+<a href="https://twitter.com/share" class="twitter-share-button" data-via="niiyz" data-lang="ja" data-size="large">ツイート</a>
+<script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+'://platform.twitter.com/widgets.js';fjs.parentNode.insertBefore(js,fjs);}}(document, 'script', 'twitter-wjs');</script>
+<iframe src="https://ghbtns.com/github-btn.html?user=niiyz&repo=JapanCityGeoJson&type=star&count=true&size=large" frameborder="0" scrolling="0" width="160px" height="30px"></iframe>
+</div>
 <div id="canvas"></div>
 <script>
 window.onload = function() {
@@ -26,7 +31,7 @@ window.onload = function() {
     // シェイプ作成
     var makeShape = function(find) {
         if (find) {
-            map.data.loadGeoJson('http://geojson.niiyz.com/geojson/' + find.pref + '/' + find.city + '.json');
+            map.data.loadGeoJson('http://geojson.niiyz.com/geojson/' + find.pref + '/' + find.main + '.json');
             map.data.setStyle({fillColor: 'green'});
         }
     };
@@ -56,22 +61,39 @@ window.onload = function() {
     input.style.fontSize    = '32px';
     input.style.background  = 'pink';
     var fillBtn = document.createElement('button');
-    fillBtn.innerText           = "塗る";
+    fillBtn.innerText = fillBtn.textContent = "塗る";
     fillBtn.style.width         = '100px';
     fillBtn.style.height        = '45px';
     fillBtn.style.fontSize      = '32px';
     google.maps.event.addDomListener(fillBtn, 'click', function() {
-        var find = _.find(list, function(chr) {
-            return chr.full.indexOf(input.value) !== -1;
+        if (input.value == '') {
+            return;
+        }
+        var find;
+        find = _.find(list, function(chr) {
+            return chr.pref == input.value || chr.addr1 + chr.addr2 == input.value;
         });
+        if (!find) {
+            console.log("B");
+            find = _.find(list, function(chr) {
+                return chr.main == input.value;
+            });
+        }
+        if (!find) {
+            console.log("C");
+            find = _.find(list, function(chr) {
+                var full = chr.pref + chr.addr1 + chr.addr2
+                return full.indexOf(input.value) !== -1;
+            });
+        }
         console.log(find);
         if (find) {
             makeShape(find);
-            changeCenter(find.city);
+            changeCenter(find.pref + find.addr1 + find.addr2);
         }
     });
     var clearBtn = document.createElement('button');
-    clearBtn.innerText           = "クリア";
+    clearBtn.innerText = clearBtn.textContent = "クリア";
     clearBtn.style.width         = '130px';
     clearBtn.style.height        = '45px';
     clearBtn.style.fontSize      = '32px';
@@ -86,7 +108,7 @@ window.onload = function() {
     div.appendChild(fillBtn);
     div.appendChild(clearBtn);
     map.controls[google.maps.ControlPosition.TOP_CENTER].push(div);
-    makeShape({city: '氷見市', pref: '富山県'});
+    makeShape({main: '氷見市', pref: '富山県'});
 };
 </script>
 </body>

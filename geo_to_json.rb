@@ -13,13 +13,15 @@ class GeoJsonToCity
       features.each do |feature|
         # 名称抽出
         city = self.checkCity(feature['properties'])
+        # 都道府県
         self.setData(city[0], feature)
         # 市町村1
         self.setData(city[1], feature)
         # 市町村2
-        self.setData(city[2], feature)
-        # 市町村3
-        self.setData(city[3], feature)
+        if !city[2].nil?
+          word = city[1] + city[2]
+          self.setData(word, feature)
+        end
       end
     end
   end
@@ -58,7 +60,6 @@ class GeoJsonToCity
       data["features"] = collection
       addr = self.checkCity(collection[0]['properties'])
       pref = addr[0]
-      city = addr.last
       FileUtils.mkdir_p('geojson/' + pref)
       File.open('geojson/' + pref + '/' + city + '.json', 'w').write(JSON.generate(data))
     end
@@ -67,11 +68,20 @@ class GeoJsonToCity
    def make2
     list = []
     @datas.each do |city, collection|
+      p city
       addr = self.checkCity(collection[0]['properties'])
       pref = addr[0]
-      main = addr.last
-      full = addr.join('');
-      list.push({'pref': pref, 'city': main, 'full': full})
+      if city == pref || city == addr[1] then
+        addr1 = ''
+        addr2 = ''
+      elsif addr[2].nil? then
+        addr1 = addr[1]
+        addr2 = ''
+      else
+        addr1 = addr[1]
+        addr2 = addr[2]
+      end
+      list.push({'pref': pref, 'main': city, 'addr1': addr1, 'addr2': addr2})
     end
     File.open('list.json', 'w').write('var list = ' + JSON.generate(list) + ';')
   end
