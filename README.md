@@ -38,7 +38,7 @@ window.onload = function() {
 
 テキストボックスに県、市、町、村、郡まで入力してください。
 
-http://toyamamap.niiyz.com/
+http://japancityshape.niiyz.com/
 
 有る。
 
