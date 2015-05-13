@@ -1,4 +1,5 @@
 require 'json'
+require 'fileutils'
 
 class GeoJsonToCity
 
@@ -13,7 +14,7 @@ class GeoJsonToCity
         # 名称抽出
         city = self.checkCity(feature['properties'])
         self.setData(city[0], feature)
-         # 市町村1
+        # 市町村1
         self.setData(city[1], feature)
         # 市町村2
         self.setData(city[2], feature)
@@ -55,8 +56,24 @@ class GeoJsonToCity
     @datas.each do |city, collection|
       data = {"type": "FeatureCollection", "features": []}
       data["features"] = collection
-      File.open('geojson/' + city + '.json', 'w').write(JSON.generate(data))
+      addr = self.checkCity(collection[0]['properties'])
+      pref = addr[0]
+      city = addr.last
+      FileUtils.mkdir_p('geojson/' + pref)
+      File.open('geojson/' + pref + '/' + city + '.json', 'w').write(JSON.generate(data))
     end
+  end
+
+   def make2
+    list = []
+    @datas.each do |city, collection|
+      addr = self.checkCity(collection[0]['properties'])
+      pref = addr[0]
+      main = addr.last
+      full = addr.join('');
+      list.push({'pref': pref, 'city': main, 'full': full})
+    end
+    File.open('list.json', 'w').write('var list = ' + JSON.generate(list) + ';')
   end
 end
 

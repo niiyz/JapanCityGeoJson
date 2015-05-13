@@ -2,8 +2,10 @@
 <html>
 <head lang="ja">
     <meta charset="UTF-8">
-    <title>GoogleMapAPIv3 市町村の形</title>
+    <title>GeoJson 日本の県市町村郡区 GoogleMapAPIv3サンプル </title>
     <script type="text/javascript" src="http://maps.googleapis.com/maps/api/js"></script>
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/lodash.js/3.8.0/lodash.min.js"></script>
+    <script type="text/javascript" src="list.json"></script>
     <style>
         html, body, #canvas {width:100%; height:100%; margin:0px; padding:0px;}
     </style>
@@ -22,9 +24,9 @@ window.onload = function() {
     var map = new google.maps.Map(div, mapOptions);
     var initCity = '氷見市';
     // シェイプ作成
-    var makeShape = function(city) {
-        if (city) {
-            map.data.loadGeoJson('http://japancityshape.niiyz.com/geojson/' + city + '.json');
+    var makeShape = function(find) {
+        if (find) {
+            map.data.loadGeoJson('http://geojson.niiyz.com/geojson/' + find.pref + '/' + find.city + '.json');
             map.data.setStyle({fillColor: 'green'});
         }
     };
@@ -46,28 +48,45 @@ window.onload = function() {
     var div = document.createElement('div');
     div.style.marginTop     = '15px';
     var setsumei = document.createElement('div');
-    setsumei.innerText = '市、県、郡、区まで付けて入力してください。'
+    setsumei.innerText = '県名、市町村名、郡区名を入力してください。'
     var input = document.createElement('input');
     input.value             = initCity;
     input.style.width       = '250px';
     input.style.height      = '40px';
     input.style.fontSize    = '32px';
     input.style.background  = 'pink';
-    var btn = document.createElement('button');
-    btn.innerText           = "塗る";
-    btn.style.width         = '100px';
-    btn.style.height        = '45px';
-    btn.style.fontSize      = '32px';
-    google.maps.event.addDomListener(btn, 'click', function() {
-        var city = input.value;
-        makeShape(city);
-        changeCenter(city);
+    var fillBtn = document.createElement('button');
+    fillBtn.innerText           = "塗る";
+    fillBtn.style.width         = '100px';
+    fillBtn.style.height        = '45px';
+    fillBtn.style.fontSize      = '32px';
+    google.maps.event.addDomListener(fillBtn, 'click', function() {
+        var find = _.find(list, function(chr) {
+            return chr.full.indexOf(input.value) !== -1;
+        });
+        console.log(find);
+        if (find) {
+            makeShape(find);
+            changeCenter(find.city);
+        }
+    });
+    var clearBtn = document.createElement('button');
+    clearBtn.innerText           = "クリア";
+    clearBtn.style.width         = '130px';
+    clearBtn.style.height        = '45px';
+    clearBtn.style.fontSize      = '32px';
+    google.maps.event.addDomListener(clearBtn, 'click', function() {
+        map.data.forEach(function(feauture) {
+            map.data.remove(feauture);
+        });
+        input.value = '';
     });
     div.appendChild(setsumei);
     div.appendChild(input);
-    div.appendChild(btn);
+    div.appendChild(fillBtn);
+    div.appendChild(clearBtn);
     map.controls[google.maps.ControlPosition.TOP_CENTER].push(div);
-    makeShape(initCity);
+    makeShape({city: '氷見市', pref: '富山県'});
 };
 </script>
 </body>
