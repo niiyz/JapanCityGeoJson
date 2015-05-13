@@ -37,17 +37,31 @@ window.onload = function() {
 
 ![Screencast](https://github.com/niiyz/JapanCityGeoJson/blob/master/screenshot.png)
 
-~~~
+
+県
+~~~ 
 map.data.loadGeoJson('http://geojson.niiyz.com/geojson/神奈川県/神奈川県.json');
 ~~~
 
+市
 ~~~
 map.data.loadGeoJson('http://geojson.niiyz.com/geojson/神奈川県/横浜市.json');
 ~~~
 
+区
 ~~~
-map.data.loadGeoJson('http://geojson.niiyz.com/geojson/神奈川県/金沢区.json');
-map.data.loadGeoJson('http://geojson.niiyz.com/geojson/神奈川県/旭区.json');
+map.data.loadGeoJson('http://geojson.niiyz.com/geojson/神奈川県/横浜市金沢区.json');
+map.data.loadGeoJson('http://geojson.niiyz.com/geojson/神奈川県/横浜市旭区.json');
+~~~
+
+郡全域
+~~~
+map.data.loadGeoJson('http://geojson.niiyz.com/geojson/高知県/高岡郡.json');
+~~~
+
+町・村
+~~~
+map.data.loadGeoJson('http://geojson.niiyz.com/geojson/高知県/高岡郡中土佐.json');
 ~~~
 
 # Demo
