@@ -1,6 +1,6 @@
 # JapanCityGeoJson
 
-国土交通省のデータから市町村の形を作るためのGeoJsonデータを小分けしました。
+県、市町村郡区の形を作るためのGeoJsonデータです。
 
 国土数値情報 (JPGIS2.1(GML)準拠及びSHAPE形式データ)　国土交通省
 
