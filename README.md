@@ -8,10 +8,12 @@
 
 GeoJson http://geojson.org/
 
+47都道府県SHAPE形式 -> 47都道府県GeoJson
 ~~~
 ogr2ogr -f GeoJSON places.json N03-14_140401.shp
 ~~~
 
+47都道府県GeoJson -> 県、市、町、村、郡、区単位のGeoJsonに分割
 ~~~
 ruby geo_to_json.rb
 ~~~
