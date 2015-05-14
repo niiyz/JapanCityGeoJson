@@ -21,18 +21,13 @@ ruby geo_to_json.rb
 GoogleMapAPIv3はGeoJsonデータに対応しているので富山県氷見市を表示してみます。
 
 ~~~
-window.onload = function() {
-    var latLng = new google.maps.LatLng(36.786897, 136.892720);
-    var mapOptions = {
-        zoom: 9,
-        center: latLng
-    };
-    var div = document.getElementById("canvas");
-    div.style.width = div.style.height = '100%';
-    var map = new google.maps.Map(div, mapOptions);
-    map.data.loadGeoJson('http://geojson.niiyz.com/geojson/富山県/氷見市.json');
-    map.data.setStyle({fillColor: 'orange'});
+var mapOptions = {
+    zoom: 9,
+    center: new google.maps.LatLng(36.786897, 136.892720)
 };
+var map = new google.maps.Map(document.getElementById("canvas"), mapOptions);
+map.data.loadGeoJson('http://geojson.niiyz.com/geojson/富山県/氷見市.json');
+map.data.setStyle({fillColor: 'green'});
 ~~~
 
 ![Screencast](https://github.com/niiyz/JapanCityGeoJson/blob/master/screenshot.png)
