@@ -62,7 +62,7 @@ map.data.loadGeoJson('http://geojson.niiyz.com/geojson/高知県/高岡郡.json'
 map.data.loadGeoJson('http://geojson.niiyz.com/geojson/高知県/高岡郡中土佐.json');
 ~~~
 
-# 47都道府県市町村郡区のデモ
+### 市町村郡区シェイプ確認デモ(GoogleMap)
 
 http://geojson.niiyz.com/
 
