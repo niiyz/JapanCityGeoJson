@@ -11,7 +11,8 @@
     </style>
 </head>
 <body>
-<div style="float:right;">
+<div style="float:right; height:35px;">
+47都道府県の市町村郡区のGeoJsonデータです。
 <a href="https://twitter.com/share" class="twitter-share-button" data-via="niiyz" data-lang="ja" data-size="large">ツイート</a>
 <script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+'://platform.twitter.com/widgets.js';fjs.parentNode.insertBefore(js,fjs);}}(document, 'script', 'twitter-wjs');</script>
 <iframe src="https://ghbtns.com/github-btn.html?user=niiyz&repo=JapanCityGeoJson&type=star&count=true&size=large" frameborder="0" scrolling="0" width="160px" height="30px"></iframe>
@@ -25,9 +26,9 @@ window.onload = function() {
         center: latLng
     };
     var div = document.getElementById("canvas");
-    div.style.width = div.style.height = '100%';
+    div.style.width = '100%';
+    div.style.height = '100%';
     var map = new google.maps.Map(div, mapOptions);
-    var initCity = '氷見市';
     // シェイプ作成
     var makeShape = function(find) {
         if (find) {
@@ -55,7 +56,7 @@ window.onload = function() {
     var setsumei = document.createElement('div');
     setsumei.innerText = '県名、市町村名、郡区名を入力してください。'
     var input = document.createElement('input');
-    input.value             = initCity;
+    input.value             = '氷見';
     input.style.width       = '250px';
     input.style.height      = '40px';
     input.style.fontSize    = '32px';
@@ -71,18 +72,21 @@ window.onload = function() {
         }
         var find;
         find = _.find(list, function(chr) {
-            return chr.pref == input.value || chr.addr1 + chr.addr2 == input.value;
+            return chr.pref == input.value;
         });
         if (!find) {
-            console.log("B");
             find = _.find(list, function(chr) {
-                return chr.main == input.value;
+                return chr.addr1 + chr.addr2 == input.value;
             });
         }
         if (!find) {
-            console.log("C");
             find = _.find(list, function(chr) {
-                var full = chr.pref + chr.addr1 + chr.addr2
+                return chr.main.indexOf(input.value) !== -1;
+            });
+        }
+        if (!find) {
+            find = _.find(list, function(chr) {
+                var full = chr.pref + chr.main + chr.addr1 + chr.addr2
                 return full.indexOf(input.value) !== -1;
             });
         }
