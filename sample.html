@@ -20,7 +20,7 @@ window.onload = function() {
     var div = document.getElementById("canvas");
     div.style.width = div.style.height = '100%';
     var map = new google.maps.Map(div, mapOptions);
-    map.data.loadGeoJson('http://japancityshape.niiyz.com/geojson/富山県/氷見市.json');
+    map.data.loadGeoJson('http://geojson.niiyz.com/geojson/富山県/氷見市.json');
     map.data.setStyle({fillColor: 'green'});
 };
 </script>
