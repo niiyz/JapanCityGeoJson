@@ -1,12 +1,14 @@
 # JapanCityGeoJson
 
-県、市町村郡区の形を作るためのGeoJsonデータです。
+47都道府県の県・市・町・村・郡・区の形を作るためのGeoJsonデータ、TopoJsonデータです。
 
 国土数値情報 (JPGIS2.1(GML)準拠及びSHAPE形式データ)　国土交通省
 
 国土交通省国土政策局GISHP http://nlftp.mlit.go.jp/ksj/gml/datalist/KsjTmplt-N03.html
 
 GeoJson http://geojson.org/
+
+# ファイル作成コマンド
 
 47都道府県SHAPE形式 -> 47都道府県GeoJson
 ~~~
@@ -16,6 +18,11 @@ ogr2ogr -f GeoJSON places.json N03-14_140401.shp
 47都道府県GeoJson -> 県、市、町、村、郡、区単位のGeoJsonに分割
 ~~~
 ruby geo_to_json.rb
+~~~
+
+GeoJson -> TopoJson
+~~~
+./geojson_to_topojson.sh
 ~~~
 
 # サンプル 例:GoogleMapAPIv3
@@ -68,21 +75,7 @@ http://geojson.niiyz.com/
 
 # サンプル 例: D3.js
 
-GeoJsonをTopoJsonというより軽い形式に変換してD3.jsで使用してみます。
-
-~~~
-% npm install -g topojson 
-% topojson --version
-1.6.19
-~~~
-
-富山県のGeoJsonをTopoJsonへ変換。
-
-id属性に氷見市、朝日町、富山市…を付与。
-
-~~~
-% topojson --id-property N03_004 -p NAME=name -p name -o toyama.topojson geojson/富山県/富山県.json
-~~~
+TopoJsonをD3.jsで使用してみます。
 
 ~~~
 <style>
