@@ -89,7 +89,7 @@ var svg = d3.select("body").append("svg")
     .attr("width", width)
     .attr("height", height);
     
-d3.json("toyama.topojson", function(error, json) {
+d3.json("topojson/富山県/富山県.topojson", function(error, json) {
   
   var toyama = topojson.feature(json, json.objects["富山県"]);
   var bounds = d3.geo.bounds(toyama);
