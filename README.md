@@ -8,6 +8,8 @@
 
 GeoJson http://geojson.org/
 
+TopoJson https://github.com/mbostock/topojson
+
 # GeoJson and TopoJson作成コマンド
 
 47都道府県SHAPE形式 -> 47都道府県GeoJson
