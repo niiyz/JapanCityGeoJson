@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<meta charset="utf-8">
+<body>
+<style>
+    .氷見市 { fill: red;}
+</style>
+<script src="http://d3js.org/d3.v3.min.js"></script>
+<script src="http://d3js.org/topojson.v1.min.js"></script>
+<script type="text/javascript" src="./data/toyama_pref.js"></script>
+<script>
+var width = 800, height = 500;
+var svg = d3.select("body").append("svg")
+    .attr("width", width)
+    .attr("height", height);
+// var json = {<-- TopoJson -->} in data/toyama_pref.js
+var toyama = topojson.feature(json, json.objects["富山県"]);
+var bounds = d3.geo.bounds(toyama);
+var centerX = d3.sum(bounds, function(d) {return d[0];}) / 2,
+      centerY = d3.sum(bounds, function(d) {return d[1];}) / 2;
+var projection = d3.geo.mercator()
+    .scale(10000)
+    .center([centerX, centerY]);
+
+svg.selectAll("path")
+    .data(toyama.features).enter().append("path")
+    .attr("d", d3.geo.path().projection(projection))
+    .attr("class", function(d) { return d.id; });
+</script>
+</body>
+</html>
