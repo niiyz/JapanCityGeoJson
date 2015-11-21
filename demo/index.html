@@ -32,7 +32,7 @@ window.onload = function() {
     // シェイプ作成
     var makeShape = function(find) {
         if (find) {
-            map.data.loadGeoJson('http://geojson.niiyz.com/geojson/' + find.pref + '/' + find.main + '.json');
+            map.data.loadGeoJson('../geojson/' + find.pref + '/' + find.main + '.json');
             map.data.setStyle({fillColor: 'green'});
         }
     };
