@@ -31,6 +31,23 @@ GeoJson -> TopoJson
 
 GoogleMapAPIv3はGeoJsonデータに対応しているので富山県氷見市を表示してみます。
 
+## ローカルに設置したGeoJsonを追加
+
+~~~
+var data = {<-- GeoJson -->};
+var mapOptions = {
+    zoom: 9,
+    center: new google.maps.LatLng(36.786897, 136.892720)
+};
+var map = new google.maps.Map(document.getElementById("canvas"), mapOptions);
+map.data.addGeoJson(data);
+map.data.setStyle({fillColor: 'green'});
+~~~
+
+![Screencast](https://github.com/niiyz/JapanCityGeoJson/blob/master/screenshot.png)
+
+## サーバーに設置したGeoJsonを読込
+
 ~~~
 var mapOptions = {
     zoom: 9,
@@ -41,12 +58,10 @@ map.data.loadGeoJson('http://geojson.niiyz.com/geojson/富山県/氷見市.json'
 map.data.setStyle({fillColor: 'green'});
 ~~~
 
-![Screencast](https://github.com/niiyz/JapanCityGeoJson/blob/master/screenshot.png)
-
 その他の市町村の例
 
 県
-~~~ 
+~~~
 map.data.loadGeoJson('http://geojson.niiyz.com/geojson/神奈川県/神奈川県.json');
 ~~~
 
@@ -90,9 +105,9 @@ var width = 800, height = 500;
 var svg = d3.select("body").append("svg")
     .attr("width", width)
     .attr("height", height);
-    
+
 d3.json("topojson/富山県/富山県.topojson", function(error, json) {
-  
+
   var toyama = topojson.feature(json, json.objects["富山県"]);
   var bounds = d3.geo.bounds(toyama);
   var centerX = d3.sum(bounds, function(d) {return d[0];}) / 2,
