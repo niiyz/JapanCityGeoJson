@@ -56,8 +56,8 @@ class GeoJsonToCity
 
   def make
     @datas.each do |city, collection|
-      data = {"type": "FeatureCollection", "features": []}
-      data["features"] = collection
+      data = {'type' => 'FeatureCollection', 'features' => []}
+      data[:features] = collection
       addr = self.checkCity(collection[0]['properties'])
       pref = addr[0]
       FileUtils.mkdir_p('geojson/' + pref)
@@ -81,7 +81,7 @@ class GeoJsonToCity
         addr1 = addr[1]
         addr2 = addr[2]
       end
-      list.push({'pref': pref, 'main': city, 'addr1': addr1, 'addr2': addr2})
+      list.push({'pref' => pref, 'main' => city, 'addr1' => addr1, 'addr2' => addr2})
     end
     File.open('list.json', 'w').write('var list = ' + JSON.generate(list) + ';')
   end
