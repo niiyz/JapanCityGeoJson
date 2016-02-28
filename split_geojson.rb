@@ -16,10 +16,10 @@ class GeoJsonToCity
         # 都道府県
         self.setData(city[0], feature)
         # 市町村1
-        self.setData(city[1], feature)
+        self.setData(city[0] + city[1], feature)
         # 市町村2
         if !city[2].nil?
-          word = city[1] + city[2]
+          word = city[0] + city[1] + city[2]
           self.setData(word, feature)
         end
       end
@@ -61,7 +61,7 @@ class GeoJsonToCity
       addr = self.checkCity(collection[0]['properties'])
       pref = addr[0]
       FileUtils.mkdir_p('geojson/' + pref)
-      File.open('geojson/' + pref + '/' + city + '.json', 'w').write(JSON.generate(data))
+      File.open('geojson/' + pref + '/' + ( ( city == pref ) ? city : city.sub( /^#{pref}/, '' ) ) + '.json', 'w').write(JSON.generate(data))
     end
   end
 
