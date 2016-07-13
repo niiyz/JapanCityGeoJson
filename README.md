@@ -33,7 +33,7 @@ GoogleMapAPIv3はGeoJsonデータに対応しているので富山県氷見市�
 
 ## ローカルに設置したGeoJsonを追加
 
-~~~
+~~~ js
 var data = {<-- GeoJson -->};
 var mapOptions = {
     zoom: 9,
@@ -48,7 +48,7 @@ map.data.setStyle({fillColor: 'green'});
 
 ## サーバーに設置したGeoJsonを読込
 
-~~~
+~~~ js
 var mapOptions = {
     zoom: 9,
     center: new google.maps.LatLng(36.786897, 136.892720)
@@ -94,7 +94,7 @@ http://geojson.niiyz.com/
 
 TopoJsonをD3.jsで使用してみます。
 
-~~~
+~~~ html
 <style>
     .氷見市 { fill: red;}
 </style>
