@@ -1,6 +1,6 @@
 # JapanCityGeoJson
 
-47都道府県の県・市・町・村・郡・区の形を作るためのGeoJsonデータ、TopoJsonデータです。
+47都道府県の県・市・町・村・郡・区の形を作るための[GeoJsonデータ](/geojson)、[TopoJsonデータ](/topojson)です。
 
 国土数値情報 (JPGIS2.1(GML)準拠及びSHAPE形式データ)　国土交通省
 
