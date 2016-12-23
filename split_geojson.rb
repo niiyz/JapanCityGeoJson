@@ -7,8 +7,8 @@ class GeoJsonToCity
     @datas = {}
   end
 
-  def split()
-    Dir.glob('places.json').each do |path|
+  def split(path)
+    Dir.glob(path).each do |path|
       str      = File.open(path).read(nil, '')
       json     = JSON.parse(str)
       features = json['features']
@@ -72,5 +72,6 @@ class GeoJsonToCity
 end
 
 city = GeoJsonToCity.new
-city.split()
+japanGeoJsonAll = './places.json'
+city.split(japanGeoJsonAll)
 city.make()
