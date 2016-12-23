@@ -1,0 +1,22 @@
+{
+  "name": "japan-city-geojson",
+  "version": "0.0.0",
+  "description": "GeoJson of Japanese cities. and TopoJson. ",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/niiyz/JapanCityGeoJson.git"
+  },
+  "keywords": [
+    "japan"
+  ],
+  "author": "niiyz <yoshida@niiyz.com> (http://niiyz.com)",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/niiyz/JapanCityGeoJson/issues"
+  },
+  "homepage": "https://github.com/niiyz/JapanCityGeoJson#readme"
+}
