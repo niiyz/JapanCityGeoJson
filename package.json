@@ -4,15 +4,19 @@
   "description": "GeoJson of Japanese cities. and TopoJson. topojson wrapper.",
   "scripts": {
     "japan": "$(npm bin)/geo2topo -o ./test.japan.topo.json -q 1e4 places.json",
-    "city":  "$(npm bin)/geo2topo -o ./test.city.topo.json -q 1e4 geojson/富山県/氷見市.json",
-    "pref":  "$(npm bin)/geo2topo -o ./test.pref.topo.json -q 1e4 geojson/47都道府県/富山県.json"
+    "city": "$(npm bin)/geo2topo -o ./test.city.topo.json -q 1e4 geojson/富山県/氷見市.json",
+    "pref": "$(npm bin)/geo2topo -o ./test.pref.topo.json -q 1e4 geojson/47都道府県/富山県.json"
   },
   "repository": {
     "type": "git",
     "url": "git+https://github.com/niiyz/JapanCityGeoJson.git"
   },
   "keywords": [
-    "japan", "topojson", "geojson", "city", "pref"
+    "japan",
+    "topojson",
+    "geojson",
+    "city",
+    "pref"
   ],
   "author": "niiyz <yoshida@niiyz.com> (http://niiyz.com)",
   "license": "MIT",
@@ -21,6 +25,7 @@
   },
   "homepage": "https://github.com/niiyz/JapanCityGeoJson#readme",
   "dependencies": {
+    "topojson-client": "^2.1.0",
     "topojson-server": "^2.0.0"
   }
 }
