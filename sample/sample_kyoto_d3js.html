@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<meta charset="utf-8">
+<body>
+<style>
+    .京都市北区 {
+        fill: #cc9b78;
+    }
+
+    .京都市上京区 {
+        fill: #99CCFF;
+    }
+
+    .京都市左京区 {
+        fill: #375d13;
+    }
+
+    .京都市中京区 {
+        fill: orange;
+    }
+
+    .京都市東山区 {
+        fill: #4e8048;
+    }
+
+    .京都市下京区 {
+        fill: gray;
+    }
+
+    .京都市南区 {
+        fill: #2bff90;
+    }
+
+    .京都市右京区 {
+        fill: #66CC33;
+    }
+
+    .京都市伏見区 {
+        fill: #a5ffac;
+    }
+
+    .京都市山科区 {
+        fill: #80492e;
+    }
+
+    .京都市西京区 {
+        fill: #754eb6;
+    }
+
+    .福知山市 {
+        fill: #b71d38;
+    }
+
+    .舞鶴市 {
+        fill: #66CC33;
+    }
+
+    .綾部市 {
+        fill: #ff3f1f;
+    }
+
+    .宇治市 {
+        fill: #E91E63;
+    }
+
+    .宮津市 {
+        fill: red;
+    }
+
+    .亀岡市 {
+        fill: pink;
+    }
+
+    .城陽市 {
+        fill: #cc6741;
+    }
+
+    .向日市 {
+        fill: #b0ff8c;
+    }
+
+    .長岡京市 {
+        fill: #fde8fb;
+    }
+
+    .八幡市 {
+        fill: #2acccc;
+    }
+
+    .京田辺市 {
+        fill: #ff5b90;
+    }
+
+    .京丹後市 {
+        fill: #009688;
+    }
+
+    .南丹市 {
+        fill: #fbf6ed;
+    }
+
+    .木津川市 {
+        fill: purple;
+    }
+
+    .乙訓郡大山崎町 {
+        fill: #66CC33;
+    }
+
+    .久世郡久御山町 {
+        fill: pink;
+    }
+
+    .綴喜郡井手町 {
+        fill: #66CC33;
+    }
+
+    .綴喜郡宇治田原町 {
+        fill: #ff8271;
+    }
+
+    .相楽郡笠置町 {
+        fill: #27805d;
+    }
+
+    .相楽郡和束町 {
+        fill: #ba88cc;
+    }
+
+    .相楽郡精華町 {
+        fill: pink;
+    }
+
+    .相楽郡南山城村 {
+        fill: #66CC33;
+    }
+
+    .船井郡京丹波町 {
+        fill: hsl(210, 100%, 50%);
+    }
+
+    .与謝郡伊根町 {
+        fill: #ffd621;
+    }
+
+    .与謝郡与謝野町 {
+        fill: purple;
+    }
+</style>
+<script src="http://d3js.org/d3.v3.min.js"></script>
+<script src="http://d3js.org/topojson.v1.min.js"></script>
+<script type="text/javascript" src="data/kyoto_pref_topo.js"></script>
+<script>
+var width = 800, height = 500;
+var svg = d3.select("body").append("svg")
+    .attr("width", width)
+    .attr("height", height);
+var kyoto = topojson.feature(json, json.objects["京都府"]);
+var bounds = d3.geo.bounds(kyoto);
+var centerX = d3.sum(bounds, function(d) {return d[0];}) / 2,
+  centerY = d3.sum(bounds, function(d) {return d[1];}) / 2;
+var projection = d3.geo.mercator()
+    .scale(20000)
+    .center([centerX, centerY]);
+
+svg.selectAll("path")
+    .data(kyoto.features).enter().append("path")
+    .attr("d", d3.geo.path().projection(projection))
+    .attr("class", function(d) { return d.id; });
+</script>
+</body>
+</html>

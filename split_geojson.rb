@@ -35,7 +35,7 @@ class GeoJsonToCity
       if !@datas.has_key?(key) then
         @datas[key] = []
       end
-      feature['class'] = fileName
+      feature['id'] = fileName
       @datas[key].push(feature)
     end
   end
@@ -73,6 +73,6 @@ class GeoJsonToCity
 end
 
 city = GeoJsonToCity.new
-japanGeoJsonAll = './japan2016.json'
+japanGeoJsonAll = './data/geojson/japan2016.json'
 city.split(japanGeoJsonAll)
 city.make()
