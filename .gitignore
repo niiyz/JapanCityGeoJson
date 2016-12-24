@@ -1,4 +1,3 @@
-places.json
-geo_to_json
 /node_modules
 test*.json
+data/
