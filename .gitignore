@@ -1,4 +1,4 @@
 /node_modules
 test*.json
-data/
+/data
 japan*.json
