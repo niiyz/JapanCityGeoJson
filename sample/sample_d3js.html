@@ -24,7 +24,7 @@ var projection = d3.geo.mercator()
 svg.selectAll("path")
     .data(toyama.features).enter().append("path")
     .attr("d", d3.geo.path().projection(projection))
-    .attr("class", function(d) { return d.id; });
+    .attr("class", function(d) { console.log(d.id);return d.id; });
 </script>
 </body>
 </html>
