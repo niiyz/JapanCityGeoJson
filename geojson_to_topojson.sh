@@ -11,6 +11,6 @@ do
     fi
     basename=$(basename $file)
     name=( `echo $basename | sed -e "s/\.json/.topojson/"`)
-    #echo $name
-    topojson --id-property N03_004 -p NAME=name -p name -o $dir"/"$name geojson/$pref/$basename
+    echo $name
+    $(npm bin)/geo2topo -o $dir/$name -q 1e4 geojson/$pref/$basename
 done
