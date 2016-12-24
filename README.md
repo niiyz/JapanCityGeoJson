@@ -11,14 +11,6 @@ GeoJson http://geojson.org/
 
 TopoJson https://github.com/mbostock/topojson
 
-
-![Screencast](https://github.com/niiyz/JapanCityGeoJson/blob/master/screenshot.png)
-
-
-### 市町村郡区シェイプ確認デモ(GoogleMap)
-
-http://geojson.niiyz.com/
-
 # D3.js
 
 D3.jsで京都のtopojsonを使用してみます。
@@ -49,3 +41,6 @@ svg.selectAll("path")
 
 ![Screencast](https://github.com/niiyz/JapanCityGeoJson/blob/master/screenshot2.png)
 
+### 市町村郡区シェイプ確認デモ(GoogleMap)
+
+http://geojson.niiyz.com/
