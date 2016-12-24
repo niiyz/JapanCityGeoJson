@@ -46,3 +46,6 @@ svg.selectAll("path")
 ### 市町村郡区シェイプ確認デモ(GoogleMap)
 
 http://geojson.niiyz.com/
+
+### データ更新手順
+https://github.com/niiyz/JapanCityGeoJson/wiki/データ更新手順
