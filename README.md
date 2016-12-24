@@ -2,6 +2,16 @@
 
 47都道府県の県・市・町・村・郡・区の形を作るための[GeoJsonデータ](/geojson)、[TopoJsonデータ](/topojson)です。
 
+
+国土数値情報 (JPGIS2.1(GML)準拠及びSHAPE形式データ)　国土交通省
+
+国土交通省国土政策局GISHP http://nlftp.mlit.go.jp/ksj/gml/datalist/KsjTmplt-N03.html
+
+GeoJson http://geojson.org/
+
+TopoJson https://github.com/mbostock/topojson
+
+
 # サンプル 例:GoogleMapAPIv3
 
 GoogleMapAPIv3はGeoJsonデータに対応しているので富山県氷見市を表示してみます。
@@ -62,10 +72,3 @@ d3.json("topojson/富山県/富山県.topojson", function(error, json) {
 
 ![Screencast](https://github.com/niiyz/JapanCityGeoJson/blob/master/screenshot2.png)
 
-国土数値情報 (JPGIS2.1(GML)準拠及びSHAPE形式データ)　国土交通省
-
-国土交通省国土政策局GISHP http://nlftp.mlit.go.jp/ksj/gml/datalist/KsjTmplt-N03.html
-
-GeoJson http://geojson.org/
-
-TopoJson https://github.com/mbostock/topojson
