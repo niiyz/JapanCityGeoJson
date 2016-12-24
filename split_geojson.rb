@@ -63,6 +63,7 @@ class GeoJsonToCity
     @datas.each do |key, collection|
       data = {'type' => 'FeatureCollection', 'features' => []}
       data[:features] = collection
+      p key
       prefDir, fileName = key.split('-')
       FileUtils.mkdir_p("geojson/#{prefDir}")
       File.open("geojson/#{prefDir}/#{fileName}.json", 'w').write(JSON.generate(data))
@@ -72,6 +73,6 @@ class GeoJsonToCity
 end
 
 city = GeoJsonToCity.new
-japanGeoJsonAll = './places.json'
+japanGeoJsonAll = './japan2016.json'
 city.split(japanGeoJsonAll)
 city.make()
