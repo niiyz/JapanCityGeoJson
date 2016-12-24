@@ -14,7 +14,7 @@ TopoJson https://github.com/mbostock/topojson
 
 国土交通省のサイトからダウンロードした「47都道府県SHAPE形式」から「47都道府県GeoJson」を作成
 ~~~
-ogr2ogr -f GeoJSON places.json N03-14_140401.shp
+ogr2ogr -f GeoJSON japan2016.json ./data/N03-160101_GML/N03-16_160101.shp
 ~~~
 
 「47都道府県GeoJson」がどデカイので「県、市、町、村、郡、区単位のGeoJson」に分割
