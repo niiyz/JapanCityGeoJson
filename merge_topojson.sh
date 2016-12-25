@@ -7,14 +7,21 @@ do
     dir="topojson/"$pref
 
     basename=$(basename $file)
-    if [ $basename = '.DS_Store' -o ! ${basename##*.} = '.simple.topojson' ]; then
+    if [ $basename = '.DS_Store' -o ! ${basename##*.} = 'topojson' ]; then
       continue
     fi
 
-    name=( `echo $basename | sed -e "s/\.topojson//"`)
-    echo "merge: "$pref" - "$name
+    name1=( `echo $basename | sed -e "s/\.topojson//"`)
+
+    if [ ! ${name1##*.} = 'simple' ]; then
+        continue
+    fi
+
+    name2=( `echo $name1 | sed -e "s/\.simple//"`)
+
+    echo "merge: "$pref" - "$name2
 
     # merge
-    $(npm bin)/topomerge $name=$name -k d.id < topojson/$pref/$basename > topojson/$pref/$name.merge.topojson
+    $(npm bin)/topomerge $name2=$name2 -k d.id -o topojson/$pref/$name2.merge.topojson topojson/$pref/$basename
 
 done
