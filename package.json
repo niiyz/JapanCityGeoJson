@@ -25,7 +25,6 @@
   "homepage": "https://github.com/niiyz/JapanCityGeoJson#readme",
   "dependencies": {
     "topojson-client": "^2.1.0",
-    "topojson-server": "^2.0.0",
-    "topojson-simplify": "^2.0.0"
+    "topojson-server": "^2.0.0"
   }
 }
