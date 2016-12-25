@@ -1,6 +1,6 @@
 #!/bin/bash
 
-find ./topojson -type f | while read file
+find ./topojson/47都道府県 -type f | while read file
 do
     arr=( `echo $file | tr -s '/' ' '`)
     pref=${arr[2]}
