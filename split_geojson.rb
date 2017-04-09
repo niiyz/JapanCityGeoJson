@@ -18,49 +18,64 @@ class GeoJsonToCity
         addr = self.parseProperties(feature['properties'])
         # properties削除
         feature.delete('properties')
-        # 都道府県
-        self.setData('47都道府県', addr[0], feature)
-        # 市町村1 ex. ["東京都", "府中市"] , ["広島県", "府中市"]
-        self.setData(addr[0], addr[1], feature)
-        # 市町村2 ex.["沖縄県", "八重山郡", "与那国町"]
-        if !addr[2].nil?
-          self.setData(addr[0], addr[1] + addr[2], feature)
+        # 都道府県/富山県.json
+        self.setData(feature,
+                     '47都道府県',
+                     addr[:pref],
+                     addr[:pref_code])
+        # 行政区分コードありなら市町村　例）富山県/氷見市.json
+        unless addr[:code].nil?
+          self.setData(feature,
+                       addr[:pref],
+                       addr[:city],
+                       addr[:code])
         end
       end
     end
   end
 
-  def setData(dirName, fileName, feature)
-    key = dirName + '-' + fileName
-    if !key.nil?
-      if !@datas.has_key?(key) then
-        @datas[key] = []
+  def setData(feature, dir_name, file_name, key)
+    unless key.nil?
+      # data
+      unless @data.has_key?(key)
+        @data[key] = []
+      end
+      feature['id'] = key
+      @data[key].push(feature)
       # data_info
       unless @data_info.has_key?(key)
         @data_info[key] = {:dir_name => dir_name, :file_name => file_name}
       end
-      feature['id'] = fileName
-      @datas[key].push(feature)
     end
   end
 
   def parseProperties(prop)
-    addr = []
-    pref  = prop['N03_001']
-    city1 = prop['N03_002']
-    city2 = prop['N03_003']
-    city3 = prop['N03_004']
-    addr.push(pref)
-    if !city1.nil? && pref != '北海道'
-      addr.push(city1)
+    pref     = prop['N03_001']
+    city1    = prop['N03_002']
+    city2    = prop['N03_003']
+    city3    = prop['N03_004']
+    code     = prop['N03_007']
+
+    city = ''
+    unless city1.nil? && pref != '北海道'
+      city += city1
     end
-    if !city2.nil?
-      addr.push(city2)
+    unless city2.nil?
+      city += city2
     end
-    if !city3.nil?
-      addr.push(city3)
+    unless city3.nil?
+      city += city3
     end
-    return addr
+    if code.nil?
+      # 未所属の場合、県名から都道府県コード取得
+      pref_code = self.get_pref_code(pref)
+    else
+      # 行政区分コード先頭2文字が都道府県コード
+      pref_code = code[0, 2]
+    end
+    {:pref => pref, :city => city, :pref_code => pref_code, :code => code}
+  end
+
   def get_pref_code(pref_name)
     pref = %w[
         北海道 青森県 岩手県 宮城県 秋田県 山形県 福島県 茨城県 栃木県 群馬県 埼玉県
