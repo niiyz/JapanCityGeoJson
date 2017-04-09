@@ -3,7 +3,7 @@ require 'fileutils'
 
 class GeoJsonToCity
 
-  def initialize()
+  def initialize
     @data      = {}
     @data_info = {}
   end
@@ -15,17 +15,17 @@ class GeoJsonToCity
       features = json['features']
       features.each do |feature|
         # 名称抽出
-        addr = self.parseProperties(feature['properties'])
+        addr = self.parse_properties(feature['properties'])
         # properties削除
         feature.delete('properties')
         # 都道府県/富山県.json
-        self.setData(feature,
+        self.set_data(feature,
                      '47都道府県',
                      addr[:pref],
                      addr[:pref_code])
         # 行政区分コードありなら市町村　例）富山県/氷見市.json
         unless addr[:code].nil?
-          self.setData(feature,
+          self.set_data(feature,
                        addr[:pref],
                        addr[:city],
                        addr[:code])
@@ -34,7 +34,7 @@ class GeoJsonToCity
     end
   end
 
-  def setData(feature, dir_name, file_name, key)
+  def set_data(feature, dir_name, file_name, key)
     unless key.nil?
       # data
       unless @data.has_key?(key)
@@ -49,7 +49,7 @@ class GeoJsonToCity
     end
   end
 
-  def parseProperties(prop)
+  def parse_properties(prop)
     pref     = prop['N03_001']
     city1    = prop['N03_002']
     city2    = prop['N03_003']
@@ -102,7 +102,7 @@ class GeoJsonToCity
 end
 
 city = GeoJsonToCity.new
-japanGeoJsonAll = './data/geojson/japan2016.json'
-city.split(japanGeoJsonAll)
+japan_get_json_all = './data/geojson/japan2016.json'
+city.split(japan_get_json_all)
 
 city.make()
