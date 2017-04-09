@@ -69,19 +69,29 @@ class GeoJsonToCity
     sprintf('%02d', idx + 1)
   end
 
+  def make_read_me(path)
+    file = File.open(path, 'w')
+    file.puts "|  都道府県  | 都道府県コード | 行政区分 | 行政区分コード |"
+    file.puts "|-----------|--------------|--------- |--------------|"
+    file
+  end
+
   def make
 
     @data.each do |key,collection|
 
-      file = File.open("geojson/#{key}/README.md", 'w')
-      file.puts "|  都道府県  | 都道府県コード | 行政区分 | 行政区分コード |"
-      file.puts "|-----------|--------------|--------- |--------------|"
+      geo_readme  = self.make_read_me("geojson/#{key}/README.md")
+      topo_readme = self.make_read_me("topojson/#{key}/README.md")
 
       collection.each do |info|
-        file.puts "| #{info[:pref]} | #{info[:pref_code]} | #{info[:city]} | #{info[:code]} |"
+        line = "| #{info[:pref]} | #{info[:pref_code]} | #{info[:city]} | #{info[:code]} |"
+        geo_readme.puts line
+        topo_readme.puts line
       end
 
-      file.close
+      geo_readme.close
+      topo_readme.close
+
     end
 
   end
