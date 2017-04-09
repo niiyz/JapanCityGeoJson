@@ -28,12 +28,20 @@ class GeoJsonToCity
         if self.is_tokyo23(addr)
           self.set_data(feature, addr[:pref_code], 'tokyo23', addr[:code])
         end
+        # 北陸3県
+        if self.is_hokuriku(addr)
+          self.set_data(feature, 'prefectures', 'hokuriku', addr[:code])
+        end
       end
     end
   end
 
   def is_tokyo23(addr)
     addr[:pref_code].to_i == 13 && addr[:code].to_i >= 13101 && addr[:code].to_i <= 13123
+  end
+
+  def is_hokuriku(addr)
+    addr[:pref_code].to_i == 16 || addr[:pref_code].to_i == 17 || addr[:pref_code].to_i == 18
   end
 
   def set_data(feature, dir_name, key, id = nil)
