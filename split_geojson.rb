@@ -20,21 +20,19 @@ class GeoJsonToCity
         feature.delete('properties')
         # 都道府県/富山県.json
         self.set_data(feature,
-                     '47都道府県',
-                     addr[:pref],
+                     'prefectures',
                      addr[:pref_code])
         # 行政区分コードありなら市町村　例）富山県/氷見市.json
         unless addr[:code].nil?
           self.set_data(feature,
-                       addr[:pref],
-                       addr[:city],
+                       addr[:pref_code],
                        addr[:code])
         end
       end
     end
   end
 
-  def set_data(feature, dir_name, file_name, key)
+  def set_data(feature, dir_name, key)
     unless key.nil?
       # data
       unless @data.has_key?(key)
@@ -44,7 +42,7 @@ class GeoJsonToCity
       @data[key].push(feature)
       # data_info
       unless @data_info.has_key?(key)
-        @data_info[key] = {:dir_name => dir_name, :file_name => file_name}
+        @data_info[key] = {:dir_name => dir_name, :file_name => key}
       end
     end
   end
