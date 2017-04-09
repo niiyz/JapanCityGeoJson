@@ -4,7 +4,7 @@ require 'fileutils'
 class GeoJsonToCity
 
   def initialize()
-    @datas = {}
+    @data      = {}
     @data_info = {}
   end
 
