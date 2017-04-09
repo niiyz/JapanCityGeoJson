@@ -103,7 +103,7 @@ class GeoJsonToCity
 end
 
 city = GeoJsonToCity.new
-japan_get_json_all = './data/geojson/japan2016.json'
-city.split(japan_get_json_all)
+japan_json = './data/geojson/japan2016.json'
+city.split(japan_json)
 
 city.make()
