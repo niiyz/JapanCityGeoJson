@@ -90,13 +90,12 @@ class GeoJsonToCity
   end
 
   def make
-    @datas.each do |key, collection|
-      data = {'type' => 'FeatureCollection', 'features' => []}
-      data[:features] = collection
-      p key
-      prefDir, fileName = key.split('-')
-      FileUtils.mkdir_p("geojson/#{prefDir}")
-      File.open("geojson/#{prefDir}/#{fileName}.json", 'w').write(JSON.generate(data))
+    @data.each do |key, collection|
+      data      = {'type' => 'FeatureCollection', 'features' => collection}
+      dir_name  = @data_info[key][:dir_name]
+      file_name = @data_info[key][:file_name]
+      FileUtils.mkdir_p("geojson/#{dir_name}")
+      File.open("geojson/#{prefDir}/#{file_name}.json", 'w').write(JSON.generate(data))
     end
   end
 
@@ -105,4 +104,5 @@ end
 city = GeoJsonToCity.new
 japanGeoJsonAll = './data/geojson/japan2016.json'
 city.split(japanGeoJsonAll)
+
 city.make()
