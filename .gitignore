@@ -2,3 +2,4 @@
 test*.json
 /data
 japan*.json
+/vendor
