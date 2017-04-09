@@ -48,19 +48,24 @@ class GeoJsonToCity
           p addr[:code]
           self.set_data(feature,
                         addr[:pref_code],
-                        'tokyo23')
+                        'tokyo23',
+                        addr[:code])
         end
       end
     end
   end
 
-  def set_data(feature, dir_name, key)
+  def set_data(feature, dir_name, key, id = nil)
     unless key.nil?
       # data
       unless @data.has_key?(key)
         @data[key] = []
       end
-      feature['id'] = key
+      if id.nil?
+        feature['id'] = key
+      else
+        feature['id'] = id
+      end
       @data[key].push(feature)
       # data_info
       unless @data_info.has_key?(key)
@@ -115,7 +120,7 @@ class GeoJsonToCity
       dir_name      = @data_info[key][:dir_name]
       file_name     = @data_info[key][:file_name]
       save_dir_name = "geojson/#{dir_name}"
-      p file_name
+      p "geo #{file_name}"
       FileUtils.mkdir_p(save_dir_name)
       File.open("#{save_dir_name}/#{file_name}.json", 'w').write(JSON.generate(data))
     end
