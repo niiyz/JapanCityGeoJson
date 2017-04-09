@@ -5,6 +5,7 @@ class GeoJsonToCity
 
   def initialize()
     @datas = {}
+    @data_info = {}
   end
 
   def split(path)
@@ -34,6 +35,9 @@ class GeoJsonToCity
     if !key.nil?
       if !@datas.has_key?(key) then
         @datas[key] = []
+      # data_info
+      unless @data_info.has_key?(key)
+        @data_info[key] = {:dir_name => dir_name, :file_name => file_name}
       end
       feature['id'] = fileName
       @datas[key].push(feature)
