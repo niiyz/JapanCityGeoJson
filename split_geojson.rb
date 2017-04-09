@@ -32,13 +32,40 @@ class GeoJsonToCity
     end
   end
 
-  def set_data(feature, dir_name, key)
+  def split_tokyo23(path)
+
+    Dir.glob(path).each do |path|
+      str = File.open(path).read(nil, '')
+      json = JSON.parse(str)
+      features = json['features']
+      features.each do |feature|
+        # 名称抽出
+        addr = self.parse_properties(feature['properties'])
+        # properties削除
+        feature.delete('properties')
+        # 23区
+        if addr[:pref_code].to_i == 13 && addr[:code].to_i >= 13101 && addr[:code].to_i <= 13123
+          p addr[:code]
+          self.set_data(feature,
+                        addr[:pref_code],
+                        'tokyo23',
+                        addr[:code])
+        end
+      end
+    end
+  end
+
+  def set_data(feature, dir_name, key, id = nil)
     unless key.nil?
       # data
       unless @data.has_key?(key)
         @data[key] = []
       end
-      feature['id'] = key
+      if id.nil?
+        feature['id'] = key
+      else
+        feature['id'] = id
+      end
       @data[key].push(feature)
       # data_info
       unless @data_info.has_key?(key)
@@ -93,6 +120,7 @@ class GeoJsonToCity
       dir_name      = @data_info[key][:dir_name]
       file_name     = @data_info[key][:file_name]
       save_dir_name = "geojson/#{dir_name}"
+      p "geo #{file_name}"
       FileUtils.mkdir_p(save_dir_name)
       File.open("#{save_dir_name}/#{file_name}.json", 'w').write(JSON.generate(data))
     end
@@ -102,6 +130,6 @@ end
 
 city = GeoJsonToCity.new
 japan_json = './data/geojson/japan2016.json'
-city.split(japan_json)
+city.split_tokyo23(japan_json)
 
 city.make()
