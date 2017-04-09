@@ -18,38 +18,15 @@ class GeoJsonToCity
         addr = self.parse_properties(feature['properties'])
         # properties削除
         feature.delete('properties')
-        # 都道府県/富山県.json
-        self.set_data(feature,
-                     'prefectures',
-                     addr[:pref_code])
-        # 行政区分コードありなら市町村　例）富山県/氷見市.json
+        # 都道府県
+        self.set_data(feature, 'prefectures', addr[:pref_code])
+        # 行政区分
         unless addr[:code].nil?
-          self.set_data(feature,
-                       addr[:pref_code],
-                       addr[:code])
+          self.set_data(feature, addr[:pref_code], addr[:code])
         end
-      end
-    end
-  end
-
-  def split_tokyo23(path)
-
-    Dir.glob(path).each do |path|
-      str = File.open(path).read(nil, '')
-      json = JSON.parse(str)
-      features = json['features']
-      features.each do |feature|
-        # 名称抽出
-        addr = self.parse_properties(feature['properties'])
-        # properties削除
-        feature.delete('properties')
-        # 23区
+        # 東京都23区
         if addr[:pref_code].to_i == 13 && addr[:code].to_i >= 13101 && addr[:code].to_i <= 13123
-          p addr[:code]
-          self.set_data(feature,
-                        addr[:pref_code],
-                        'tokyo23',
-                        addr[:code])
+          self.set_data(feature, addr[:pref_code], 'tokyo23', addr[:code])
         end
       end
     end
@@ -130,6 +107,6 @@ end
 
 city = GeoJsonToCity.new
 japan_json = './data/geojson/japan2016.json'
-city.split_tokyo23(japan_json)
+city.split(japan_json)
 
 city.make()
