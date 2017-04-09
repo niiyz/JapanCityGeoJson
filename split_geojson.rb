@@ -25,11 +25,15 @@ class GeoJsonToCity
           self.set_data(feature, addr[:pref_code], addr[:code])
         end
         # 東京都23区
-        if addr[:pref_code].to_i == 13 && addr[:code].to_i >= 13101 && addr[:code].to_i <= 13123
+        if self.is_tokyo23(addr)
           self.set_data(feature, addr[:pref_code], 'tokyo23', addr[:code])
         end
       end
     end
+  end
+
+  def is_tokyo23(addr)
+    addr[:pref_code].to_i == 13 && addr[:code].to_i >= 13101 && addr[:code].to_i <= 13123
   end
 
   def set_data(feature, dir_name, key, id = nil)
