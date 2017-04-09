@@ -91,11 +91,12 @@ class GeoJsonToCity
 
   def make
     @data.each do |key, collection|
-      data      = {'type' => 'FeatureCollection', 'features' => collection}
-      dir_name  = @data_info[key][:dir_name]
-      file_name = @data_info[key][:file_name]
-      FileUtils.mkdir_p("geojson/#{dir_name}")
-      File.open("geojson/#{prefDir}/#{file_name}.json", 'w').write(JSON.generate(data))
+      data          = {'type' => 'FeatureCollection', 'features' => collection}
+      dir_name      = @data_info[key][:dir_name]
+      file_name     = @data_info[key][:file_name]
+      save_dir_name = "geojson/#{dir_name}"
+      FileUtils.mkdir_p(save_dir_name)
+      File.open("#{save_dir_name}/#{file_name}.json" 'w').write(JSON.generate(data))
     end
   end
 
