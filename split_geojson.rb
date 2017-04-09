@@ -96,7 +96,7 @@ class GeoJsonToCity
       file_name     = @data_info[key][:file_name]
       save_dir_name = "geojson/#{dir_name}"
       FileUtils.mkdir_p(save_dir_name)
-      File.open("#{save_dir_name}/#{file_name}.json" 'w').write(JSON.generate(data))
+      File.open("#{save_dir_name}/#{file_name}.json", 'w').write(JSON.generate(data))
     end
   end
 
