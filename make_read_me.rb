@@ -79,10 +79,10 @@ class GeoJsonToCity
   def make
 
     geo_all_readme  = File.open("geojson/README.md", 'w')
-    geo_all_readme.puts "|  都道府県  | 都道府県コード |"
+    geo_all_readme.puts "|  都道府県  | 都道府県コード | GeoJson |"
 
     topo_all_readme = File.open("topojson/README.md", 'w')
-    topo_all_readme.puts "|  都道府県  | 都道府県コード |"
+    topo_all_readme.puts "|  都道府県  | 都道府県コード | TopoJson |"
 
     @data.each do |key,collection|
 
@@ -91,8 +91,8 @@ class GeoJsonToCity
 
       collection.each_with_index do |info,i|
         if i == 1
-          geo_all_readme.puts "| #{info[:pref]} | #{info[:pref_code]} |"
-          topo_all_readme.puts "| #{info[:pref]} | #{info[:pref_code]} |"
+          geo_all_readme.puts "| #{info[:pref]} | #{info[:pref_code]} | [#{info[:pref]}](/#{info[:pref_code]}) |"
+          topo_all_readme.puts "| #{info[:pref]} | #{info[:pref_code]} | [#{info[:pref]}](/#{info[:pref_code]}) |"
         end
 
         line = "| #{info[:pref]} | #{info[:pref_code]} | #{info[:city]} | #{info[:code]} |"
