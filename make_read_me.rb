@@ -25,6 +25,10 @@ class GeoJsonToCity
           @data[addr[:pref_code]].push(addr)
           @check[addr[:code]] = 1
         end
+        if @data['all'].nil?
+          @data['all'] = []
+        end
+        @data['all'].push(addr)
       end
     end
   end
@@ -80,8 +84,13 @@ class GeoJsonToCity
 
     @data.each do |key,collection|
 
-      geo_readme  = self.make_read_me("geojson/#{key}/README.md")
-      topo_readme = self.make_read_me("topojson/#{key}/README.md")
+      if key != 'all'
+        geo_readme  = self.make_read_me("geojson/#{key}/README.md")
+        topo_readme = self.make_read_me("topojson/#{key}/README.md")
+      else
+        geo_readme  = self.make_read_me("geojson/README.md")
+        topo_readme = self.make_read_me("topojson/README.md")
+      end
 
       collection.each do |info|
         line = "| #{info[:pref]} | #{info[:pref_code]} | #{info[:city]} | #{info[:code]} |"
