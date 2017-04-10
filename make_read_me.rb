@@ -25,10 +25,6 @@ class GeoJsonToCity
           @data[addr[:pref_code]].push(addr)
           @check[addr[:code]] = 1
         end
-        if @data['all'].nil?
-          @data['all'] = []
-        end
-        @data['all'].push(addr)
       end
     end
   end
@@ -82,17 +78,23 @@ class GeoJsonToCity
 
   def make
 
+    geo_all_readme  = File.open("geojson/README.md", 'w')
+    geo_all_readme.puts "|  都道府県  | 都道府県コード |"
+
+    topo_all_readme = File.open("topojson/README.md", 'w')
+    topo_all_readme.puts "|  都道府県  | 都道府県コード |"
+
     @data.each do |key,collection|
 
-      if key != 'all'
-        geo_readme  = self.make_read_me("geojson/#{key}/README.md")
-        topo_readme = self.make_read_me("topojson/#{key}/README.md")
-      else
-        geo_readme  = self.make_read_me("geojson/README.md")
-        topo_readme = self.make_read_me("topojson/README.md")
-      end
+      geo_readme  = self.make_read_me("geojson/#{key}/README.md")
+      topo_readme = self.make_read_me("topojson/#{key}/README.md")
 
-      collection.each do |info|
+      collection.each_with_index do |info,i|
+        if i == 1
+          geo_all_readme.puts "| #{info[:pref]} | #{info[:pref_code]} |"
+          topo_all_readme.puts "| #{info[:pref]} | #{info[:pref_code]} |"
+        end
+
         line = "| #{info[:pref]} | #{info[:pref_code]} | #{info[:city]} | #{info[:code]} |"
         geo_readme.puts line
         topo_readme.puts line
@@ -102,6 +104,9 @@ class GeoJsonToCity
       topo_readme.close
 
     end
+
+    geo_all_readme.close
+    topo_all_readme.close
 
   end
 
