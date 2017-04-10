@@ -71,19 +71,19 @@ class GeoJsonToCity
 
   def make_read_me(path)
     file = File.open(path, 'w')
-    file.puts "|  都道府県  | 都道府県コード | 行政区分 | 行政区分コード | json |"
-    file.puts "|-----------|--------------|--------- |--------------|------|"
+    file.puts "|  都道府県  | 都道府県コード | 行政区分 | 行政区分コード | GeoJson | TopoJson |"
+    file.puts "|-----------|--------------|--------- |--------------|------|------|"
     file
   end
 
   def make
 
     geo_all_readme  = File.open("geojson/README.md", 'w')
-    geo_all_readme.puts "|  都道府県  | 都道府県コード | GeoJson |"
+    geo_all_readme.puts "|  都道府県  | 都道府県コード | GeoJson | TopoJson|"
     geo_all_readme.puts "|-----------|--------------|--------- |"
 
     topo_all_readme = File.open("topojson/README.md", 'w')
-    topo_all_readme.puts "|  都道府県  | 都道府県コード | TopoJson |"
+    topo_all_readme.puts "|  都道府県  | 都道府県コード | GeoJson | TopoJson|"
     topo_all_readme.puts "|-----------|--------------|--------- |"
 
     @data.each do |key,collection|
@@ -93,12 +93,14 @@ class GeoJsonToCity
 
       collection.each_with_index do |info,i|
         if i == 1
-          geo_all_readme.puts "| #{info[:pref]} | #{info[:pref_code]} | [#{info[:pref]}](/geojson/#{info[:pref_code]}) |"
-          topo_all_readme.puts "| #{info[:pref]} | #{info[:pref_code]} | [#{info[:pref]}](/topojson/#{info[:pref_code]}) |"
+          pref_line = "| #{info[:pref]} | #{info[:pref_code]} | [#{info[:pref]}](/geojson/#{info[:pref_code]}) | [#{info[:pref]}](/topojson/#{info[:pref_code]})"
+          geo_all_readme.puts pref_line
+          topo_all_readme.puts pref_line
         end
 
-        geo_readme.puts "| #{info[:pref]} | #{info[:pref_code]} | #{info[:city]} | #{info[:code]} | [#{info[:city]}](/geojson/#{info[:pref_code]}/#{info[:code]}.json) |"
-        topo_readme.puts "| #{info[:pref]} | #{info[:pref_code]} | #{info[:city]} | #{info[:code]} | [#{info[:city]}](/topojson/#{info[:pref_code]}/#{info[:code]}.topojson) |"
+        line =  "| #{info[:pref]} | #{info[:pref_code]} | #{info[:city]} | #{info[:code]} | [#{info[:city]}](/geojson/#{info[:pref_code]}/#{info[:code]}.json) | [#{info[:city]}](/topojson/#{info[:pref_code]}/#{info[:code]}.topojson) |"
+        geo_readme.puts line
+        topo_readme.puts line
       end
 
       geo_readme.close
