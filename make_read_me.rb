@@ -80,11 +80,11 @@ class GeoJsonToCity
 
     geo_all_readme  = File.open("geojson/README.md", 'w')
     geo_all_readme.puts "|  都道府県  | 都道府県コード | GeoJson | TopoJson|"
-    geo_all_readme.puts "|-----------|--------------|--------- |"
+    geo_all_readme.puts "|-----------|--------------|---------|--------- |"
 
     topo_all_readme = File.open("topojson/README.md", 'w')
     topo_all_readme.puts "|  都道府県  | 都道府県コード | GeoJson | TopoJson|"
-    topo_all_readme.puts "|-----------|--------------|--------- |"
+    topo_all_readme.puts "|-----------|--------------|---------|--------- |"
 
     @data.each do |key,collection|
 
