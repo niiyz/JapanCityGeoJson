@@ -15,7 +15,7 @@ TopoJson https://github.com/mbostock/topojson
 - [東京23区topojson](/topojson/13/tokyo23.topojson)
 - [北陸３県（富山・石川・福井）topojson](/topojson/prefectures/hokuriku.topojson)
 - [各都道府県 topojson](/topojson/prefectures)
-- [各市町村 topojson](/topojson/prefectures)
+- [各市町村 topojson](/topojson/)
 
 # D3.js
 
