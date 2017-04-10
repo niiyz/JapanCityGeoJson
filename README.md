@@ -21,11 +21,12 @@ TopoJson https://github.com/mbostock/topojson
 
 D3.jsでtokyo23区のtopojsonを使用してみます。
 
-![Screencast](https://github.com/niiyz/JapanCityGeoJson/blob/master/screenshot2.png)
+![Screencast](/screenshot.png)
 
 
 ~~~ html
 <style>
+    body {background: pink;}
     .tokyo23-13101 {fill: red;}
     .tokyo23-13102 {fill: blue;}
     .tokyo23-13103 {fill: green;}
