@@ -82,9 +82,18 @@ class GeoJsonToCity
     geo_all_readme.puts "|  都道府県  | 都道府県コード | GeoJson | TopoJson|"
     geo_all_readme.puts "|-----------|--------------|---------|--------- |"
 
+    geo_prefectures_readme  = File.open("geojson/prefectures/README.md", 'w')
+    geo_prefectures_readme.puts "|  都道府県  | 都道府県コード | GeoJson | TopoJson|"
+    geo_prefectures_readme.puts "|-----------|--------------|---------|--------- |"
+
+
     topo_all_readme = File.open("topojson/README.md", 'w')
     topo_all_readme.puts "|  都道府県  | 都道府県コード | GeoJson | TopoJson|"
     topo_all_readme.puts "|-----------|--------------|---------|--------- |"
+
+    topo_prefectures_readme  = File.open("topojson/prefectures/README.md", 'w')
+    topo_prefectures_readme.puts "|  都道府県  | 都道府県コード | GeoJson | TopoJson|"
+    topo_prefectures_readme.puts "|-----------|--------------|---------|--------- |"
 
     @data.each do |key,collection|
 
@@ -93,9 +102,13 @@ class GeoJsonToCity
 
       collection.each_with_index do |info,i|
         if i == 1
-          pref_line = "| #{info[:pref]} | #{info[:pref_code]} | [#{info[:pref]}](/geojson/#{info[:pref_code]}) | [#{info[:pref]}](/topojson/#{info[:pref_code]})"
-          geo_all_readme.puts pref_line
-          topo_all_readme.puts pref_line
+          all_line = "| #{info[:pref]} | #{info[:pref_code]} | [#{info[:pref]}](/geojson/#{info[:pref_code]}) | [#{info[:pref]}](/topojson/#{info[:pref_code]})"
+          geo_all_readme.puts all_line
+          topo_all_readme.puts all_line
+
+          prefectures_line = "| #{info[:pref]} | #{info[:pref_code]} | [#{info[:pref]}](/geojson/prefectures/#{info[:pref_code]}.json) | [#{info[:pref]}](/topojson/prefectures/#{info[:pref_code]}.topojson)"
+          geo_prefectures_readme.puts prefectures_line
+          topo_prefectures_readme.puts prefectures_line
         end
 
         line =  "| #{info[:pref]} | #{info[:pref_code]} | #{info[:city]} | #{info[:code]} | [#{info[:city]}](/geojson/#{info[:pref_code]}/#{info[:code]}.json) | [#{info[:city]}](/topojson/#{info[:pref_code]}/#{info[:code]}.topojson) |"
@@ -110,7 +123,8 @@ class GeoJsonToCity
 
     geo_all_readme.close
     topo_all_readme.close
-
+    geo_prefectures_readme.close
+    topo_prefectures_readme.close
   end
 
 end
