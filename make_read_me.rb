@@ -71,8 +71,8 @@ class GeoJsonToCity
 
   def make_read_me(path)
     file = File.open(path, 'w')
-    file.puts "|  都道府県  | 都道府県コード | 行政区分 | 行政区分コード |"
-    file.puts "|-----------|--------------|--------- |--------------|"
+    file.puts "|  都道府県  | 都道府県コード | 行政区分 | 行政区分コード | json |"
+    file.puts "|-----------|--------------|--------- |--------------|------|"
     file
   end
 
@@ -97,9 +97,8 @@ class GeoJsonToCity
           topo_all_readme.puts "| #{info[:pref]} | #{info[:pref_code]} | [#{info[:pref]}](/topojson/#{info[:pref_code]}) |"
         end
 
-        line = "| #{info[:pref]} | #{info[:pref_code]} | #{info[:city]} | #{info[:code]} |"
-        geo_readme.puts line
-        topo_readme.puts line
+        geo_readme.puts "| #{info[:pref]} | #{info[:pref_code]} | #{info[:city]} | #{info[:code]} | [#{info[:city]}](/geojson/#{info[:pref_code]}/#{info[:code]}.json) |"
+        topo_readme.puts "| #{info[:pref]} | #{info[:pref_code]} | #{info[:city]} | #{info[:code]} | [#{info[:city]}](/topojson/#{info[:pref_code]}/#{info[:code]}.topojson) |"
       end
 
       geo_readme.close
