@@ -4,4 +4,4 @@ services:
     build: .
     tty: true
     volumes:
-      - ./:/go/src/app
+      - .:/go/src/app

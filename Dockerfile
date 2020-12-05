@@ -1,11 +1,11 @@
-FROM golang:1.15.5-alpine3.12
+FROM osgeo/gdal:alpine-small-latest
 
-RUN mkdir /go/src/app
+RUN apk add --update --no-cache alpine-sdk git go
+
+RUN mkdir -p /go/src/app
 
 WORKDIR /go/src/app
 
-ADD . /go/src/app
+COPY ./ /go/src/app
 
-RUN apk add --no-cache \
-        alpine-sdk \
-        git \
+RUN go version
