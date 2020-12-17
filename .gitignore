@@ -1,5 +1,5 @@
 /node_modules
-test*.json
-japan*.json
 /*.geojson
 /*_GML.zip
+/N03-*
+/KS-META-N03-*.xml
