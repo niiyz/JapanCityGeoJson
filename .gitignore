@@ -1,5 +1,5 @@
 /node_modules
 test*.json
-/data
 japan*.json
-/vendor
+/*.geojson
+/*_GML.zip
