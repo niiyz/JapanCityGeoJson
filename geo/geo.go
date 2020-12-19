@@ -80,7 +80,7 @@ func Split(splitType string, raw []byte) map[string][]Feature {
 		case SPLIT_TYPE_CITY:
 			key = ft.GetCode()
 		case SPLIT_TYPE_PREF:
-			key = ft.GetPref()
+			key = ft.GetPrefCode()
 		case SPLIT_TYPE_COUNTY:
 			county := ft.GetCounty()
 			if county == "" {

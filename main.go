@@ -7,29 +7,6 @@ import (
 	"os"
 )
 
-func makeCityTest(targetPref string, targetCity string, raw []byte) {
-	// Split Data
-	cityMap := geo.Split(geo.SPLIT_TYPE_CITY, raw)
-
-	// Loop
-	for city, fts := range cityMap {
-		// Pref Name
-		pref := fts[0].GetPref()
-		if targetPref != pref || targetCity != targetCity {
-			return
-		}
-		// fmt.Println(pref, city, len(fts))
-		dir := "test"
-		if !isExist(dir) {
-			os.MkdirAll(dir, 0777)
-		}
-		// Save Path
-		path := dir + "/" + city + ".json"
-		// Save Json
-		geo.Save(path, fts)
-	}
-}
-
 // City
 func makeCityGeoJson(raw []byte) {
 	// Split Data
@@ -51,42 +28,20 @@ func makeCityGeoJson(raw []byte) {
 	}
 }
 
-// County
-func makeCountyGeoJson(raw []byte) {
-	// Split Data
-	cityMap := geo.Split(geo.SPLIT_TYPE_COUNTY, raw)
-
-	// Loop
-	for county, fts := range cityMap {
-		// Pref Name
-		pref := fts[0].GetPref()
-		fmt.Println(county, cap(fts))
-		// Save Dir
-		dir := "geojson/" + pref
-		if !isExist(dir) {
-			os.MkdirAll(dir, 0777)
-		}
-		// Save Path
-		path := dir + "/" + county + ".json"
-		// Save Json
-		geo.Save(path, fts)
-	}
-}
-
 // Pref
 func makePrefGeoJson(raw []byte) {
 	// Split Data
 	cityMap := geo.Split(geo.SPLIT_TYPE_PREF, raw)
 	// Loop
-	for pref, fts := range cityMap {
-		fmt.Println(pref, cap(fts))
+	for prefCode, fts := range cityMap {
+		fmt.Println(prefCode, fts[0].GetPref())
 		// Save Dir
 		dir := "geojson/prefectures"
 		if !isExist(dir) {
 			os.MkdirAll(dir, 0777)
 		}
 		// Save Path
-		path := dir + "/" + pref + ".json"
+		path := fmt.Sprintf("%s/%s.json", dir, prefCode)
 		// Save Json
 		geo.Save(path, fts)
 	}
@@ -107,13 +62,11 @@ func main() {
 		fmt.Println(err.Error())
 		os.Exit(1)
 	}
-	reset()
+	// reset()
 	// City
-	makeCityGeoJson(raw)
+	// makeCityGeoJson(raw)
 	// Pref
-	// makePrefGeoJson(raw)
-	// County
-	// makeCountyGeoJson(raw)
+	makePrefGeoJson(raw)
 }
 
 // Check Dir Exist
