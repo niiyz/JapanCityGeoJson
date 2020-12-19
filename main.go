@@ -1,11 +1,34 @@
 package main
 
 import (
-	"fmt"
 	"./geo"
+	"fmt"
 	"io/ioutil"
 	"os"
 )
+
+func makeCityTest(targetPref string, targetCity string, raw []byte) {
+	// Split Data
+	cityMap := geo.Split(geo.SPLIT_TYPE_CITY, raw)
+
+	// Loop
+	for city, fts := range cityMap {
+		// Pref Name
+		pref := fts[0].GetPref()
+		if targetPref != pref || targetCity != targetCity {
+			return
+		}
+		// fmt.Println(pref, city, len(fts))
+		dir := "test"
+		if !isExist(dir) {
+			os.MkdirAll(dir, 0777)
+		}
+		// Save Path
+		path := dir + "/" + city + ".json"
+		// Save Json
+		geo.Save(path, fts)
+	}
+}
 
 // City
 func makeCityGeoJson(raw []byte) {
@@ -59,7 +82,7 @@ func makePrefGeoJson(raw []byte) {
 	for pref, fts := range cityMap {
 		fmt.Println(pref, cap(fts))
 		// Save Dir
-		dir := "geojson/47都道府県"
+		dir := "geojson/prefectures"
 		if !isExist(dir) {
 			os.MkdirAll(dir, 0777)
 		}
@@ -85,9 +108,9 @@ func main() {
 		fmt.Println(err.Error())
 		os.Exit(1)
 	}
-	reset()
+	// reset()
 	// City
-	makeCityGeoJson(raw)
+	makeCityTest("富山県", "氷見市", raw)
 	// Pref
 	// makePrefGeoJson(raw)
 	// County

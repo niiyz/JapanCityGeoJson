@@ -2,6 +2,7 @@ package geo
 
 import (
 	"encoding/json"
+	"fmt"
 )
 
 const (
@@ -37,6 +38,10 @@ func (ft Feature) GetCounty() string {
 
 func (ft Feature) GetPref() string {
 	return ft.Properties.Pref
+}
+
+func (ft Feature) GetGeometryCoordinates() [][][]LatLng {
+	return ft.Geometry.Coordinates
 }
 
 type Properties struct {
@@ -78,5 +83,22 @@ func Split(splitType string, raw []byte) map[string][]Feature {
 		}
 		cityMap[key] = append(cityMap[key], ft)
 	}
-	return cityMap
+
+	cityMap2 := make(map[string][]Feature)
+	for key, fts := range cityMap {
+		if key != "氷見市" {
+			continue
+		}
+		fmt.Println(key)
+		var code [][]LatLng
+		for _, ft := range fts {
+			code = append(code, ft.GetGeometryCoordinates()[0][0])
+			// fmt.Println(len(ft.GetGeometryCoordinates()[0][0]))
+		}
+		fts[0].Geometry.Coordinates = [][][]LatLng{code}
+		cityMap2[key] = []Feature{fts[0]}
+		// fmt.Println(cofts[0]de)
+	}
+
+	return cityMap2
 }
