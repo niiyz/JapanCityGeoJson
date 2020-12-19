@@ -48,8 +48,8 @@ type Properties struct {
 }
 
 type Geometry struct {
-	Type        string     `json:"type"` // Polygon
-	Coordinates [][]LatLng `json:"coordinates"`
+	Type        string       `json:"type"` // Polygon
+	Coordinates [][][]LatLng `json:"coordinates"`
 }
 
 type LatLng [2]float64
