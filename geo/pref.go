@@ -1,4 +1,4 @@
-package main
+package geo
 
 import "fmt"
 
@@ -63,7 +63,7 @@ func indexOf(element string, data [47]string) int {
 	return -1
 }
 
-func GetPrefCode(prefName string) string {
+func GetPrefCodeByName(prefName string) string {
 	if prefIndex := indexOf(prefName, pref); prefIndex >= 0 {
 		return fmt.Sprintf("%2d", prefIndex + 1)
 	}

@@ -2,7 +2,6 @@ package geo
 
 import (
 	"encoding/json"
-	"fmt"
 )
 
 const (
@@ -22,14 +21,22 @@ type Feature struct {
 	Geometry   Geometry   `json:"geometry"`
 }
 
-func (ft Feature) GetCity() string {
-	var city string
-	if ft.Properties.City == "所属未定地" {
-		city = ft.Properties.Pref + ft.Properties.City
-	} else {
-		city = ft.Properties.County + ft.Properties.City
+func (ft Feature) GetPrefCode() string {
+	if ft.Properties.Code == "" {
+		return GetPrefCodeByName(ft.Properties.Pref)
 	}
-	return city
+	return ft.Properties.Code[:2]
+}
+
+func (ft Feature) GetCode() string {
+	if ft.Properties.Code == "" {
+		return "UNDECIDED_LAND"
+	}
+	return ft.Properties.Code
+}
+
+func (ft Feature) GetCity() string {
+	return ft.Properties.City
 }
 
 func (ft Feature) GetCounty() string {
@@ -65,13 +72,13 @@ func Split(splitType string, raw []byte) map[string][]Feature {
 
 	json.Unmarshal(raw, &fc)
 
-	cityMap := make(map[string][]Feature)
+	ftsByKey := make(map[string][]Feature)
 
 	for _, ft := range fc.Features {
 		var key string
 		switch splitType {
 		case SPLIT_TYPE_CITY:
-			key = ft.GetCity()
+			key = ft.GetCode()
 		case SPLIT_TYPE_PREF:
 			key = ft.GetPref()
 		case SPLIT_TYPE_COUNTY:
@@ -81,24 +88,18 @@ func Split(splitType string, raw []byte) map[string][]Feature {
 			}
 			key = county
 		}
-		cityMap[key] = append(cityMap[key], ft)
+		ftsByKey[key] = append(ftsByKey[key], ft)
 	}
 
-	cityMap2 := make(map[string][]Feature)
-	for key, fts := range cityMap {
-		if key != "氷見市" {
-			continue
-		}
-		fmt.Println(key)
+	multiPolygonMergedFtsByKey := make(map[string][]Feature)
+	for key, fts := range ftsByKey {
 		var code [][]LatLng
 		for _, ft := range fts {
 			code = append(code, ft.GetGeometryCoordinates()[0][0])
-			// fmt.Println(len(ft.GetGeometryCoordinates()[0][0]))
 		}
 		fts[0].Geometry.Coordinates = [][][]LatLng{code}
-		cityMap2[key] = []Feature{fts[0]}
-		// fmt.Println(cofts[0]de)
+		multiPolygonMergedFtsByKey[key] = []Feature{fts[0]}
 	}
 
-	return cityMap2
+	return multiPolygonMergedFtsByKey
 }

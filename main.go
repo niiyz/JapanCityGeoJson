@@ -36,17 +36,16 @@ func makeCityGeoJson(raw []byte) {
 	cityMap := geo.Split(geo.SPLIT_TYPE_CITY, raw)
 
 	// Loop
-	for city, fts := range cityMap {
-		// Pref Name
-		pref := fts[0].GetPref()
-		fmt.Println(pref, city, cap(fts))
+	for cityCode, fts := range cityMap {
+		prefCode := fts[0].GetPrefCode()
+		fmt.Println(cityCode, prefCode, fts[0].GetPref(), fts[0].GetCounty(), fts[0].GetCity())
 		// Save Dir
-		dir := "geojson/" + pref
+		dir := fmt.Sprintf("geojson/%s", prefCode)
 		if !isExist(dir) {
 			os.MkdirAll(dir, 0777)
 		}
 		// Save Path
-		path := dir + "/" + city + ".json"
+		path := fmt.Sprintf("%s/%s.json", dir, cityCode)
 		// Save Json
 		geo.Save(path, fts)
 	}
@@ -108,9 +107,9 @@ func main() {
 		fmt.Println(err.Error())
 		os.Exit(1)
 	}
-	// reset()
+	reset()
 	// City
-	makeCityTest("富山県", "氷見市", raw)
+	makeCityGeoJson(raw)
 	// Pref
 	// makePrefGeoJson(raw)
 	// County
