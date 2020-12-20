@@ -65,7 +65,7 @@ func indexOf(element string, data [47]string) int {
 
 func GetPrefCodeByName(prefName string) string {
 	if prefIndex := indexOf(prefName, pref); prefIndex >= 0 {
-		return fmt.Sprintf("%2d", prefIndex + 1)
+		return fmt.Sprintf("%2d", prefIndex+1)
 	}
 	return ""
 }

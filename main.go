@@ -7,10 +7,31 @@ import (
 	"os"
 )
 
+// Custom
+func makeCustomGeoJson(raw []byte, title string, codes []string) {
+	// Split Data
+	cityMap := geo.Split(raw, geo.SPLIT_TYPE_CUSTOM, codes)
+	// Loop
+	var customFts []geo.Feature
+	for _, fts := range cityMap {
+		customFts = append(customFts, fts...)
+	}
+	// Save Dir
+	dir := fmt.Sprintf("geojson/custom")
+	if !isExist(dir) {
+		os.MkdirAll(dir, 0777)
+	}
+	// Save Path
+	path := fmt.Sprintf("%s/%s.json", dir, title)
+	// Save Json
+	geo.Save(path, customFts)
+}
+
 // City
 func makeCityGeoJson(raw []byte) {
+
 	// Split Data
-	cityMap := geo.Split(geo.SPLIT_TYPE_CITY, raw)
+	cityMap := geo.Split(raw, geo.SPLIT_TYPE_CITY,  []string{})
 
 	// Loop
 	for cityCode, fts := range cityMap {
@@ -30,25 +51,24 @@ func makeCityGeoJson(raw []byte) {
 
 // Pref
 func makePrefGeoJson(raw []byte) {
+
+	os.RemoveAll("geojson/prefectures")
+	// Save Dir
+	dir := "geojson/prefectures"
+	if !isExist(dir) {
+		os.MkdirAll(dir, 0777)
+	}
+	
 	// Split Data
-	cityMap := geo.Split(geo.SPLIT_TYPE_PREF, raw)
+	cityMap := geo.Split(raw, geo.SPLIT_TYPE_PREF, []string{})
 	// Loop
 	for prefCode, fts := range cityMap {
 		fmt.Println(prefCode, fts[0].GetPref())
-		// Save Dir
-		dir := "geojson/prefectures"
-		if !isExist(dir) {
-			os.MkdirAll(dir, 0777)
-		}
 		// Save Path
 		path := fmt.Sprintf("%s/%s.json", dir, prefCode)
 		// Save Json
 		geo.Save(path, fts)
 	}
-}
-
-func reset() {
-	os.RemoveAll("geojson")
 }
 
 func main() {
@@ -62,11 +82,13 @@ func main() {
 		fmt.Println(err.Error())
 		os.Exit(1)
 	}
-	// reset()
-	// City
-	// makeCityGeoJson(raw)
-	// Pref
-	makePrefGeoJson(raw)
+	switch os.Args[2] {
+	case "custom":
+		makeCustomGeoJson(raw, os.Args[3], os.Args[4:])
+	default:
+		makeCityGeoJson(raw)
+		makePrefGeoJson(raw)
+	}
 }
 
 // Check Dir Exist
