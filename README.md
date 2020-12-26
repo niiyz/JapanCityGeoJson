@@ -38,3 +38,8 @@ docker-compose exec app go run main.go JAPAN2020-MULTIPOLYGON.json
 // make custom tokyo23, output geojson/custom/tokyo23.json
 docker-compose exec app go run main.go JAPAN2020-MULTIPOLYGON.json custom tokyo23 13101 13102 13103 13104 13105 13106 13107 13108 13109 13110 13111 13112 13113 13114 13115 13116 13117 13118 13119 13120 13121 13122 13123
 ```
+
+
+https://github.com/topojson/topojson/wiki/Introduction
+
+
