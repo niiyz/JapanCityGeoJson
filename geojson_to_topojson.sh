@@ -12,5 +12,5 @@ do
     basename=$(basename $file)
     name=( `echo $basename | sed -e "s/\.json/.topojson/"`)
     echo $name
-    $(npm bin)/geo2topo -o $dir/$name -q 1e4 geojson/$pref_code/$basename
+    npx geo2topo -o $dir/$name -q 1e4 geojson/$pref_code/$basename
 done

@@ -1,84 +1,67 @@
-# JapanCityGeoJson 2016
+# JapanCityGeoJson 2020
 
 47都道府県の県・市・町・村・郡・区の形を作るための[GeoJsonデータ](/geojson)、[TopoJsonデータ](/topojson)です。
 
-
 国土数値情報 (JPGIS2.1(GML)準拠及びSHAPE形式データ)　国土交通省
-
-国土交通省国土政策局GISHP http://nlftp.mlit.go.jp/ksj/gml/datalist/KsjTmplt-N03.html
+https://nlftp.mlit.go.jp/ksj/gml/datalist/KsjTmplt-N03-v2_4.html#prefecture00
 
 GeoJson http://geojson.org/
 
+https://tex2e.github.io/rfc-translater/html/rfc7946.html
+
 TopoJson https://github.com/mbostock/topojson
 
-# TopoJson
-- [東京23区topojson](/topojson/13/tokyo23.topojson)
-- [北陸３県（富山・石川・福井）topojson](/topojson/prefectures/hokuriku.topojson)
-- [各都道府県 topojson](/topojson/prefectures)
-- [各市町村 topojson](/topojson/)
-
-# D3.js
-
-D3.jsでtokyo23区のtopojsonを使用してみます。
-
-![Screencast](/screenshot.png)
 
 
-~~~ html
-<style>
-    body {background: pink;}
-    .tokyo23-13101 {fill: red;}
-    .tokyo23-13102 {fill: blue;}
-    .tokyo23-13103 {fill: green;}
-    .tokyo23-13104 {fill: orange;}
-    .tokyo23-13105 {fill: blueviolet;}
-    .tokyo23-13106 {fill: azure;}
-    .tokyo23-13107 {fill: forestgreen;}
-    .tokyo23-13108 {fill: tomato;}
-    .tokyo23-13109 {fill: lightyellow;}
-    .tokyo23-13110 {fill: yellow;}
-    .tokyo23-13111 {fill: crimson;}
-    .tokyo23-13112 {fill: forestgreen;}
-    .tokyo23-13113 {fill: red;}
-    .tokyo23-13114 {fill: skyblue;}
-    .tokyo23-13115 {fill: palegoldenrod;}
-    .tokyo23-13116 {fill: red;}
-    .tokyo23-13117 {fill: maroon;}
-    .tokyo23-13118 {fill: royalblue;}
-    .tokyo23-13119 {fill: lawngreen;}
-    .tokyo23-13120 {fill: darkblue;}
-    .tokyo23-13121 {fill: darkmagenta;}
-    .tokyo23-13122 {fill: cornsilk;}
-    .tokyo23-13123 {fill: aqua;}
-</style>
-<script src="http://d3js.org/d3.v3.min.js"></script>
-<script src="http://d3js.org/topojson.v1.min.js"></script>
-<script type="text/javascript" src="data/tokyo23_topojson.js"></script>
-<script>
-var width = 800, height = 500;
-var svg = d3.select("body").append("svg")
-    .attr("width", width)
-    .attr("height", height);
-var id = 'tokyo23';
-var tokyo23 = topojson.feature(json, json.objects[id]);
-var bounds = d3.geo.bounds(tokyo23);
-var centerX = d3.sum(bounds, function(d) {return d[0];}) / 2,
-  centerY = d3.sum(bounds, function(d) {return d[1];}) / 2;
-var projection = d3.geo.mercator()
-    .scale(70000)
-    .center([centerX, centerY]);
-
-svg.selectAll("path")
-    .data(tokyo23.features).enter().append("path")
-    .attr("d", d3.geo.path().projection(projection))
-    .attr("class", function(d) { return 'tokyo23-' + d.id; });
-</script>
-~~~
 
 
-### 市町村郡区シェイプ確認デモ(GoogleMap)
 
-http://geojson.niiyz.com/
 
-### データ更新手順
-https://github.com/niiyz/JapanCityGeoJson/wiki/データ更新手順
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+### Make JAPAN2020-MULTIPOLYGON.json
+
+```
+// Download N03-20200101_GML.zip
+// https://nlftp.mlit.go.jp/ksj/gml/datalist/KsjTmplt-N03-v2_4.html#prefecture00
+
+// 
+// Docker
+docker-compose up
+
+// Unzip Download File
+docker-compose exec app unzip N03-20200101_GML.zip N03-20_200101.dbf N03-20_200101.shp N03-20_200101.shx N03-20_200101.xml
+
+// Shapefile shit_jis -> UTF-8 , Input dataset open option shift_jis, Layer creation option UTF-8
+docker-compose exec app ogr2ogr -f "ESRI Shapefile" -lco ENCODING=UTF-8 -oo ENCODING=shift_jis N03-20_200101sjis.shp N03-20_200101.shp
+
+// Shapefile -> GeoJson
+docker-compose exec app ogr2ogr -f GeoJSON -nlt MULTIPOLYGON JAPAN2020-MULTIPOLYGON.json N03-20_200101sjis.shp
+```
+
+### Make city json
+```
+// make city and pref, output to geojson directory
+docker-compose exec app go run main.go JAPAN2020-MULTIPOLYGON.json
+// make custom tokyo23, output geojson/custom/tokyo23.json
+docker-compose exec app go run main.go JAPAN2020-MULTIPOLYGON.json custom tokyo23 13101 13102 13103 13104 13105 13106 13107 13108 13109 13110 13111 13112 13113 13114 13115 13116 13117 13118 13119 13120 13121 13122 13123
+```
+
+
+https://github.com/topojson/topojson/wiki/Introduction
+
+
+docker-compose exec node /bin/bash geojson_to_topojson.sh
