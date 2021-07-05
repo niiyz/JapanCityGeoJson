@@ -11,6 +11,27 @@ https://tex2e.github.io/rfc-translater/html/rfc7946.html
 
 TopoJson https://github.com/mbostock/topojson
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 ### Make JAPAN2020-MULTIPOLYGON.json
 
 ```
@@ -43,3 +64,4 @@ docker-compose exec app go run main.go JAPAN2020-MULTIPOLYGON.json custom tokyo2
 https://github.com/topojson/topojson/wiki/Introduction
 
 
+docker-compose exec node /bin/bash geojson_to_topojson.sh

@@ -31,7 +31,7 @@ func makeCustomGeoJson(raw []byte, title string, codes []string) {
 func makeCityGeoJson(raw []byte) {
 
 	// Split Data
-	cityMap := geo.Split(raw, geo.SPLIT_TYPE_CITY,  []string{})
+	cityMap := geo.Split(raw, geo.SPLIT_TYPE_CITY, []string{})
 
 	// Loop
 	for cityCode, fts := range cityMap {
@@ -58,7 +58,7 @@ func makePrefGeoJson(raw []byte) {
 	if !isExist(dir) {
 		os.MkdirAll(dir, 0777)
 	}
-	
+
 	// Split Data
 	cityMap := geo.Split(raw, geo.SPLIT_TYPE_PREF, []string{})
 	// Loop

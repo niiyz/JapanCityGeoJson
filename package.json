@@ -1,0 +1,30 @@
+{
+  "name": "japan-city-geojson",
+  "version": "0.0.0",
+  "description": "GeoJson of Japanese cities. and TopoJson. topojson wrapper.",
+  "scripts": {
+    "pref": "$(npm bin)/geo2topo -o ./test.pref.topo.json -q 1e4 geojson/47都道府県/京都府.json",
+    "simple": "$(npm bin)/toposimplify -F -o ./test.pref.topo.json test.pref.topo.json"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/niiyz/JapanCityGeoJson.git"
+  },
+  "keywords": [
+    "japan",
+    "topojson",
+    "geojson",
+    "city",
+    "pref"
+  ],
+  "author": "niiyz <yoshida@niiyz.com> (http://niiyz.com)",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/niiyz/JapanCityGeoJson/issues"
+  },
+  "homepage": "https://github.com/niiyz/JapanCityGeoJson#readme",
+  "dependencies": {
+    "topojson-client": "^2.1.0",
+    "topojson-server": "^2.0.0"
+  }
+}

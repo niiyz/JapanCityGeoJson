@@ -1,7 +1,17 @@
 version: '3'
 services:
   app:
-    build: .
+    build:
+      context: .
+      dockerfile: ./docker/gdal/Dockerfile
     tty: true
     volumes:
       - .:/go/src/app
+
+  node:
+    build:
+      context: .
+      dockerfile: docker/node/Dockerfile
+    tty: true
+    volumes:
+      - .:/usr/src/app
