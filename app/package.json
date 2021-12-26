@@ -1,0 +1,28 @@
+{
+  "name": "japancitygeojson",
+  "version": "1.0.0",
+  "description": "47都道府県の県・市・町・村・郡・区の形を作るための[GeoJsonデータ](/geojson)、[TopoJsonデータ](/topojson)です。",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/niiyz/JapanCityGeoJson.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/niiyz/JapanCityGeoJson/issues"
+  },
+  "homepage": "https://github.com/niiyz/JapanCityGeoJson#readme",
+  "dependencies": {
+    "pg": "^8.7.1",
+    "ts-node": "^10.4.0",
+    "typescript": "^4.5.4"
+  },
+  "devDependencies": {
+    "@types/node": "^17.0.4",
+    "@types/pg": "^8.6.3"
+  }
+}
