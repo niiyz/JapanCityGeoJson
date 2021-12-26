@@ -1,6 +1,7 @@
 version: '3'
 services:
   postgis:
+    container_name: JapanCityGeoJson
     build:
       context: .
       dockerfile: docker/postgis/Dockerfile.postgis
@@ -12,6 +13,22 @@ services:
       POSTGRES_DB: postgis
       POSTGRES_USER: postgis
       POSTGRES_PASSWORD: postgis
+
+  node:
+    container_name: node
+    build:
+      context: .
+      dockerfile: docker/node/Dockerfile.node
+    cap_add:
+      - SYS_ADMIN
+    tty: true
+    stdin_open: true
+    volumes:
+      - ./app:/usr/src/app
+    ports:
+      - 8080:8080
+    depends_on:
+      - postgis
 
 volumes:
   db-data:
