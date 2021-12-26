@@ -1,0 +1,5 @@
+pref n03_001
+regional n03_002
+city1 n03_003
+city2 n03_004
+code n03_007

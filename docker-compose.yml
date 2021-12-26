@@ -1,17 +1,17 @@
 version: '3'
 services:
-  app:
+  postgis:
     build:
       context: .
-      dockerfile: ./docker/gdal/Dockerfile
-    tty: true
+      dockerfile: docker/postgis/Dockerfile.postgis
+    ports:
+      - 5434:5432
     volumes:
-      - .:/go/src/app
+      - db-data:/var/lib/postgresql/data
+    environment:
+      POSTGRES_DB: postgis
+      POSTGRES_USER: postgis
+      POSTGRES_PASSWORD: postgis
 
-  node:
-    build:
-      context: .
-      dockerfile: docker/node/Dockerfile
-    tty: true
-    volumes:
-      - .:/usr/src/app
+volumes:
+  db-data:

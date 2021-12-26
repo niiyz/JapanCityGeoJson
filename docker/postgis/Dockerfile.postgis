@@ -1,0 +1,24 @@
+FROM postgres:12 AS make_data
+
+RUN apt-get update
+RUN apt-get install -y postgis zip tree
+RUN apt-get clean
+RUN rm -rf /var/cache/apt/lists
+
+WORKDIR ./data
+RUN mkdir input
+COPY docker/postgis/rename.txt input
+
+ADD https://nlftp.mlit.go.jp/ksj/gml/data/N03/N03-2020/N03-20200101_GML.zip input
+RUN unzip -j -d temp input/N03-20200101_GML.zip "*.dbf" "*.shp" "*.shx" "*.xml"; exit 0
+
+RUN mkdir output
+RUN shp2pgsql -s 4612 -D -i -I -S -m input/rename.txt -W cp932 temp/N03-20_200101.shp japan > output/japan.sql
+
+RUN tree -sh .
+
+FROM postgis/postgis AS db
+
+COPY --from=make_data /data/output/japan.sql /docker-entrypoint-initdb.d
+COPY docker/postgis/prefectures.sql /docker-entrypoint-initdb.d
+
