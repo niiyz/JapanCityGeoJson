@@ -38,7 +38,7 @@ FROM (
         const filepath = `${path}/${code}.json`;
         console.log(code, name, filepath);
         fs.writeFileSync(filepath, JSON.stringify(json.rows[0].json_build_object));
-        text += `| ${name} | ${code} | [${name}](/geojson/prefectures/${code}.json) | [${name}](/topojson/prefectures/${code}.json) |\n`;
+        text += `| ${name} | ${code} | [${name}](/geojson/prefectures/${code}.json) | [${name}](/topojson/prefectures/${code}.topojson) |\n`;
     }
 
     await client.end()
