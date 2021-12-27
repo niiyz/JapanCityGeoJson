@@ -53,7 +53,7 @@ FROM (
             prevPrefCode = prefCode;
             text = "";
         }
-        const cityName = `${city.regional}${city.city1}${city.city2}`;
+        const cityName = `${city.regional || ""}${city.city1 || ""}${city.city2 || ""}`;
         text += `| ${city.pref} | ${prefCode} | ${cityName} | ${city.code} | [${cityName}](/geojson/cities/${prefCode}/${city.code}.json) | [${cityName}](/topojson/cities/${prefCode}/${city.code}.topojson) |\n`;
     }
     await client.end();
