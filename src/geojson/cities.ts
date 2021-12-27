@@ -48,7 +48,7 @@ FROM (
         // console.log(city.code, city.pref, city.regional, city.city1, city.city2, city.cnt);
         // fs.writeFileSync(`${filepath}/${city.code}.json`, JSON.stringify(json.rows[0].json_build_object));
         if (prevPrefCode !== prefCode) {
-            const readme = `| 都道府県 | 行政区分 | 行政区分コード | GeoJson | TopoJson |\n|-----------|--------------|--------- |--------------|------|------|\n${text}`;
+            const readme = `| 都道府県 | 行政区分 | 行政区分コード | GeoJson | TopoJson |\n|-----------|--------- |--------------|------|------|\n${text}`;
             fs.writeFileSync(`geojson/cities/${prevPrefCode}/README.md`, readme);
             prevPrefCode = prefCode;
             text = "";
