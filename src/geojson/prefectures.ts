@@ -29,6 +29,8 @@ FROM (
 `;
     const prefectures = await client.query('select code, name from prefectures group by code, name order by code');
 
+    let text = "";
+
     for (let i in prefectures.rows) {
         const code = prefectures.rows[i].code;
         const name = prefectures.rows[i].name;
@@ -36,8 +38,13 @@ FROM (
         const filepath = `${path}/${code}.json`;
         console.log(code, name, filepath);
         fs.writeFileSync(filepath, JSON.stringify(json.rows[0].json_build_object));
+        text += `| ${name} | ${code} | [${name}](/geojson/prefectures/${code}.json) | [${name}](/topojson/prefectures/${code}.json) |\n`;
     }
+
     await client.end()
+
+    const readme = "|  都道府県  | 都道府県コード | GeoJson | TopoJson |\n" + "|-----------|--------------|------|------|\n" + text;
+    fs.writeFileSync("geojson/README.md", readme);
 }
 
 main().then(() => {
