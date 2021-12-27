@@ -1,0 +1,21 @@
+| 都道府県 | 都道府県コード | 行政区分 | 行政区分コード | GeoJson | TopoJson |
+|-----------|--------------|--------- |--------------|------|------|
+| 石川県 | 17 | nullnull金沢市 | 17201 | [nullnull金沢市](/geojson/cities/17/17201.json) | [nullnull金沢市](/topojson/cities/17/17201.topojson) |
+| 石川県 | 17 | nullnull七尾市 | 17202 | [nullnull七尾市](/geojson/cities/17/17202.json) | [nullnull七尾市](/topojson/cities/17/17202.topojson) |
+| 石川県 | 17 | nullnull小松市 | 17203 | [nullnull小松市](/geojson/cities/17/17203.json) | [nullnull小松市](/topojson/cities/17/17203.topojson) |
+| 石川県 | 17 | nullnull輪島市 | 17204 | [nullnull輪島市](/geojson/cities/17/17204.json) | [nullnull輪島市](/topojson/cities/17/17204.topojson) |
+| 石川県 | 17 | nullnull珠洲市 | 17205 | [nullnull珠洲市](/geojson/cities/17/17205.json) | [nullnull珠洲市](/topojson/cities/17/17205.topojson) |
+| 石川県 | 17 | nullnull加賀市 | 17206 | [nullnull加賀市](/geojson/cities/17/17206.json) | [nullnull加賀市](/topojson/cities/17/17206.topojson) |
+| 石川県 | 17 | nullnull羽咋市 | 17207 | [nullnull羽咋市](/geojson/cities/17/17207.json) | [nullnull羽咋市](/topojson/cities/17/17207.topojson) |
+| 石川県 | 17 | nullnullかほく市 | 17209 | [nullnullかほく市](/geojson/cities/17/17209.json) | [nullnullかほく市](/topojson/cities/17/17209.topojson) |
+| 石川県 | 17 | nullnull白山市 | 17210 | [nullnull白山市](/geojson/cities/17/17210.json) | [nullnull白山市](/topojson/cities/17/17210.topojson) |
+| 石川県 | 17 | nullnull能美市 | 17211 | [nullnull能美市](/geojson/cities/17/17211.json) | [nullnull能美市](/topojson/cities/17/17211.topojson) |
+| 石川県 | 17 | nullnull野々市市 | 17212 | [nullnull野々市市](/geojson/cities/17/17212.json) | [nullnull野々市市](/topojson/cities/17/17212.topojson) |
+| 石川県 | 17 | null能美郡川北町 | 17324 | [null能美郡川北町](/geojson/cities/17/17324.json) | [null能美郡川北町](/topojson/cities/17/17324.topojson) |
+| 石川県 | 17 | null河北郡津幡町 | 17361 | [null河北郡津幡町](/geojson/cities/17/17361.json) | [null河北郡津幡町](/topojson/cities/17/17361.topojson) |
+| 石川県 | 17 | null河北郡内灘町 | 17365 | [null河北郡内灘町](/geojson/cities/17/17365.json) | [null河北郡内灘町](/topojson/cities/17/17365.topojson) |
+| 石川県 | 17 | null羽咋郡志賀町 | 17384 | [null羽咋郡志賀町](/geojson/cities/17/17384.json) | [null羽咋郡志賀町](/topojson/cities/17/17384.topojson) |
+| 石川県 | 17 | null羽咋郡宝達志水町 | 17386 | [null羽咋郡宝達志水町](/geojson/cities/17/17386.json) | [null羽咋郡宝達志水町](/topojson/cities/17/17386.topojson) |
+| 石川県 | 17 | null鹿島郡中能登町 | 17407 | [null鹿島郡中能登町](/geojson/cities/17/17407.json) | [null鹿島郡中能登町](/topojson/cities/17/17407.topojson) |
+| 石川県 | 17 | null鳳珠郡穴水町 | 17461 | [null鳳珠郡穴水町](/geojson/cities/17/17461.json) | [null鳳珠郡穴水町](/topojson/cities/17/17461.topojson) |
+| 石川県 | 17 | null鳳珠郡能登町 | 17463 | [null鳳珠郡能登町](/geojson/cities/17/17463.json) | [null鳳珠郡能登町](/topojson/cities/17/17463.topojson) |

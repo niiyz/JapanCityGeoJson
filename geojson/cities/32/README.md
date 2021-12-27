@@ -1,0 +1,21 @@
+| 都道府県 | 都道府県コード | 行政区分 | 行政区分コード | GeoJson | TopoJson |
+|-----------|--------------|--------- |--------------|------|------|
+| 島根県 | 32 | nullnull松江市 | 32201 | [nullnull松江市](/geojson/cities/32/32201.json) | [nullnull松江市](/topojson/cities/32/32201.topojson) |
+| 島根県 | 32 | nullnull浜田市 | 32202 | [nullnull浜田市](/geojson/cities/32/32202.json) | [nullnull浜田市](/topojson/cities/32/32202.topojson) |
+| 島根県 | 32 | nullnull出雲市 | 32203 | [nullnull出雲市](/geojson/cities/32/32203.json) | [nullnull出雲市](/topojson/cities/32/32203.topojson) |
+| 島根県 | 32 | nullnull益田市 | 32204 | [nullnull益田市](/geojson/cities/32/32204.json) | [nullnull益田市](/topojson/cities/32/32204.topojson) |
+| 島根県 | 32 | nullnull大田市 | 32205 | [nullnull大田市](/geojson/cities/32/32205.json) | [nullnull大田市](/topojson/cities/32/32205.topojson) |
+| 島根県 | 32 | nullnull安来市 | 32206 | [nullnull安来市](/geojson/cities/32/32206.json) | [nullnull安来市](/topojson/cities/32/32206.topojson) |
+| 島根県 | 32 | nullnull江津市 | 32207 | [nullnull江津市](/geojson/cities/32/32207.json) | [nullnull江津市](/topojson/cities/32/32207.topojson) |
+| 島根県 | 32 | nullnull雲南市 | 32209 | [nullnull雲南市](/geojson/cities/32/32209.json) | [nullnull雲南市](/topojson/cities/32/32209.topojson) |
+| 島根県 | 32 | null仁多郡奥出雲町 | 32343 | [null仁多郡奥出雲町](/geojson/cities/32/32343.json) | [null仁多郡奥出雲町](/topojson/cities/32/32343.topojson) |
+| 島根県 | 32 | null飯石郡飯南町 | 32386 | [null飯石郡飯南町](/geojson/cities/32/32386.json) | [null飯石郡飯南町](/topojson/cities/32/32386.topojson) |
+| 島根県 | 32 | null邑智郡川本町 | 32441 | [null邑智郡川本町](/geojson/cities/32/32441.json) | [null邑智郡川本町](/topojson/cities/32/32441.topojson) |
+| 島根県 | 32 | null邑智郡美郷町 | 32448 | [null邑智郡美郷町](/geojson/cities/32/32448.json) | [null邑智郡美郷町](/topojson/cities/32/32448.topojson) |
+| 島根県 | 32 | null邑智郡邑南町 | 32449 | [null邑智郡邑南町](/geojson/cities/32/32449.json) | [null邑智郡邑南町](/topojson/cities/32/32449.topojson) |
+| 島根県 | 32 | null鹿足郡津和野町 | 32501 | [null鹿足郡津和野町](/geojson/cities/32/32501.json) | [null鹿足郡津和野町](/topojson/cities/32/32501.topojson) |
+| 島根県 | 32 | null鹿足郡吉賀町 | 32505 | [null鹿足郡吉賀町](/geojson/cities/32/32505.json) | [null鹿足郡吉賀町](/topojson/cities/32/32505.topojson) |
+| 島根県 | 32 | null隠岐郡海士町 | 32525 | [null隠岐郡海士町](/geojson/cities/32/32525.json) | [null隠岐郡海士町](/topojson/cities/32/32525.topojson) |
+| 島根県 | 32 | null隠岐郡西ノ島町 | 32526 | [null隠岐郡西ノ島町](/geojson/cities/32/32526.json) | [null隠岐郡西ノ島町](/topojson/cities/32/32526.topojson) |
+| 島根県 | 32 | null隠岐郡知夫村 | 32527 | [null隠岐郡知夫村](/geojson/cities/32/32527.json) | [null隠岐郡知夫村](/topojson/cities/32/32527.topojson) |
+| 島根県 | 32 | null隠岐郡隠岐の島町 | 32528 | [null隠岐郡隠岐の島町](/geojson/cities/32/32528.json) | [null隠岐郡隠岐の島町](/topojson/cities/32/32528.topojson) |

@@ -1,0 +1,20 @@
+| 都道府県 | 都道府県コード | 行政区分 | 行政区分コード | GeoJson | TopoJson |
+|-----------|--------------|--------- |--------------|------|------|
+| 大分県 | 44 | nullnull大分市 | 44201 | [nullnull大分市](/geojson/cities/44/44201.json) | [nullnull大分市](/topojson/cities/44/44201.topojson) |
+| 大分県 | 44 | nullnull別府市 | 44202 | [nullnull別府市](/geojson/cities/44/44202.json) | [nullnull別府市](/topojson/cities/44/44202.topojson) |
+| 大分県 | 44 | nullnull中津市 | 44203 | [nullnull中津市](/geojson/cities/44/44203.json) | [nullnull中津市](/topojson/cities/44/44203.topojson) |
+| 大分県 | 44 | nullnull日田市 | 44204 | [nullnull日田市](/geojson/cities/44/44204.json) | [nullnull日田市](/topojson/cities/44/44204.topojson) |
+| 大分県 | 44 | nullnull佐伯市 | 44205 | [nullnull佐伯市](/geojson/cities/44/44205.json) | [nullnull佐伯市](/topojson/cities/44/44205.topojson) |
+| 大分県 | 44 | nullnull臼杵市 | 44206 | [nullnull臼杵市](/geojson/cities/44/44206.json) | [nullnull臼杵市](/topojson/cities/44/44206.topojson) |
+| 大分県 | 44 | nullnull津久見市 | 44207 | [nullnull津久見市](/geojson/cities/44/44207.json) | [nullnull津久見市](/topojson/cities/44/44207.topojson) |
+| 大分県 | 44 | nullnull竹田市 | 44208 | [nullnull竹田市](/geojson/cities/44/44208.json) | [nullnull竹田市](/topojson/cities/44/44208.topojson) |
+| 大分県 | 44 | nullnull豊後高田市 | 44209 | [nullnull豊後高田市](/geojson/cities/44/44209.json) | [nullnull豊後高田市](/topojson/cities/44/44209.topojson) |
+| 大分県 | 44 | nullnull杵築市 | 44210 | [nullnull杵築市](/geojson/cities/44/44210.json) | [nullnull杵築市](/topojson/cities/44/44210.topojson) |
+| 大分県 | 44 | nullnull宇佐市 | 44211 | [nullnull宇佐市](/geojson/cities/44/44211.json) | [nullnull宇佐市](/topojson/cities/44/44211.topojson) |
+| 大分県 | 44 | nullnull豊後大野市 | 44212 | [nullnull豊後大野市](/geojson/cities/44/44212.json) | [nullnull豊後大野市](/topojson/cities/44/44212.topojson) |
+| 大分県 | 44 | nullnull由布市 | 44213 | [nullnull由布市](/geojson/cities/44/44213.json) | [nullnull由布市](/topojson/cities/44/44213.topojson) |
+| 大分県 | 44 | nullnull国東市 | 44214 | [nullnull国東市](/geojson/cities/44/44214.json) | [nullnull国東市](/topojson/cities/44/44214.topojson) |
+| 大分県 | 44 | null東国東郡姫島村 | 44322 | [null東国東郡姫島村](/geojson/cities/44/44322.json) | [null東国東郡姫島村](/topojson/cities/44/44322.topojson) |
+| 大分県 | 44 | null速見郡日出町 | 44341 | [null速見郡日出町](/geojson/cities/44/44341.json) | [null速見郡日出町](/topojson/cities/44/44341.topojson) |
+| 大分県 | 44 | null玖珠郡九重町 | 44461 | [null玖珠郡九重町](/geojson/cities/44/44461.json) | [null玖珠郡九重町](/topojson/cities/44/44461.topojson) |
+| 大分県 | 44 | null玖珠郡玖珠町 | 44462 | [null玖珠郡玖珠町](/geojson/cities/44/44462.json) | [null玖珠郡玖珠町](/topojson/cities/44/44462.topojson) |

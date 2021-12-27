@@ -1,0 +1,21 @@
+| 都道府県 | 都道府県コード | 行政区分 | 行政区分コード | GeoJson | TopoJson |
+|-----------|--------------|--------- |--------------|------|------|
+| 鳥取県 | 31 | nullnull鳥取市 | 31201 | [nullnull鳥取市](/geojson/cities/31/31201.json) | [nullnull鳥取市](/topojson/cities/31/31201.topojson) |
+| 鳥取県 | 31 | nullnull米子市 | 31202 | [nullnull米子市](/geojson/cities/31/31202.json) | [nullnull米子市](/topojson/cities/31/31202.topojson) |
+| 鳥取県 | 31 | nullnull倉吉市 | 31203 | [nullnull倉吉市](/geojson/cities/31/31203.json) | [nullnull倉吉市](/topojson/cities/31/31203.topojson) |
+| 鳥取県 | 31 | nullnull境港市 | 31204 | [nullnull境港市](/geojson/cities/31/31204.json) | [nullnull境港市](/topojson/cities/31/31204.topojson) |
+| 鳥取県 | 31 | null岩美郡岩美町 | 31302 | [null岩美郡岩美町](/geojson/cities/31/31302.json) | [null岩美郡岩美町](/topojson/cities/31/31302.topojson) |
+| 鳥取県 | 31 | null八頭郡若桜町 | 31325 | [null八頭郡若桜町](/geojson/cities/31/31325.json) | [null八頭郡若桜町](/topojson/cities/31/31325.topojson) |
+| 鳥取県 | 31 | null八頭郡智頭町 | 31328 | [null八頭郡智頭町](/geojson/cities/31/31328.json) | [null八頭郡智頭町](/topojson/cities/31/31328.topojson) |
+| 鳥取県 | 31 | null八頭郡八頭町 | 31329 | [null八頭郡八頭町](/geojson/cities/31/31329.json) | [null八頭郡八頭町](/topojson/cities/31/31329.topojson) |
+| 鳥取県 | 31 | null東伯郡三朝町 | 31364 | [null東伯郡三朝町](/geojson/cities/31/31364.json) | [null東伯郡三朝町](/topojson/cities/31/31364.topojson) |
+| 鳥取県 | 31 | null東伯郡湯梨浜町 | 31370 | [null東伯郡湯梨浜町](/geojson/cities/31/31370.json) | [null東伯郡湯梨浜町](/topojson/cities/31/31370.topojson) |
+| 鳥取県 | 31 | null東伯郡琴浦町 | 31371 | [null東伯郡琴浦町](/geojson/cities/31/31371.json) | [null東伯郡琴浦町](/topojson/cities/31/31371.topojson) |
+| 鳥取県 | 31 | null東伯郡北栄町 | 31372 | [null東伯郡北栄町](/geojson/cities/31/31372.json) | [null東伯郡北栄町](/topojson/cities/31/31372.topojson) |
+| 鳥取県 | 31 | null西伯郡日吉津村 | 31384 | [null西伯郡日吉津村](/geojson/cities/31/31384.json) | [null西伯郡日吉津村](/topojson/cities/31/31384.topojson) |
+| 鳥取県 | 31 | null西伯郡大山町 | 31386 | [null西伯郡大山町](/geojson/cities/31/31386.json) | [null西伯郡大山町](/topojson/cities/31/31386.topojson) |
+| 鳥取県 | 31 | null西伯郡南部町 | 31389 | [null西伯郡南部町](/geojson/cities/31/31389.json) | [null西伯郡南部町](/topojson/cities/31/31389.topojson) |
+| 鳥取県 | 31 | null西伯郡伯耆町 | 31390 | [null西伯郡伯耆町](/geojson/cities/31/31390.json) | [null西伯郡伯耆町](/topojson/cities/31/31390.topojson) |
+| 鳥取県 | 31 | null日野郡日南町 | 31401 | [null日野郡日南町](/geojson/cities/31/31401.json) | [null日野郡日南町](/topojson/cities/31/31401.topojson) |
+| 鳥取県 | 31 | null日野郡日野町 | 31402 | [null日野郡日野町](/geojson/cities/31/31402.json) | [null日野郡日野町](/topojson/cities/31/31402.topojson) |
+| 鳥取県 | 31 | null日野郡江府町 | 31403 | [null日野郡江府町](/geojson/cities/31/31403.json) | [null日野郡江府町](/topojson/cities/31/31403.topojson) |

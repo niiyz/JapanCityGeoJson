@@ -1,0 +1,19 @@
+| 都道府県 | 都道府県コード | 行政区分 | 行政区分コード | GeoJson | TopoJson |
+|-----------|--------------|--------- |--------------|------|------|
+| 福井県 | 18 | nullnull福井市 | 18201 | [nullnull福井市](/geojson/cities/18/18201.json) | [nullnull福井市](/topojson/cities/18/18201.topojson) |
+| 福井県 | 18 | nullnull敦賀市 | 18202 | [nullnull敦賀市](/geojson/cities/18/18202.json) | [nullnull敦賀市](/topojson/cities/18/18202.topojson) |
+| 福井県 | 18 | nullnull小浜市 | 18204 | [nullnull小浜市](/geojson/cities/18/18204.json) | [nullnull小浜市](/topojson/cities/18/18204.topojson) |
+| 福井県 | 18 | nullnull大野市 | 18205 | [nullnull大野市](/geojson/cities/18/18205.json) | [nullnull大野市](/topojson/cities/18/18205.topojson) |
+| 福井県 | 18 | nullnull勝山市 | 18206 | [nullnull勝山市](/geojson/cities/18/18206.json) | [nullnull勝山市](/topojson/cities/18/18206.topojson) |
+| 福井県 | 18 | nullnull鯖江市 | 18207 | [nullnull鯖江市](/geojson/cities/18/18207.json) | [nullnull鯖江市](/topojson/cities/18/18207.topojson) |
+| 福井県 | 18 | nullnullあわら市 | 18208 | [nullnullあわら市](/geojson/cities/18/18208.json) | [nullnullあわら市](/topojson/cities/18/18208.topojson) |
+| 福井県 | 18 | nullnull越前市 | 18209 | [nullnull越前市](/geojson/cities/18/18209.json) | [nullnull越前市](/topojson/cities/18/18209.topojson) |
+| 福井県 | 18 | nullnull坂井市 | 18210 | [nullnull坂井市](/geojson/cities/18/18210.json) | [nullnull坂井市](/topojson/cities/18/18210.topojson) |
+| 福井県 | 18 | null吉田郡永平寺町 | 18322 | [null吉田郡永平寺町](/geojson/cities/18/18322.json) | [null吉田郡永平寺町](/topojson/cities/18/18322.topojson) |
+| 福井県 | 18 | null今立郡池田町 | 18382 | [null今立郡池田町](/geojson/cities/18/18382.json) | [null今立郡池田町](/topojson/cities/18/18382.topojson) |
+| 福井県 | 18 | null南条郡南越前町 | 18404 | [null南条郡南越前町](/geojson/cities/18/18404.json) | [null南条郡南越前町](/topojson/cities/18/18404.topojson) |
+| 福井県 | 18 | null丹生郡越前町 | 18423 | [null丹生郡越前町](/geojson/cities/18/18423.json) | [null丹生郡越前町](/topojson/cities/18/18423.topojson) |
+| 福井県 | 18 | null三方郡美浜町 | 18442 | [null三方郡美浜町](/geojson/cities/18/18442.json) | [null三方郡美浜町](/topojson/cities/18/18442.topojson) |
+| 福井県 | 18 | null大飯郡高浜町 | 18481 | [null大飯郡高浜町](/geojson/cities/18/18481.json) | [null大飯郡高浜町](/topojson/cities/18/18481.topojson) |
+| 福井県 | 18 | null大飯郡おおい町 | 18483 | [null大飯郡おおい町](/geojson/cities/18/18483.json) | [null大飯郡おおい町](/topojson/cities/18/18483.topojson) |
+| 福井県 | 18 | null三方上中郡若狭町 | 18501 | [null三方上中郡若狭町](/geojson/cities/18/18501.json) | [null三方上中郡若狭町](/topojson/cities/18/18501.topojson) |

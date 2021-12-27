@@ -1,0 +1,22 @@
+| 都道府県 | 都道府県コード | 行政区分 | 行政区分コード | GeoJson | TopoJson |
+|-----------|--------------|--------- |--------------|------|------|
+| 愛媛県 | 38 | nullnull松山市 | 38201 | [nullnull松山市](/geojson/cities/38/38201.json) | [nullnull松山市](/topojson/cities/38/38201.topojson) |
+| 愛媛県 | 38 | nullnull今治市 | 38202 | [nullnull今治市](/geojson/cities/38/38202.json) | [nullnull今治市](/topojson/cities/38/38202.topojson) |
+| 愛媛県 | 38 | nullnull宇和島市 | 38203 | [nullnull宇和島市](/geojson/cities/38/38203.json) | [nullnull宇和島市](/topojson/cities/38/38203.topojson) |
+| 愛媛県 | 38 | nullnull八幡浜市 | 38204 | [nullnull八幡浜市](/geojson/cities/38/38204.json) | [nullnull八幡浜市](/topojson/cities/38/38204.topojson) |
+| 愛媛県 | 38 | nullnull新居浜市 | 38205 | [nullnull新居浜市](/geojson/cities/38/38205.json) | [nullnull新居浜市](/topojson/cities/38/38205.topojson) |
+| 愛媛県 | 38 | nullnull西条市 | 38206 | [nullnull西条市](/geojson/cities/38/38206.json) | [nullnull西条市](/topojson/cities/38/38206.topojson) |
+| 愛媛県 | 38 | nullnull大洲市 | 38207 | [nullnull大洲市](/geojson/cities/38/38207.json) | [nullnull大洲市](/topojson/cities/38/38207.topojson) |
+| 愛媛県 | 38 | nullnull伊予市 | 38210 | [nullnull伊予市](/geojson/cities/38/38210.json) | [nullnull伊予市](/topojson/cities/38/38210.topojson) |
+| 愛媛県 | 38 | nullnull四国中央市 | 38213 | [nullnull四国中央市](/geojson/cities/38/38213.json) | [nullnull四国中央市](/topojson/cities/38/38213.topojson) |
+| 愛媛県 | 38 | nullnull西予市 | 38214 | [nullnull西予市](/geojson/cities/38/38214.json) | [nullnull西予市](/topojson/cities/38/38214.topojson) |
+| 愛媛県 | 38 | nullnull東温市 | 38215 | [nullnull東温市](/geojson/cities/38/38215.json) | [nullnull東温市](/topojson/cities/38/38215.topojson) |
+| 愛媛県 | 38 | null越智郡上島町 | 38356 | [null越智郡上島町](/geojson/cities/38/38356.json) | [null越智郡上島町](/topojson/cities/38/38356.topojson) |
+| 愛媛県 | 38 | null上浮穴郡久万高原町 | 38386 | [null上浮穴郡久万高原町](/geojson/cities/38/38386.json) | [null上浮穴郡久万高原町](/topojson/cities/38/38386.topojson) |
+| 愛媛県 | 38 | null伊予郡松前町 | 38401 | [null伊予郡松前町](/geojson/cities/38/38401.json) | [null伊予郡松前町](/topojson/cities/38/38401.topojson) |
+| 愛媛県 | 38 | null伊予郡砥部町 | 38402 | [null伊予郡砥部町](/geojson/cities/38/38402.json) | [null伊予郡砥部町](/topojson/cities/38/38402.topojson) |
+| 愛媛県 | 38 | null喜多郡内子町 | 38422 | [null喜多郡内子町](/geojson/cities/38/38422.json) | [null喜多郡内子町](/topojson/cities/38/38422.topojson) |
+| 愛媛県 | 38 | null西宇和郡伊方町 | 38442 | [null西宇和郡伊方町](/geojson/cities/38/38442.json) | [null西宇和郡伊方町](/topojson/cities/38/38442.topojson) |
+| 愛媛県 | 38 | null北宇和郡松野町 | 38484 | [null北宇和郡松野町](/geojson/cities/38/38484.json) | [null北宇和郡松野町](/topojson/cities/38/38484.topojson) |
+| 愛媛県 | 38 | null北宇和郡鬼北町 | 38488 | [null北宇和郡鬼北町](/geojson/cities/38/38488.json) | [null北宇和郡鬼北町](/topojson/cities/38/38488.topojson) |
+| 愛媛県 | 38 | null南宇和郡愛南町 | 38506 | [null南宇和郡愛南町](/geojson/cities/38/38506.json) | [null南宇和郡愛南町](/topojson/cities/38/38506.topojson) |

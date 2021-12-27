@@ -1,0 +1,27 @@
+| 都道府県 | 都道府県コード | 行政区分 | 行政区分コード | GeoJson | TopoJson |
+|-----------|--------------|--------- |--------------|------|------|
+| 秋田県 | 05 | nullnull秋田市 | 05201 | [nullnull秋田市](/geojson/cities/05/05201.json) | [nullnull秋田市](/topojson/cities/05/05201.topojson) |
+| 秋田県 | 05 | nullnull能代市 | 05202 | [nullnull能代市](/geojson/cities/05/05202.json) | [nullnull能代市](/topojson/cities/05/05202.topojson) |
+| 秋田県 | 05 | nullnull横手市 | 05203 | [nullnull横手市](/geojson/cities/05/05203.json) | [nullnull横手市](/topojson/cities/05/05203.topojson) |
+| 秋田県 | 05 | nullnull大館市 | 05204 | [nullnull大館市](/geojson/cities/05/05204.json) | [nullnull大館市](/topojson/cities/05/05204.topojson) |
+| 秋田県 | 05 | nullnull男鹿市 | 05206 | [nullnull男鹿市](/geojson/cities/05/05206.json) | [nullnull男鹿市](/topojson/cities/05/05206.topojson) |
+| 秋田県 | 05 | nullnull湯沢市 | 05207 | [nullnull湯沢市](/geojson/cities/05/05207.json) | [nullnull湯沢市](/topojson/cities/05/05207.topojson) |
+| 秋田県 | 05 | nullnull鹿角市 | 05209 | [nullnull鹿角市](/geojson/cities/05/05209.json) | [nullnull鹿角市](/topojson/cities/05/05209.topojson) |
+| 秋田県 | 05 | nullnull由利本荘市 | 05210 | [nullnull由利本荘市](/geojson/cities/05/05210.json) | [nullnull由利本荘市](/topojson/cities/05/05210.topojson) |
+| 秋田県 | 05 | nullnull潟上市 | 05211 | [nullnull潟上市](/geojson/cities/05/05211.json) | [nullnull潟上市](/topojson/cities/05/05211.topojson) |
+| 秋田県 | 05 | nullnull大仙市 | 05212 | [nullnull大仙市](/geojson/cities/05/05212.json) | [nullnull大仙市](/topojson/cities/05/05212.topojson) |
+| 秋田県 | 05 | nullnull北秋田市 | 05213 | [nullnull北秋田市](/geojson/cities/05/05213.json) | [nullnull北秋田市](/topojson/cities/05/05213.topojson) |
+| 秋田県 | 05 | nullnullにかほ市 | 05214 | [nullnullにかほ市](/geojson/cities/05/05214.json) | [nullnullにかほ市](/topojson/cities/05/05214.topojson) |
+| 秋田県 | 05 | nullnull仙北市 | 05215 | [nullnull仙北市](/geojson/cities/05/05215.json) | [nullnull仙北市](/topojson/cities/05/05215.topojson) |
+| 秋田県 | 05 | null鹿角郡小坂町 | 05303 | [null鹿角郡小坂町](/geojson/cities/05/05303.json) | [null鹿角郡小坂町](/topojson/cities/05/05303.topojson) |
+| 秋田県 | 05 | null北秋田郡上小阿仁村 | 05327 | [null北秋田郡上小阿仁村](/geojson/cities/05/05327.json) | [null北秋田郡上小阿仁村](/topojson/cities/05/05327.topojson) |
+| 秋田県 | 05 | null山本郡藤里町 | 05346 | [null山本郡藤里町](/geojson/cities/05/05346.json) | [null山本郡藤里町](/topojson/cities/05/05346.topojson) |
+| 秋田県 | 05 | null山本郡三種町 | 05348 | [null山本郡三種町](/geojson/cities/05/05348.json) | [null山本郡三種町](/topojson/cities/05/05348.topojson) |
+| 秋田県 | 05 | null山本郡八峰町 | 05349 | [null山本郡八峰町](/geojson/cities/05/05349.json) | [null山本郡八峰町](/topojson/cities/05/05349.topojson) |
+| 秋田県 | 05 | null南秋田郡五城目町 | 05361 | [null南秋田郡五城目町](/geojson/cities/05/05361.json) | [null南秋田郡五城目町](/topojson/cities/05/05361.topojson) |
+| 秋田県 | 05 | null南秋田郡八郎潟町 | 05363 | [null南秋田郡八郎潟町](/geojson/cities/05/05363.json) | [null南秋田郡八郎潟町](/topojson/cities/05/05363.topojson) |
+| 秋田県 | 05 | null南秋田郡井川町 | 05366 | [null南秋田郡井川町](/geojson/cities/05/05366.json) | [null南秋田郡井川町](/topojson/cities/05/05366.topojson) |
+| 秋田県 | 05 | null南秋田郡大潟村 | 05368 | [null南秋田郡大潟村](/geojson/cities/05/05368.json) | [null南秋田郡大潟村](/topojson/cities/05/05368.topojson) |
+| 秋田県 | 05 | null仙北郡美郷町 | 05434 | [null仙北郡美郷町](/geojson/cities/05/05434.json) | [null仙北郡美郷町](/topojson/cities/05/05434.topojson) |
+| 秋田県 | 05 | null雄勝郡羽後町 | 05463 | [null雄勝郡羽後町](/geojson/cities/05/05463.json) | [null雄勝郡羽後町](/topojson/cities/05/05463.topojson) |
+| 秋田県 | 05 | null雄勝郡東成瀬村 | 05464 | [null雄勝郡東成瀬村](/geojson/cities/05/05464.json) | [null雄勝郡東成瀬村](/topojson/cities/05/05464.topojson) |

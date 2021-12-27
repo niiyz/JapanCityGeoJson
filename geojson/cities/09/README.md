@@ -1,0 +1,27 @@
+| 都道府県 | 都道府県コード | 行政区分 | 行政区分コード | GeoJson | TopoJson |
+|-----------|--------------|--------- |--------------|------|------|
+| 栃木県 | 09 | nullnull宇都宮市 | 09201 | [nullnull宇都宮市](/geojson/cities/09/09201.json) | [nullnull宇都宮市](/topojson/cities/09/09201.topojson) |
+| 栃木県 | 09 | nullnull足利市 | 09202 | [nullnull足利市](/geojson/cities/09/09202.json) | [nullnull足利市](/topojson/cities/09/09202.topojson) |
+| 栃木県 | 09 | nullnull栃木市 | 09203 | [nullnull栃木市](/geojson/cities/09/09203.json) | [nullnull栃木市](/topojson/cities/09/09203.topojson) |
+| 栃木県 | 09 | nullnull佐野市 | 09204 | [nullnull佐野市](/geojson/cities/09/09204.json) | [nullnull佐野市](/topojson/cities/09/09204.topojson) |
+| 栃木県 | 09 | nullnull鹿沼市 | 09205 | [nullnull鹿沼市](/geojson/cities/09/09205.json) | [nullnull鹿沼市](/topojson/cities/09/09205.topojson) |
+| 栃木県 | 09 | nullnull日光市 | 09206 | [nullnull日光市](/geojson/cities/09/09206.json) | [nullnull日光市](/topojson/cities/09/09206.topojson) |
+| 栃木県 | 09 | nullnull小山市 | 09208 | [nullnull小山市](/geojson/cities/09/09208.json) | [nullnull小山市](/topojson/cities/09/09208.topojson) |
+| 栃木県 | 09 | nullnull真岡市 | 09209 | [nullnull真岡市](/geojson/cities/09/09209.json) | [nullnull真岡市](/topojson/cities/09/09209.topojson) |
+| 栃木県 | 09 | nullnull大田原市 | 09210 | [nullnull大田原市](/geojson/cities/09/09210.json) | [nullnull大田原市](/topojson/cities/09/09210.topojson) |
+| 栃木県 | 09 | nullnull矢板市 | 09211 | [nullnull矢板市](/geojson/cities/09/09211.json) | [nullnull矢板市](/topojson/cities/09/09211.topojson) |
+| 栃木県 | 09 | nullnull那須塩原市 | 09213 | [nullnull那須塩原市](/geojson/cities/09/09213.json) | [nullnull那須塩原市](/topojson/cities/09/09213.topojson) |
+| 栃木県 | 09 | nullnullさくら市 | 09214 | [nullnullさくら市](/geojson/cities/09/09214.json) | [nullnullさくら市](/topojson/cities/09/09214.topojson) |
+| 栃木県 | 09 | nullnull那須烏山市 | 09215 | [nullnull那須烏山市](/geojson/cities/09/09215.json) | [nullnull那須烏山市](/topojson/cities/09/09215.topojson) |
+| 栃木県 | 09 | nullnull下野市 | 09216 | [nullnull下野市](/geojson/cities/09/09216.json) | [nullnull下野市](/topojson/cities/09/09216.topojson) |
+| 栃木県 | 09 | null河内郡上三川町 | 09301 | [null河内郡上三川町](/geojson/cities/09/09301.json) | [null河内郡上三川町](/topojson/cities/09/09301.topojson) |
+| 栃木県 | 09 | null芳賀郡益子町 | 09342 | [null芳賀郡益子町](/geojson/cities/09/09342.json) | [null芳賀郡益子町](/topojson/cities/09/09342.topojson) |
+| 栃木県 | 09 | null芳賀郡茂木町 | 09343 | [null芳賀郡茂木町](/geojson/cities/09/09343.json) | [null芳賀郡茂木町](/topojson/cities/09/09343.topojson) |
+| 栃木県 | 09 | null芳賀郡市貝町 | 09344 | [null芳賀郡市貝町](/geojson/cities/09/09344.json) | [null芳賀郡市貝町](/topojson/cities/09/09344.topojson) |
+| 栃木県 | 09 | null芳賀郡芳賀町 | 09345 | [null芳賀郡芳賀町](/geojson/cities/09/09345.json) | [null芳賀郡芳賀町](/topojson/cities/09/09345.topojson) |
+| 栃木県 | 09 | null下都賀郡壬生町 | 09361 | [null下都賀郡壬生町](/geojson/cities/09/09361.json) | [null下都賀郡壬生町](/topojson/cities/09/09361.topojson) |
+| 栃木県 | 09 | null下都賀郡野木町 | 09364 | [null下都賀郡野木町](/geojson/cities/09/09364.json) | [null下都賀郡野木町](/topojson/cities/09/09364.topojson) |
+| 栃木県 | 09 | null塩谷郡塩谷町 | 09384 | [null塩谷郡塩谷町](/geojson/cities/09/09384.json) | [null塩谷郡塩谷町](/topojson/cities/09/09384.topojson) |
+| 栃木県 | 09 | null塩谷郡高根沢町 | 09386 | [null塩谷郡高根沢町](/geojson/cities/09/09386.json) | [null塩谷郡高根沢町](/topojson/cities/09/09386.topojson) |
+| 栃木県 | 09 | null那須郡那須町 | 09407 | [null那須郡那須町](/geojson/cities/09/09407.json) | [null那須郡那須町](/topojson/cities/09/09407.topojson) |
+| 栃木県 | 09 | null那須郡那珂川町 | 09411 | [null那須郡那珂川町](/geojson/cities/09/09411.json) | [null那須郡那珂川町](/topojson/cities/09/09411.topojson) |

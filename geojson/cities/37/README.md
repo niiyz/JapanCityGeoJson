@@ -1,0 +1,19 @@
+| 都道府県 | 都道府県コード | 行政区分 | 行政区分コード | GeoJson | TopoJson |
+|-----------|--------------|--------- |--------------|------|------|
+| 香川県 | 37 | nullnull高松市 | 37201 | [nullnull高松市](/geojson/cities/37/37201.json) | [nullnull高松市](/topojson/cities/37/37201.topojson) |
+| 香川県 | 37 | nullnull丸亀市 | 37202 | [nullnull丸亀市](/geojson/cities/37/37202.json) | [nullnull丸亀市](/topojson/cities/37/37202.topojson) |
+| 香川県 | 37 | nullnull坂出市 | 37203 | [nullnull坂出市](/geojson/cities/37/37203.json) | [nullnull坂出市](/topojson/cities/37/37203.topojson) |
+| 香川県 | 37 | nullnull善通寺市 | 37204 | [nullnull善通寺市](/geojson/cities/37/37204.json) | [nullnull善通寺市](/topojson/cities/37/37204.topojson) |
+| 香川県 | 37 | nullnull観音寺市 | 37205 | [nullnull観音寺市](/geojson/cities/37/37205.json) | [nullnull観音寺市](/topojson/cities/37/37205.topojson) |
+| 香川県 | 37 | nullnullさぬき市 | 37206 | [nullnullさぬき市](/geojson/cities/37/37206.json) | [nullnullさぬき市](/topojson/cities/37/37206.topojson) |
+| 香川県 | 37 | nullnull東かがわ市 | 37207 | [nullnull東かがわ市](/geojson/cities/37/37207.json) | [nullnull東かがわ市](/topojson/cities/37/37207.topojson) |
+| 香川県 | 37 | nullnull三豊市 | 37208 | [nullnull三豊市](/geojson/cities/37/37208.json) | [nullnull三豊市](/topojson/cities/37/37208.topojson) |
+| 香川県 | 37 | null小豆郡土庄町 | 37322 | [null小豆郡土庄町](/geojson/cities/37/37322.json) | [null小豆郡土庄町](/topojson/cities/37/37322.topojson) |
+| 香川県 | 37 | null小豆郡小豆島町 | 37324 | [null小豆郡小豆島町](/geojson/cities/37/37324.json) | [null小豆郡小豆島町](/topojson/cities/37/37324.topojson) |
+| 香川県 | 37 | null木田郡三木町 | 37341 | [null木田郡三木町](/geojson/cities/37/37341.json) | [null木田郡三木町](/topojson/cities/37/37341.topojson) |
+| 香川県 | 37 | null香川郡直島町 | 37364 | [null香川郡直島町](/geojson/cities/37/37364.json) | [null香川郡直島町](/topojson/cities/37/37364.topojson) |
+| 香川県 | 37 | null綾歌郡宇多津町 | 37386 | [null綾歌郡宇多津町](/geojson/cities/37/37386.json) | [null綾歌郡宇多津町](/topojson/cities/37/37386.topojson) |
+| 香川県 | 37 | null綾歌郡綾川町 | 37387 | [null綾歌郡綾川町](/geojson/cities/37/37387.json) | [null綾歌郡綾川町](/topojson/cities/37/37387.topojson) |
+| 香川県 | 37 | null仲多度郡琴平町 | 37403 | [null仲多度郡琴平町](/geojson/cities/37/37403.json) | [null仲多度郡琴平町](/topojson/cities/37/37403.topojson) |
+| 香川県 | 37 | null仲多度郡多度津町 | 37404 | [null仲多度郡多度津町](/geojson/cities/37/37404.json) | [null仲多度郡多度津町](/topojson/cities/37/37404.topojson) |
+| 香川県 | 37 | null仲多度郡まんのう町 | 37406 | [null仲多度郡まんのう町](/geojson/cities/37/37406.json) | [null仲多度郡まんのう町](/topojson/cities/37/37406.topojson) |
