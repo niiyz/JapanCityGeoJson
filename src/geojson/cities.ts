@@ -2,6 +2,8 @@ import {pgClient} from "../pgClient";
 
 const fs = require("fs");
 
+const mdOnly = true;
+
 const path = './geojson/cities';
 
 const main = async (): Promise<void> => {
@@ -32,7 +34,6 @@ FROM (
 
     for (let i in cities.rows) {
         const city = cities.rows[i];
-        // const json = await client.query(sql, [city.code]);
         if (!city.code) {
              console.log("所属未定地");
              break;
@@ -41,15 +42,19 @@ FROM (
         if (prevPrefCode === "") {
             prevPrefCode = prefCode;
         }
-        // const filepath = `${path}/${prefCode}`;
-        // if (!fs.existsSync(filepath)) {
-        //     fs.mkdirSync(filepath, {recursive: true});
-        // }
-        // console.log(city.code, city.pref, city.regional, city.city1, city.city2, city.cnt);
-        // fs.writeFileSync(`${filepath}/${city.code}.json`, JSON.stringify(json.rows[0].json_build_object));
+        const filepath = `${path}/${prefCode}`;
+        if (!fs.existsSync(filepath)) {
+            fs.mkdirSync(filepath, {recursive: true});
+        }
+        if (! mdOnly) {
+            const json = await client.query(sql, [city.code]);
+            fs.writeFileSync(`${filepath}/${city.code}.json`, JSON.stringify(json.rows[0].json_build_object));
+        }
+        console.log(city.code, city.pref, city.regional, city.city1, city.city2, city.cnt);
         if (prevPrefCode !== prefCode) {
             const readme = `| 都道府県 | 行政区分 | 行政区分コード | GeoJson | TopoJson |\n|-----------|--------- |--------------|------|------|\n${text}`;
             fs.writeFileSync(`geojson/cities/${prevPrefCode}/README.md`, readme);
+            fs.writeFileSync(`topojson/cities/${prevPrefCode}/README.md`, readme);
             prevPrefCode = prefCode;
             text = "";
         }

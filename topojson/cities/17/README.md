@@ -1,0 +1,21 @@
+| 都道府県 | 行政区分 | 行政区分コード | GeoJson | TopoJson |
+|-----------|--------- |--------------|------|------|
+| 石川県 | 金沢市 | 17201 | [金沢市](/geojson/cities/17/17201.json) | [金沢市](/topojson/cities/17/17201.topojson) |
+| 石川県 | 七尾市 | 17202 | [七尾市](/geojson/cities/17/17202.json) | [七尾市](/topojson/cities/17/17202.topojson) |
+| 石川県 | 小松市 | 17203 | [小松市](/geojson/cities/17/17203.json) | [小松市](/topojson/cities/17/17203.topojson) |
+| 石川県 | 輪島市 | 17204 | [輪島市](/geojson/cities/17/17204.json) | [輪島市](/topojson/cities/17/17204.topojson) |
+| 石川県 | 珠洲市 | 17205 | [珠洲市](/geojson/cities/17/17205.json) | [珠洲市](/topojson/cities/17/17205.topojson) |
+| 石川県 | 加賀市 | 17206 | [加賀市](/geojson/cities/17/17206.json) | [加賀市](/topojson/cities/17/17206.topojson) |
+| 石川県 | 羽咋市 | 17207 | [羽咋市](/geojson/cities/17/17207.json) | [羽咋市](/topojson/cities/17/17207.topojson) |
+| 石川県 | かほく市 | 17209 | [かほく市](/geojson/cities/17/17209.json) | [かほく市](/topojson/cities/17/17209.topojson) |
+| 石川県 | 白山市 | 17210 | [白山市](/geojson/cities/17/17210.json) | [白山市](/topojson/cities/17/17210.topojson) |
+| 石川県 | 能美市 | 17211 | [能美市](/geojson/cities/17/17211.json) | [能美市](/topojson/cities/17/17211.topojson) |
+| 石川県 | 野々市市 | 17212 | [野々市市](/geojson/cities/17/17212.json) | [野々市市](/topojson/cities/17/17212.topojson) |
+| 石川県 | 能美郡川北町 | 17324 | [能美郡川北町](/geojson/cities/17/17324.json) | [能美郡川北町](/topojson/cities/17/17324.topojson) |
+| 石川県 | 河北郡津幡町 | 17361 | [河北郡津幡町](/geojson/cities/17/17361.json) | [河北郡津幡町](/topojson/cities/17/17361.topojson) |
+| 石川県 | 河北郡内灘町 | 17365 | [河北郡内灘町](/geojson/cities/17/17365.json) | [河北郡内灘町](/topojson/cities/17/17365.topojson) |
+| 石川県 | 羽咋郡志賀町 | 17384 | [羽咋郡志賀町](/geojson/cities/17/17384.json) | [羽咋郡志賀町](/topojson/cities/17/17384.topojson) |
+| 石川県 | 羽咋郡宝達志水町 | 17386 | [羽咋郡宝達志水町](/geojson/cities/17/17386.json) | [羽咋郡宝達志水町](/topojson/cities/17/17386.topojson) |
+| 石川県 | 鹿島郡中能登町 | 17407 | [鹿島郡中能登町](/geojson/cities/17/17407.json) | [鹿島郡中能登町](/topojson/cities/17/17407.topojson) |
+| 石川県 | 鳳珠郡穴水町 | 17461 | [鳳珠郡穴水町](/geojson/cities/17/17461.json) | [鳳珠郡穴水町](/topojson/cities/17/17461.topojson) |
+| 石川県 | 鳳珠郡能登町 | 17463 | [鳳珠郡能登町](/geojson/cities/17/17463.json) | [鳳珠郡能登町](/topojson/cities/17/17463.topojson) |

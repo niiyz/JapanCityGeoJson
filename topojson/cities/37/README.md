@@ -1,0 +1,19 @@
+| 都道府県 | 行政区分 | 行政区分コード | GeoJson | TopoJson |
+|-----------|--------- |--------------|------|------|
+| 香川県 | 高松市 | 37201 | [高松市](/geojson/cities/37/37201.json) | [高松市](/topojson/cities/37/37201.topojson) |
+| 香川県 | 丸亀市 | 37202 | [丸亀市](/geojson/cities/37/37202.json) | [丸亀市](/topojson/cities/37/37202.topojson) |
+| 香川県 | 坂出市 | 37203 | [坂出市](/geojson/cities/37/37203.json) | [坂出市](/topojson/cities/37/37203.topojson) |
+| 香川県 | 善通寺市 | 37204 | [善通寺市](/geojson/cities/37/37204.json) | [善通寺市](/topojson/cities/37/37204.topojson) |
+| 香川県 | 観音寺市 | 37205 | [観音寺市](/geojson/cities/37/37205.json) | [観音寺市](/topojson/cities/37/37205.topojson) |
+| 香川県 | さぬき市 | 37206 | [さぬき市](/geojson/cities/37/37206.json) | [さぬき市](/topojson/cities/37/37206.topojson) |
+| 香川県 | 東かがわ市 | 37207 | [東かがわ市](/geojson/cities/37/37207.json) | [東かがわ市](/topojson/cities/37/37207.topojson) |
+| 香川県 | 三豊市 | 37208 | [三豊市](/geojson/cities/37/37208.json) | [三豊市](/topojson/cities/37/37208.topojson) |
+| 香川県 | 小豆郡土庄町 | 37322 | [小豆郡土庄町](/geojson/cities/37/37322.json) | [小豆郡土庄町](/topojson/cities/37/37322.topojson) |
+| 香川県 | 小豆郡小豆島町 | 37324 | [小豆郡小豆島町](/geojson/cities/37/37324.json) | [小豆郡小豆島町](/topojson/cities/37/37324.topojson) |
+| 香川県 | 木田郡三木町 | 37341 | [木田郡三木町](/geojson/cities/37/37341.json) | [木田郡三木町](/topojson/cities/37/37341.topojson) |
+| 香川県 | 香川郡直島町 | 37364 | [香川郡直島町](/geojson/cities/37/37364.json) | [香川郡直島町](/topojson/cities/37/37364.topojson) |
+| 香川県 | 綾歌郡宇多津町 | 37386 | [綾歌郡宇多津町](/geojson/cities/37/37386.json) | [綾歌郡宇多津町](/topojson/cities/37/37386.topojson) |
+| 香川県 | 綾歌郡綾川町 | 37387 | [綾歌郡綾川町](/geojson/cities/37/37387.json) | [綾歌郡綾川町](/topojson/cities/37/37387.topojson) |
+| 香川県 | 仲多度郡琴平町 | 37403 | [仲多度郡琴平町](/geojson/cities/37/37403.json) | [仲多度郡琴平町](/topojson/cities/37/37403.topojson) |
+| 香川県 | 仲多度郡多度津町 | 37404 | [仲多度郡多度津町](/geojson/cities/37/37404.json) | [仲多度郡多度津町](/topojson/cities/37/37404.topojson) |
+| 香川県 | 仲多度郡まんのう町 | 37406 | [仲多度郡まんのう町](/geojson/cities/37/37406.json) | [仲多度郡まんのう町](/topojson/cities/37/37406.topojson) |

@@ -1,0 +1,21 @@
+| 都道府県 | 行政区分 | 行政区分コード | GeoJson | TopoJson |
+|-----------|--------- |--------------|------|------|
+| 滋賀県 | 大津市 | 25201 | [大津市](/geojson/cities/25/25201.json) | [大津市](/topojson/cities/25/25201.topojson) |
+| 滋賀県 | 彦根市 | 25202 | [彦根市](/geojson/cities/25/25202.json) | [彦根市](/topojson/cities/25/25202.topojson) |
+| 滋賀県 | 長浜市 | 25203 | [長浜市](/geojson/cities/25/25203.json) | [長浜市](/topojson/cities/25/25203.topojson) |
+| 滋賀県 | 近江八幡市 | 25204 | [近江八幡市](/geojson/cities/25/25204.json) | [近江八幡市](/topojson/cities/25/25204.topojson) |
+| 滋賀県 | 草津市 | 25206 | [草津市](/geojson/cities/25/25206.json) | [草津市](/topojson/cities/25/25206.topojson) |
+| 滋賀県 | 守山市 | 25207 | [守山市](/geojson/cities/25/25207.json) | [守山市](/topojson/cities/25/25207.topojson) |
+| 滋賀県 | 栗東市 | 25208 | [栗東市](/geojson/cities/25/25208.json) | [栗東市](/topojson/cities/25/25208.topojson) |
+| 滋賀県 | 甲賀市 | 25209 | [甲賀市](/geojson/cities/25/25209.json) | [甲賀市](/topojson/cities/25/25209.topojson) |
+| 滋賀県 | 野洲市 | 25210 | [野洲市](/geojson/cities/25/25210.json) | [野洲市](/topojson/cities/25/25210.topojson) |
+| 滋賀県 | 湖南市 | 25211 | [湖南市](/geojson/cities/25/25211.json) | [湖南市](/topojson/cities/25/25211.topojson) |
+| 滋賀県 | 高島市 | 25212 | [高島市](/geojson/cities/25/25212.json) | [高島市](/topojson/cities/25/25212.topojson) |
+| 滋賀県 | 東近江市 | 25213 | [東近江市](/geojson/cities/25/25213.json) | [東近江市](/topojson/cities/25/25213.topojson) |
+| 滋賀県 | 米原市 | 25214 | [米原市](/geojson/cities/25/25214.json) | [米原市](/topojson/cities/25/25214.topojson) |
+| 滋賀県 | 蒲生郡日野町 | 25383 | [蒲生郡日野町](/geojson/cities/25/25383.json) | [蒲生郡日野町](/topojson/cities/25/25383.topojson) |
+| 滋賀県 | 蒲生郡竜王町 | 25384 | [蒲生郡竜王町](/geojson/cities/25/25384.json) | [蒲生郡竜王町](/topojson/cities/25/25384.topojson) |
+| 滋賀県 | 愛知郡愛荘町 | 25425 | [愛知郡愛荘町](/geojson/cities/25/25425.json) | [愛知郡愛荘町](/topojson/cities/25/25425.topojson) |
+| 滋賀県 | 犬上郡豊郷町 | 25441 | [犬上郡豊郷町](/geojson/cities/25/25441.json) | [犬上郡豊郷町](/topojson/cities/25/25441.topojson) |
+| 滋賀県 | 犬上郡甲良町 | 25442 | [犬上郡甲良町](/geojson/cities/25/25442.json) | [犬上郡甲良町](/topojson/cities/25/25442.topojson) |
+| 滋賀県 | 犬上郡多賀町 | 25443 | [犬上郡多賀町](/geojson/cities/25/25443.json) | [犬上郡多賀町](/topojson/cities/25/25443.topojson) |

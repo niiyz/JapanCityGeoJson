@@ -1,0 +1,23 @@
+| 都道府県 | 行政区分 | 行政区分コード | GeoJson | TopoJson |
+|-----------|--------- |--------------|------|------|
+| 長崎県 | 長崎市 | 42201 | [長崎市](/geojson/cities/42/42201.json) | [長崎市](/topojson/cities/42/42201.topojson) |
+| 長崎県 | 佐世保市 | 42202 | [佐世保市](/geojson/cities/42/42202.json) | [佐世保市](/topojson/cities/42/42202.topojson) |
+| 長崎県 | 島原市 | 42203 | [島原市](/geojson/cities/42/42203.json) | [島原市](/topojson/cities/42/42203.topojson) |
+| 長崎県 | 諫早市 | 42204 | [諫早市](/geojson/cities/42/42204.json) | [諫早市](/topojson/cities/42/42204.topojson) |
+| 長崎県 | 大村市 | 42205 | [大村市](/geojson/cities/42/42205.json) | [大村市](/topojson/cities/42/42205.topojson) |
+| 長崎県 | 平戸市 | 42207 | [平戸市](/geojson/cities/42/42207.json) | [平戸市](/topojson/cities/42/42207.topojson) |
+| 長崎県 | 松浦市 | 42208 | [松浦市](/geojson/cities/42/42208.json) | [松浦市](/topojson/cities/42/42208.topojson) |
+| 長崎県 | 対馬市 | 42209 | [対馬市](/geojson/cities/42/42209.json) | [対馬市](/topojson/cities/42/42209.topojson) |
+| 長崎県 | 壱岐市 | 42210 | [壱岐市](/geojson/cities/42/42210.json) | [壱岐市](/topojson/cities/42/42210.topojson) |
+| 長崎県 | 五島市 | 42211 | [五島市](/geojson/cities/42/42211.json) | [五島市](/topojson/cities/42/42211.topojson) |
+| 長崎県 | 西海市 | 42212 | [西海市](/geojson/cities/42/42212.json) | [西海市](/topojson/cities/42/42212.topojson) |
+| 長崎県 | 雲仙市 | 42213 | [雲仙市](/geojson/cities/42/42213.json) | [雲仙市](/topojson/cities/42/42213.topojson) |
+| 長崎県 | 南島原市 | 42214 | [南島原市](/geojson/cities/42/42214.json) | [南島原市](/topojson/cities/42/42214.topojson) |
+| 長崎県 | 西彼杵郡長与町 | 42307 | [西彼杵郡長与町](/geojson/cities/42/42307.json) | [西彼杵郡長与町](/topojson/cities/42/42307.topojson) |
+| 長崎県 | 西彼杵郡時津町 | 42308 | [西彼杵郡時津町](/geojson/cities/42/42308.json) | [西彼杵郡時津町](/topojson/cities/42/42308.topojson) |
+| 長崎県 | 東彼杵郡東彼杵町 | 42321 | [東彼杵郡東彼杵町](/geojson/cities/42/42321.json) | [東彼杵郡東彼杵町](/topojson/cities/42/42321.topojson) |
+| 長崎県 | 東彼杵郡川棚町 | 42322 | [東彼杵郡川棚町](/geojson/cities/42/42322.json) | [東彼杵郡川棚町](/topojson/cities/42/42322.topojson) |
+| 長崎県 | 東彼杵郡波佐見町 | 42323 | [東彼杵郡波佐見町](/geojson/cities/42/42323.json) | [東彼杵郡波佐見町](/topojson/cities/42/42323.topojson) |
+| 長崎県 | 北松浦郡小値賀町 | 42383 | [北松浦郡小値賀町](/geojson/cities/42/42383.json) | [北松浦郡小値賀町](/topojson/cities/42/42383.topojson) |
+| 長崎県 | 北松浦郡佐々町 | 42391 | [北松浦郡佐々町](/geojson/cities/42/42391.json) | [北松浦郡佐々町](/topojson/cities/42/42391.topojson) |
+| 長崎県 | 南松浦郡新上五島町 | 42411 | [南松浦郡新上五島町](/geojson/cities/42/42411.json) | [南松浦郡新上五島町](/topojson/cities/42/42411.topojson) |
