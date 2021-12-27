@@ -13,7 +13,7 @@ const main = async (): Promise<void> => {
     const client = await pgClient();
     const sql = `
         with edges as (
-            select gid as arc_id, geom, code from prefectures where code = $1
+            select gid as arc_id, geom, code from prefectures where code = $1 and ST_Area(geom) > 0.0003495285322129
         ),
              collect_edges as (
                  select st_collect(geom) as geom, code
@@ -94,15 +94,13 @@ const main = async (): Promise<void> => {
         select string_agg(json, '') as topojson
         from topojson;
 `;
-    const prefectures = await client.query('select code, name from prefectures group by code, name order by code');
+    const prefectures = await client.query("select code, name, count(*) as cnt from prefectures where ST_Area(geom) > 0.0003495285322129 group by code, name order by code");
 
     for (let i in prefectures.rows) {
-        const code = prefectures.rows[i].code;
-        const name = prefectures.rows[i].name;
-        const json = await client.query(sql, [code]);
-        const filepath = `${path}/${code}.topojson`;
-        console.log(code, name, filepath);
-        fs.writeFileSync(filepath, JSON.stringify(json.rows[0].topojson));
+        const prefecture = prefectures.rows[i];
+        const json = await client.query(sql, [prefecture.code]);
+        console.log(prefecture.code, prefecture.name, prefecture.cnt);
+        fs.writeFileSync(`${path}/${prefecture.code}.topojson`, JSON.stringify(JSON.parse(json.rows[0].topojson)));
     }
     await client.end()
 }
