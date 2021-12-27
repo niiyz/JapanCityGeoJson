@@ -44,7 +44,7 @@ FROM (
     await client.end()
 
     const readme = "|  都道府県  | 都道府県コード | GeoJson | TopoJson |\n" + "|-----------|--------------|------|------|\n" + text;
-    fs.writeFileSync("geojson/README.md", readme);
+    fs.writeFileSync("geojson/prefectures/README.md", readme);
 }
 
 main().then(() => {
