@@ -61,6 +61,7 @@ const main = async (): Promise<void> => {
             case when q2.path is null then q1.y else q1.y - q2.y end as y
         from quantize as q1 left outer join quantize q2
         on ( q1.arc_id = q2.arc_id and q1.path[1] = q2.path[1] and q1.path[2] = q2.path[2]+1 )
+        where q1.path[1] = 1
         order by q1.arc_id, q1.path
             ), delta_arc_ids as (
         select arc_id
