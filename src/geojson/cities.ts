@@ -1,4 +1,4 @@
-import {pgClient} from "./pgClient";
+import {pgClient} from "../pgClient";
 
 const fs = require("fs");
 
