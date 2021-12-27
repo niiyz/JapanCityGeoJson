@@ -1,22 +1,22 @@
-| 都道府県 | 都道府県コード | 行政区分 | 行政区分コード | GeoJson | TopoJson |
+| 都道府県 | 行政区分 | 行政区分コード | GeoJson | TopoJson |
 |-----------|--------------|--------- |--------------|------|------|
-| 佐賀県 | 41 | 佐賀市 | 41201 | [佐賀市](/geojson/cities/41/41201.json) | [佐賀市](/topojson/cities/41/41201.topojson) |
-| 佐賀県 | 41 | 唐津市 | 41202 | [唐津市](/geojson/cities/41/41202.json) | [唐津市](/topojson/cities/41/41202.topojson) |
-| 佐賀県 | 41 | 鳥栖市 | 41203 | [鳥栖市](/geojson/cities/41/41203.json) | [鳥栖市](/topojson/cities/41/41203.topojson) |
-| 佐賀県 | 41 | 多久市 | 41204 | [多久市](/geojson/cities/41/41204.json) | [多久市](/topojson/cities/41/41204.topojson) |
-| 佐賀県 | 41 | 伊万里市 | 41205 | [伊万里市](/geojson/cities/41/41205.json) | [伊万里市](/topojson/cities/41/41205.topojson) |
-| 佐賀県 | 41 | 武雄市 | 41206 | [武雄市](/geojson/cities/41/41206.json) | [武雄市](/topojson/cities/41/41206.topojson) |
-| 佐賀県 | 41 | 鹿島市 | 41207 | [鹿島市](/geojson/cities/41/41207.json) | [鹿島市](/topojson/cities/41/41207.topojson) |
-| 佐賀県 | 41 | 小城市 | 41208 | [小城市](/geojson/cities/41/41208.json) | [小城市](/topojson/cities/41/41208.topojson) |
-| 佐賀県 | 41 | 嬉野市 | 41209 | [嬉野市](/geojson/cities/41/41209.json) | [嬉野市](/topojson/cities/41/41209.topojson) |
-| 佐賀県 | 41 | 神埼市 | 41210 | [神埼市](/geojson/cities/41/41210.json) | [神埼市](/topojson/cities/41/41210.topojson) |
-| 佐賀県 | 41 | 神埼郡吉野ヶ里町 | 41327 | [神埼郡吉野ヶ里町](/geojson/cities/41/41327.json) | [神埼郡吉野ヶ里町](/topojson/cities/41/41327.topojson) |
-| 佐賀県 | 41 | 三養基郡基山町 | 41341 | [三養基郡基山町](/geojson/cities/41/41341.json) | [三養基郡基山町](/topojson/cities/41/41341.topojson) |
-| 佐賀県 | 41 | 三養基郡上峰町 | 41345 | [三養基郡上峰町](/geojson/cities/41/41345.json) | [三養基郡上峰町](/topojson/cities/41/41345.topojson) |
-| 佐賀県 | 41 | 三養基郡みやき町 | 41346 | [三養基郡みやき町](/geojson/cities/41/41346.json) | [三養基郡みやき町](/topojson/cities/41/41346.topojson) |
-| 佐賀県 | 41 | 東松浦郡玄海町 | 41387 | [東松浦郡玄海町](/geojson/cities/41/41387.json) | [東松浦郡玄海町](/topojson/cities/41/41387.topojson) |
-| 佐賀県 | 41 | 西松浦郡有田町 | 41401 | [西松浦郡有田町](/geojson/cities/41/41401.json) | [西松浦郡有田町](/topojson/cities/41/41401.topojson) |
-| 佐賀県 | 41 | 杵島郡大町町 | 41423 | [杵島郡大町町](/geojson/cities/41/41423.json) | [杵島郡大町町](/topojson/cities/41/41423.topojson) |
-| 佐賀県 | 41 | 杵島郡江北町 | 41424 | [杵島郡江北町](/geojson/cities/41/41424.json) | [杵島郡江北町](/topojson/cities/41/41424.topojson) |
-| 佐賀県 | 41 | 杵島郡白石町 | 41425 | [杵島郡白石町](/geojson/cities/41/41425.json) | [杵島郡白石町](/topojson/cities/41/41425.topojson) |
-| 佐賀県 | 41 | 藤津郡太良町 | 41441 | [藤津郡太良町](/geojson/cities/41/41441.json) | [藤津郡太良町](/topojson/cities/41/41441.topojson) |
+| 佐賀県 | 佐賀市 | 41201 | [佐賀市](/geojson/cities/41/41201.json) | [佐賀市](/topojson/cities/41/41201.topojson) |
+| 佐賀県 | 唐津市 | 41202 | [唐津市](/geojson/cities/41/41202.json) | [唐津市](/topojson/cities/41/41202.topojson) |
+| 佐賀県 | 鳥栖市 | 41203 | [鳥栖市](/geojson/cities/41/41203.json) | [鳥栖市](/topojson/cities/41/41203.topojson) |
+| 佐賀県 | 多久市 | 41204 | [多久市](/geojson/cities/41/41204.json) | [多久市](/topojson/cities/41/41204.topojson) |
+| 佐賀県 | 伊万里市 | 41205 | [伊万里市](/geojson/cities/41/41205.json) | [伊万里市](/topojson/cities/41/41205.topojson) |
+| 佐賀県 | 武雄市 | 41206 | [武雄市](/geojson/cities/41/41206.json) | [武雄市](/topojson/cities/41/41206.topojson) |
+| 佐賀県 | 鹿島市 | 41207 | [鹿島市](/geojson/cities/41/41207.json) | [鹿島市](/topojson/cities/41/41207.topojson) |
+| 佐賀県 | 小城市 | 41208 | [小城市](/geojson/cities/41/41208.json) | [小城市](/topojson/cities/41/41208.topojson) |
+| 佐賀県 | 嬉野市 | 41209 | [嬉野市](/geojson/cities/41/41209.json) | [嬉野市](/topojson/cities/41/41209.topojson) |
+| 佐賀県 | 神埼市 | 41210 | [神埼市](/geojson/cities/41/41210.json) | [神埼市](/topojson/cities/41/41210.topojson) |
+| 佐賀県 | 神埼郡吉野ヶ里町 | 41327 | [神埼郡吉野ヶ里町](/geojson/cities/41/41327.json) | [神埼郡吉野ヶ里町](/topojson/cities/41/41327.topojson) |
+| 佐賀県 | 三養基郡基山町 | 41341 | [三養基郡基山町](/geojson/cities/41/41341.json) | [三養基郡基山町](/topojson/cities/41/41341.topojson) |
+| 佐賀県 | 三養基郡上峰町 | 41345 | [三養基郡上峰町](/geojson/cities/41/41345.json) | [三養基郡上峰町](/topojson/cities/41/41345.topojson) |
+| 佐賀県 | 三養基郡みやき町 | 41346 | [三養基郡みやき町](/geojson/cities/41/41346.json) | [三養基郡みやき町](/topojson/cities/41/41346.topojson) |
+| 佐賀県 | 東松浦郡玄海町 | 41387 | [東松浦郡玄海町](/geojson/cities/41/41387.json) | [東松浦郡玄海町](/topojson/cities/41/41387.topojson) |
+| 佐賀県 | 西松浦郡有田町 | 41401 | [西松浦郡有田町](/geojson/cities/41/41401.json) | [西松浦郡有田町](/topojson/cities/41/41401.topojson) |
+| 佐賀県 | 杵島郡大町町 | 41423 | [杵島郡大町町](/geojson/cities/41/41423.json) | [杵島郡大町町](/topojson/cities/41/41423.topojson) |
+| 佐賀県 | 杵島郡江北町 | 41424 | [杵島郡江北町](/geojson/cities/41/41424.json) | [杵島郡江北町](/topojson/cities/41/41424.topojson) |
+| 佐賀県 | 杵島郡白石町 | 41425 | [杵島郡白石町](/geojson/cities/41/41425.json) | [杵島郡白石町](/topojson/cities/41/41425.topojson) |
+| 佐賀県 | 藤津郡太良町 | 41441 | [藤津郡太良町](/geojson/cities/41/41441.json) | [藤津郡太良町](/topojson/cities/41/41441.topojson) |

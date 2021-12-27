@@ -1,44 +1,44 @@
-| 都道府県 | 都道府県コード | 行政区分 | 行政区分コード | GeoJson | TopoJson |
+| 都道府県 | 行政区分 | 行政区分コード | GeoJson | TopoJson |
 |-----------|--------------|--------- |--------------|------|------|
-| 岐阜県 | 21 | 岐阜市 | 21201 | [岐阜市](/geojson/cities/21/21201.json) | [岐阜市](/topojson/cities/21/21201.topojson) |
-| 岐阜県 | 21 | 大垣市 | 21202 | [大垣市](/geojson/cities/21/21202.json) | [大垣市](/topojson/cities/21/21202.topojson) |
-| 岐阜県 | 21 | 高山市 | 21203 | [高山市](/geojson/cities/21/21203.json) | [高山市](/topojson/cities/21/21203.topojson) |
-| 岐阜県 | 21 | 多治見市 | 21204 | [多治見市](/geojson/cities/21/21204.json) | [多治見市](/topojson/cities/21/21204.topojson) |
-| 岐阜県 | 21 | 関市 | 21205 | [関市](/geojson/cities/21/21205.json) | [関市](/topojson/cities/21/21205.topojson) |
-| 岐阜県 | 21 | 中津川市 | 21206 | [中津川市](/geojson/cities/21/21206.json) | [中津川市](/topojson/cities/21/21206.topojson) |
-| 岐阜県 | 21 | 美濃市 | 21207 | [美濃市](/geojson/cities/21/21207.json) | [美濃市](/topojson/cities/21/21207.topojson) |
-| 岐阜県 | 21 | 瑞浪市 | 21208 | [瑞浪市](/geojson/cities/21/21208.json) | [瑞浪市](/topojson/cities/21/21208.topojson) |
-| 岐阜県 | 21 | 羽島市 | 21209 | [羽島市](/geojson/cities/21/21209.json) | [羽島市](/topojson/cities/21/21209.topojson) |
-| 岐阜県 | 21 | 恵那市 | 21210 | [恵那市](/geojson/cities/21/21210.json) | [恵那市](/topojson/cities/21/21210.topojson) |
-| 岐阜県 | 21 | 美濃加茂市 | 21211 | [美濃加茂市](/geojson/cities/21/21211.json) | [美濃加茂市](/topojson/cities/21/21211.topojson) |
-| 岐阜県 | 21 | 土岐市 | 21212 | [土岐市](/geojson/cities/21/21212.json) | [土岐市](/topojson/cities/21/21212.topojson) |
-| 岐阜県 | 21 | 各務原市 | 21213 | [各務原市](/geojson/cities/21/21213.json) | [各務原市](/topojson/cities/21/21213.topojson) |
-| 岐阜県 | 21 | 可児市 | 21214 | [可児市](/geojson/cities/21/21214.json) | [可児市](/topojson/cities/21/21214.topojson) |
-| 岐阜県 | 21 | 山県市 | 21215 | [山県市](/geojson/cities/21/21215.json) | [山県市](/topojson/cities/21/21215.topojson) |
-| 岐阜県 | 21 | 瑞穂市 | 21216 | [瑞穂市](/geojson/cities/21/21216.json) | [瑞穂市](/topojson/cities/21/21216.topojson) |
-| 岐阜県 | 21 | 飛騨市 | 21217 | [飛騨市](/geojson/cities/21/21217.json) | [飛騨市](/topojson/cities/21/21217.topojson) |
-| 岐阜県 | 21 | 本巣市 | 21218 | [本巣市](/geojson/cities/21/21218.json) | [本巣市](/topojson/cities/21/21218.topojson) |
-| 岐阜県 | 21 | 郡上市 | 21219 | [郡上市](/geojson/cities/21/21219.json) | [郡上市](/topojson/cities/21/21219.topojson) |
-| 岐阜県 | 21 | 下呂市 | 21220 | [下呂市](/geojson/cities/21/21220.json) | [下呂市](/topojson/cities/21/21220.topojson) |
-| 岐阜県 | 21 | 海津市 | 21221 | [海津市](/geojson/cities/21/21221.json) | [海津市](/topojson/cities/21/21221.topojson) |
-| 岐阜県 | 21 | 羽島郡岐南町 | 21302 | [羽島郡岐南町](/geojson/cities/21/21302.json) | [羽島郡岐南町](/topojson/cities/21/21302.topojson) |
-| 岐阜県 | 21 | 羽島郡笠松町 | 21303 | [羽島郡笠松町](/geojson/cities/21/21303.json) | [羽島郡笠松町](/topojson/cities/21/21303.topojson) |
-| 岐阜県 | 21 | 養老郡養老町 | 21341 | [養老郡養老町](/geojson/cities/21/21341.json) | [養老郡養老町](/topojson/cities/21/21341.topojson) |
-| 岐阜県 | 21 | 不破郡垂井町 | 21361 | [不破郡垂井町](/geojson/cities/21/21361.json) | [不破郡垂井町](/topojson/cities/21/21361.topojson) |
-| 岐阜県 | 21 | 不破郡関ケ原町 | 21362 | [不破郡関ケ原町](/geojson/cities/21/21362.json) | [不破郡関ケ原町](/topojson/cities/21/21362.topojson) |
-| 岐阜県 | 21 | 安八郡神戸町 | 21381 | [安八郡神戸町](/geojson/cities/21/21381.json) | [安八郡神戸町](/topojson/cities/21/21381.topojson) |
-| 岐阜県 | 21 | 安八郡輪之内町 | 21382 | [安八郡輪之内町](/geojson/cities/21/21382.json) | [安八郡輪之内町](/topojson/cities/21/21382.topojson) |
-| 岐阜県 | 21 | 安八郡安八町 | 21383 | [安八郡安八町](/geojson/cities/21/21383.json) | [安八郡安八町](/topojson/cities/21/21383.topojson) |
-| 岐阜県 | 21 | 揖斐郡揖斐川町 | 21401 | [揖斐郡揖斐川町](/geojson/cities/21/21401.json) | [揖斐郡揖斐川町](/topojson/cities/21/21401.topojson) |
-| 岐阜県 | 21 | 揖斐郡大野町 | 21403 | [揖斐郡大野町](/geojson/cities/21/21403.json) | [揖斐郡大野町](/topojson/cities/21/21403.topojson) |
-| 岐阜県 | 21 | 揖斐郡池田町 | 21404 | [揖斐郡池田町](/geojson/cities/21/21404.json) | [揖斐郡池田町](/topojson/cities/21/21404.topojson) |
-| 岐阜県 | 21 | 本巣郡北方町 | 21421 | [本巣郡北方町](/geojson/cities/21/21421.json) | [本巣郡北方町](/topojson/cities/21/21421.topojson) |
-| 岐阜県 | 21 | 加茂郡坂祝町 | 21501 | [加茂郡坂祝町](/geojson/cities/21/21501.json) | [加茂郡坂祝町](/topojson/cities/21/21501.topojson) |
-| 岐阜県 | 21 | 加茂郡富加町 | 21502 | [加茂郡富加町](/geojson/cities/21/21502.json) | [加茂郡富加町](/topojson/cities/21/21502.topojson) |
-| 岐阜県 | 21 | 加茂郡川辺町 | 21503 | [加茂郡川辺町](/geojson/cities/21/21503.json) | [加茂郡川辺町](/topojson/cities/21/21503.topojson) |
-| 岐阜県 | 21 | 加茂郡七宗町 | 21504 | [加茂郡七宗町](/geojson/cities/21/21504.json) | [加茂郡七宗町](/topojson/cities/21/21504.topojson) |
-| 岐阜県 | 21 | 加茂郡八百津町 | 21505 | [加茂郡八百津町](/geojson/cities/21/21505.json) | [加茂郡八百津町](/topojson/cities/21/21505.topojson) |
-| 岐阜県 | 21 | 加茂郡白川町 | 21506 | [加茂郡白川町](/geojson/cities/21/21506.json) | [加茂郡白川町](/topojson/cities/21/21506.topojson) |
-| 岐阜県 | 21 | 加茂郡東白川村 | 21507 | [加茂郡東白川村](/geojson/cities/21/21507.json) | [加茂郡東白川村](/topojson/cities/21/21507.topojson) |
-| 岐阜県 | 21 | 可児郡御嵩町 | 21521 | [可児郡御嵩町](/geojson/cities/21/21521.json) | [可児郡御嵩町](/topojson/cities/21/21521.topojson) |
-| 岐阜県 | 21 | 大野郡白川村 | 21604 | [大野郡白川村](/geojson/cities/21/21604.json) | [大野郡白川村](/topojson/cities/21/21604.topojson) |
+| 岐阜県 | 岐阜市 | 21201 | [岐阜市](/geojson/cities/21/21201.json) | [岐阜市](/topojson/cities/21/21201.topojson) |
+| 岐阜県 | 大垣市 | 21202 | [大垣市](/geojson/cities/21/21202.json) | [大垣市](/topojson/cities/21/21202.topojson) |
+| 岐阜県 | 高山市 | 21203 | [高山市](/geojson/cities/21/21203.json) | [高山市](/topojson/cities/21/21203.topojson) |
+| 岐阜県 | 多治見市 | 21204 | [多治見市](/geojson/cities/21/21204.json) | [多治見市](/topojson/cities/21/21204.topojson) |
+| 岐阜県 | 関市 | 21205 | [関市](/geojson/cities/21/21205.json) | [関市](/topojson/cities/21/21205.topojson) |
+| 岐阜県 | 中津川市 | 21206 | [中津川市](/geojson/cities/21/21206.json) | [中津川市](/topojson/cities/21/21206.topojson) |
+| 岐阜県 | 美濃市 | 21207 | [美濃市](/geojson/cities/21/21207.json) | [美濃市](/topojson/cities/21/21207.topojson) |
+| 岐阜県 | 瑞浪市 | 21208 | [瑞浪市](/geojson/cities/21/21208.json) | [瑞浪市](/topojson/cities/21/21208.topojson) |
+| 岐阜県 | 羽島市 | 21209 | [羽島市](/geojson/cities/21/21209.json) | [羽島市](/topojson/cities/21/21209.topojson) |
+| 岐阜県 | 恵那市 | 21210 | [恵那市](/geojson/cities/21/21210.json) | [恵那市](/topojson/cities/21/21210.topojson) |
+| 岐阜県 | 美濃加茂市 | 21211 | [美濃加茂市](/geojson/cities/21/21211.json) | [美濃加茂市](/topojson/cities/21/21211.topojson) |
+| 岐阜県 | 土岐市 | 21212 | [土岐市](/geojson/cities/21/21212.json) | [土岐市](/topojson/cities/21/21212.topojson) |
+| 岐阜県 | 各務原市 | 21213 | [各務原市](/geojson/cities/21/21213.json) | [各務原市](/topojson/cities/21/21213.topojson) |
+| 岐阜県 | 可児市 | 21214 | [可児市](/geojson/cities/21/21214.json) | [可児市](/topojson/cities/21/21214.topojson) |
+| 岐阜県 | 山県市 | 21215 | [山県市](/geojson/cities/21/21215.json) | [山県市](/topojson/cities/21/21215.topojson) |
+| 岐阜県 | 瑞穂市 | 21216 | [瑞穂市](/geojson/cities/21/21216.json) | [瑞穂市](/topojson/cities/21/21216.topojson) |
+| 岐阜県 | 飛騨市 | 21217 | [飛騨市](/geojson/cities/21/21217.json) | [飛騨市](/topojson/cities/21/21217.topojson) |
+| 岐阜県 | 本巣市 | 21218 | [本巣市](/geojson/cities/21/21218.json) | [本巣市](/topojson/cities/21/21218.topojson) |
+| 岐阜県 | 郡上市 | 21219 | [郡上市](/geojson/cities/21/21219.json) | [郡上市](/topojson/cities/21/21219.topojson) |
+| 岐阜県 | 下呂市 | 21220 | [下呂市](/geojson/cities/21/21220.json) | [下呂市](/topojson/cities/21/21220.topojson) |
+| 岐阜県 | 海津市 | 21221 | [海津市](/geojson/cities/21/21221.json) | [海津市](/topojson/cities/21/21221.topojson) |
+| 岐阜県 | 羽島郡岐南町 | 21302 | [羽島郡岐南町](/geojson/cities/21/21302.json) | [羽島郡岐南町](/topojson/cities/21/21302.topojson) |
+| 岐阜県 | 羽島郡笠松町 | 21303 | [羽島郡笠松町](/geojson/cities/21/21303.json) | [羽島郡笠松町](/topojson/cities/21/21303.topojson) |
+| 岐阜県 | 養老郡養老町 | 21341 | [養老郡養老町](/geojson/cities/21/21341.json) | [養老郡養老町](/topojson/cities/21/21341.topojson) |
+| 岐阜県 | 不破郡垂井町 | 21361 | [不破郡垂井町](/geojson/cities/21/21361.json) | [不破郡垂井町](/topojson/cities/21/21361.topojson) |
+| 岐阜県 | 不破郡関ケ原町 | 21362 | [不破郡関ケ原町](/geojson/cities/21/21362.json) | [不破郡関ケ原町](/topojson/cities/21/21362.topojson) |
+| 岐阜県 | 安八郡神戸町 | 21381 | [安八郡神戸町](/geojson/cities/21/21381.json) | [安八郡神戸町](/topojson/cities/21/21381.topojson) |
+| 岐阜県 | 安八郡輪之内町 | 21382 | [安八郡輪之内町](/geojson/cities/21/21382.json) | [安八郡輪之内町](/topojson/cities/21/21382.topojson) |
+| 岐阜県 | 安八郡安八町 | 21383 | [安八郡安八町](/geojson/cities/21/21383.json) | [安八郡安八町](/topojson/cities/21/21383.topojson) |
+| 岐阜県 | 揖斐郡揖斐川町 | 21401 | [揖斐郡揖斐川町](/geojson/cities/21/21401.json) | [揖斐郡揖斐川町](/topojson/cities/21/21401.topojson) |
+| 岐阜県 | 揖斐郡大野町 | 21403 | [揖斐郡大野町](/geojson/cities/21/21403.json) | [揖斐郡大野町](/topojson/cities/21/21403.topojson) |
+| 岐阜県 | 揖斐郡池田町 | 21404 | [揖斐郡池田町](/geojson/cities/21/21404.json) | [揖斐郡池田町](/topojson/cities/21/21404.topojson) |
+| 岐阜県 | 本巣郡北方町 | 21421 | [本巣郡北方町](/geojson/cities/21/21421.json) | [本巣郡北方町](/topojson/cities/21/21421.topojson) |
+| 岐阜県 | 加茂郡坂祝町 | 21501 | [加茂郡坂祝町](/geojson/cities/21/21501.json) | [加茂郡坂祝町](/topojson/cities/21/21501.topojson) |
+| 岐阜県 | 加茂郡富加町 | 21502 | [加茂郡富加町](/geojson/cities/21/21502.json) | [加茂郡富加町](/topojson/cities/21/21502.topojson) |
+| 岐阜県 | 加茂郡川辺町 | 21503 | [加茂郡川辺町](/geojson/cities/21/21503.json) | [加茂郡川辺町](/topojson/cities/21/21503.topojson) |
+| 岐阜県 | 加茂郡七宗町 | 21504 | [加茂郡七宗町](/geojson/cities/21/21504.json) | [加茂郡七宗町](/topojson/cities/21/21504.topojson) |
+| 岐阜県 | 加茂郡八百津町 | 21505 | [加茂郡八百津町](/geojson/cities/21/21505.json) | [加茂郡八百津町](/topojson/cities/21/21505.topojson) |
+| 岐阜県 | 加茂郡白川町 | 21506 | [加茂郡白川町](/geojson/cities/21/21506.json) | [加茂郡白川町](/topojson/cities/21/21506.topojson) |
+| 岐阜県 | 加茂郡東白川村 | 21507 | [加茂郡東白川村](/geojson/cities/21/21507.json) | [加茂郡東白川村](/topojson/cities/21/21507.topojson) |
+| 岐阜県 | 可児郡御嵩町 | 21521 | [可児郡御嵩町](/geojson/cities/21/21521.json) | [可児郡御嵩町](/topojson/cities/21/21521.topojson) |
+| 岐阜県 | 大野郡白川村 | 21604 | [大野郡白川村](/geojson/cities/21/21604.json) | [大野郡白川村](/topojson/cities/21/21604.topojson) |
