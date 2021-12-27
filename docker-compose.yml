@@ -24,7 +24,7 @@ services:
     tty: true
     stdin_open: true
     volumes:
-      - ./app:/usr/src/app
+      - .:/usr/app
     ports:
       - 8080:8080
     depends_on:

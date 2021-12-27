@@ -1,12 +1,15 @@
 PSQL := docker-compose exec postgis psql -U postgis
 PSQL_COMMAND := $(PSQL) -c
 
+geojson:
+	 docker-compose exec node ./node_modules/.bin/ts-node ./src/prefectures.ts
+clean:
+	rm -rf geojson
+
 psql:
 	$(PSQL)
-cleanup:
-	docker volume rm JapanCityGeoJson_db-data -f && docker-compose build --no-cache && docker-compose up
 up:
-	docker-compose down && docker volume rm JapanCityGeoJson_db-data -f && docker-compose up --build
+	docker-compose down && docker volume rm JapanCityGeoJson_db-data -f && docker-compose up --build --no-cache
 all:
 	@make japan
 	@make japan_count
@@ -27,3 +30,5 @@ prefectures_count:
 	$(PSQL_COMMAND) "select code, name, count(*) as count from prefectures group by code, name order by code;"
 prefectures_tokyo:
 	$(PSQL_COMMAND) "select code, name, GeometryType(geom) from prefectures where name = '東京都';"
+
+

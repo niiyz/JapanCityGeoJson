@@ -1,7 +1,7 @@
 FROM node:17-slim
 
-WORKDIR /usr/src/app
+WORKDIR /usr/app
 
-COPY app/package*.json ./
+COPY package*.json ./
 
 RUN npm install
