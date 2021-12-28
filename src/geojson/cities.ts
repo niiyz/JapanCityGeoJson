@@ -64,13 +64,16 @@ const main = async (): Promise<void> => {
         }
         console.log(city.code, city.pref, city.regional, city.city1, city.city2, city.cnt);
         if (prevPrefCode !== prefCode) {
-            writeReadme(prevPrefCode, mdContent)
+            writeReadme(prevPrefCode, mdContent);
             prevPrefCode = prefCode;
             mdContent = "";
         }
         const cityName = `${city.regional || ""}${city.city1 || ""}${city.city2 || ""}`;
         mdContent += `| ${city.pref} | ${cityName} | ${city.code} | [${cityName}](/geojson/cities/${prefCode}/${city.code}.json) | [${cityName}](/topojson/cities/${prefCode}/${city.code}.topojson) |\n`;
     }
+
+    writeReadme(prevPrefCode, mdContent);
+
     await client.end();
 }
 
