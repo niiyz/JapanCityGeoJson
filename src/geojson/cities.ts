@@ -42,6 +42,7 @@ ${content}`;
 
     fs.writeFileSync(`geojson/cities/README.md`, readme);
 }
+
 const main = async (): Promise<void> => {
 
     const client = await pgClient();
