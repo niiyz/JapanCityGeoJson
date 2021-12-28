@@ -2,14 +2,11 @@ import {pgClient} from "../pgClient";
 
 const fs = require("fs");
 
-const mdOnly = true;
+const mdOnly = false;
 
 const path = './geojson/cities';
 
-const main = async (): Promise<void> => {
-
-    const client = await pgClient();
-    const sql = `
+const dumpJsonSQL = `
 SELECT json_build_object(
     'type', 'FeatureCollection',
     'features', json_agg(ST_AsGeoJSON(pref.*)::json)
@@ -27,9 +24,24 @@ FROM (
 		code
 ) as pref;
 `;
+
+const writeReadme = (prefCode: string, content: string) => {
+    const readme = `| 都道府県 | 行政区分 | 行政区分コード | GeoJson | TopoJson |
+|-----------|--------- |--------------|------|------|
+${content}`;
+
+    fs.writeFileSync(`geojson/cities/${prefCode}/README.md`, readme);
+    fs.writeFileSync(`topojson/cities/${prefCode}/README.md`, readme);
+}
+
+
+const main = async (): Promise<void> => {
+
+    const client = await pgClient();
+
     const cities = await client.query("select code, pref, regional, city1, city2, count(*) as cnt from japan where ST_Area(geom) > 0.0003495285322129 group by code, pref, regional, city1, city2 order by code");
 
-    let text = "";
+    let mdContent = "";
     let prevPrefCode = "";
 
     for (let i in cities.rows) {
@@ -47,23 +59,21 @@ FROM (
             fs.mkdirSync(filepath, {recursive: true});
         }
         if (! mdOnly) {
-            const json = await client.query(sql, [city.code]);
+            const json = await client.query(dumpJsonSQL, [city.code]);
             fs.writeFileSync(`${filepath}/${city.code}.json`, JSON.stringify(json.rows[0].json_build_object));
         }
         console.log(city.code, city.pref, city.regional, city.city1, city.city2, city.cnt);
         if (prevPrefCode !== prefCode) {
-            const readme = `| 都道府県 | 行政区分 | 行政区分コード | GeoJson | TopoJson |\n|-----------|--------- |--------------|------|------|\n${text}`;
-            fs.writeFileSync(`geojson/cities/${prevPrefCode}/README.md`, readme);
-            fs.writeFileSync(`topojson/cities/${prevPrefCode}/README.md`, readme);
+            writeReadme(prevPrefCode, mdContent)
             prevPrefCode = prefCode;
-            text = "";
+            mdContent = "";
         }
         const cityName = `${city.regional || ""}${city.city1 || ""}${city.city2 || ""}`;
-        text += `| ${city.pref} | ${cityName} | ${city.code} | [${cityName}](/geojson/cities/${prefCode}/${city.code}.json) | [${cityName}](/topojson/cities/${prefCode}/${city.code}.topojson) |\n`;
+        mdContent += `| ${city.pref} | ${cityName} | ${city.code} | [${cityName}](/geojson/cities/${prefCode}/${city.code}.json) | [${cityName}](/topojson/cities/${prefCode}/${city.code}.topojson) |\n`;
     }
     await client.end();
 }
 
 main().then(() => {
-    console.log("cities.ts finished");
+    console.log(`${__filename} finished`);
 });
