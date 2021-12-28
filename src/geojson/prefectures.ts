@@ -8,10 +8,7 @@ if (!fs.existsSync(path)) {
     fs.mkdirSync(path, {recursive: true});
 }
 
-const main = async (): Promise<void> => {
-
-    const client = await pgClient();
-    const sql = `
+const dumpJsonSQL = `
 SELECT json_build_object(
     'type', 'FeatureCollection',
     'features', json_agg(ST_AsGeoJSON(pref.*)::json)
@@ -27,26 +24,38 @@ FROM (
 		code, name
 ) as pref;
 `;
+
+const writeReadme = (content: string) => {
+    const readme = `| 都道府県 | 都道府県コード | GeoJson | TopoJson |
+|-----------|--------------|------|------|
+${content}`;
+
+    fs.writeFileSync("geojson/prefectures/README.md", readme);
+}
+
+const main = async (): Promise<void> => {
+
+    const client = await pgClient();
+
     const prefectures = await client.query('select code, name from prefectures group by code, name order by code');
 
-    let text = "";
+    let mdContent = "";
 
     for (let i in prefectures.rows) {
         const code = prefectures.rows[i].code;
         const name = prefectures.rows[i].name;
-        const json = await client.query(sql, [code]);
+        const json = await client.query(dumpJsonSQL, [code]);
         const filepath = `${path}/${code}.json`;
         console.log(code, name, filepath);
         fs.writeFileSync(filepath, JSON.stringify(json.rows[0].json_build_object));
-        text += `| ${name} | ${code} | [${name}](/geojson/prefectures/${code}.json) | [${name}](/topojson/prefectures/${code}.topojson) |\n`;
+        mdContent += `| ${name} | ${code} | [${name}](/geojson/prefectures/${code}.json) | [${name}](/topojson/prefectures/${code}.topojson) |\n`;
     }
 
     await client.end()
 
-    const readme = "|  都道府県  | 都道府県コード | GeoJson | TopoJson |\n" + "|-----------|--------------|------|------|\n" + text;
-    fs.writeFileSync("geojson/prefectures/README.md", readme);
+    writeReadme(mdContent);
 }
 
 main().then(() => {
-    console.log("prefectures.ts finished");
+    console.log(`${__filename} finished`);
 });
