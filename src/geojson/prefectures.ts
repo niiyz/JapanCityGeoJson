@@ -5,7 +5,7 @@ const fs = require("fs");
 const path = './geojson/prefectures';
 
 if (!fs.existsSync(path)) {
-    fs.mkdirSync(path, {recursive: true});
+    fs.mkdirSync(path, {recursive: true, mode: 0o777});
 }
 
 const dumpJsonSQL = `
@@ -30,7 +30,7 @@ const writeReadme = (content: string) => {
 |-----------|--------------|------|------|
 ${content}`;
 
-    fs.writeFileSync("geojson/prefectures/README.md", readme);
+    fs.writeFileSync("geojson/prefectures/README.md", readme,{mode: 0o777});
 }
 
 const main = async (): Promise<void> => {
@@ -47,7 +47,7 @@ const main = async (): Promise<void> => {
         const json = await client.query(dumpJsonSQL, [code]);
         const filepath = `${path}/${code}.json`;
         console.log(code, name, filepath);
-        fs.writeFileSync(filepath, JSON.stringify(json.rows[0].json_build_object));
+        fs.writeFileSync(filepath, JSON.stringify(json.rows[0].json_build_object),{mode: 0o777});
         mdContent += `| ${name} | ${code} | [${name}](/geojson/prefectures/${code}.json) | [${name}](/topojson/prefectures/${code}.topojson) |\n`;
     }
 

@@ -102,10 +102,10 @@ const main = async (): Promise<void> => {
         const prefCode = city.code.substring(0, 2);
         const filepath = `${path}/${prefCode}`;
         if (!fs.existsSync(filepath)) {
-            fs.mkdirSync(filepath, {recursive: true});
+            fs.mkdirSync(filepath, {recursive: true, mode: 0o777});
         }
         console.log(city.code, city.pref, city.regional, city.city1, city.city2, city.cnt);
-        fs.writeFileSync(`${filepath}/${city.code}.topojson`, JSON.stringify(JSON.parse(json.rows[0].topojson)));
+        fs.writeFileSync(`${filepath}/${city.code}.topojson`, JSON.stringify(JSON.parse(json.rows[0].topojson)),{mode: 0o777});
     }
     await client.end()
 }

@@ -2,9 +2,13 @@ PSQL := docker-compose exec postgis psql -U postgis
 PSQL_COMMAND := $(PSQL) -c
 
 geojson:
-	 docker-compose exec node ./node_modules/.bin/ts-node ./src/prefectures.ts
+	docker-compose exec node ./node_modules/.bin/ts-node ./src/geojson/prefectures.ts
+	docker-compose exec node ./node_modules/.bin/ts-node ./src/geojson/cities.ts
+	docker-compose exec node ./node_modules/.bin/ts-node ./src/topojson/prefectures.ts
+	docker-compose exec node ./node_modules/.bin/ts-node ./src/topojson/cities.ts
 clean:
 	rm -rf geojson
+	rm -rf topojson
 
 psql:
 	$(PSQL)

@@ -31,7 +31,7 @@ const writeReadmePref = (prefCode: string, content: string) => {
 |-----------|--------- |--------------|------|------|
 ${content}`;
 
-    fs.writeFileSync(`geojson/cities/${prefCode}/README.md`, readme);
+    fs.writeFileSync(`geojson/cities/${prefCode}/README.md`, readme,{mode: 0o777});
 }
 
 // Index Readme.md
@@ -40,7 +40,7 @@ const writeReadme = (content: string) => {
 |-----------|---------|------|------|
 ${content}`;
 
-    fs.writeFileSync(`geojson/cities/README.md`, readme);
+    fs.writeFileSync(`geojson/cities/README.md`, readme,{mode: 0o777});
 }
 
 const main = async (): Promise<void> => {
@@ -71,11 +71,11 @@ const main = async (): Promise<void> => {
         }
         const filepath = `${path}/${prefCode}`;
         if (!fs.existsSync(filepath)) {
-            fs.mkdirSync(filepath, {recursive: true});
+            fs.mkdirSync(filepath, {recursive: true, mode: 0o777});
         }
         if (! mdOnly) {
             const json = await client.query(dumpJsonSQL, [city.code]);
-            fs.writeFileSync(`${filepath}/${city.code}.json`, JSON.stringify(json.rows[0].json_build_object));
+            fs.writeFileSync(`${filepath}/${city.code}.json`, JSON.stringify(json.rows[0].json_build_object),{mode: 0o777});
         }
         console.log(city.code, city.pref, city.regional, city.city1, city.city2, city.cnt);
         const cityName = `${city.regional || ""}${city.city1 || ""}${city.city2 || ""}`;
