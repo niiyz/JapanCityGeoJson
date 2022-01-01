@@ -5,8 +5,8 @@ let map: google.maps.Map;
 
 async function loadMap() {
     map = new google.maps.Map(document.getElementById("map") as HTMLElement, {
-        center: { lat: 35.652832, lng: 139.839478 },
-        zoom: 8,
+        center: { lat: 43.06417, lng: 141.34695 },
+        zoom: 6,
     });
     console.log("loadMap");
 }
