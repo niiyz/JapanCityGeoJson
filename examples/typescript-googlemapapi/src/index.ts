@@ -1,5 +1,6 @@
 import HOKKAIDO from "../../../geojson/prefectures/01.json";
 import AOMORI from "../../../geojson/prefectures/02.json";
+import TOYAMA from "../../../geojson/prefectures/16.json";
 
 let map: google.maps.Map;
 
@@ -13,7 +14,7 @@ async function loadMap() {
 
 loadMap().then(() => {
     map.data.addGeoJson(HOKKAIDO);
-    map.data.addGeoJson(AOMORI);
+    map.data.addGeoJson(TOYAMA);
     map.data.setStyle((feature) => {
         let fillColor;
         switch (feature.getProperty('name')) {

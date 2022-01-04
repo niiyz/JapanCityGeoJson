@@ -2,5 +2,6 @@
 
 ```shell
 npm install
-npm run server
+npm run start
+http://localhost:9000/
 ```
